@@ -19,9 +19,9 @@
         <input type="radio" name="sex_Orie" value="male">男
         <input type="radio" name="sex_Orie" value="female">女
         <br /> 爱好：
-        <input type="checkbox" name="hobby" value="dota">Dota
-        <input type="checkbox" name="hobby" value="travel">旅游
-        <input type="checkbox" name="hobby" value="pets">宠物
+        <input type="checkbox" name="hobby[dota]" value="dota">Dota
+        <input type="checkbox" name="hobby[travel]" value="travel">旅游
+        <input type="checkbox" name="hobby[pets]" value="pets">宠物
         <br /> 评论：
         <textarea name="discuss" cols="30" rows="10"></textarea>
         <br /> 我的car：
