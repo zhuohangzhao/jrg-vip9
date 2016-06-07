@@ -1,0 +1,163 @@
+@charset "UTF-8";
+/**
+ * @authors Du Xian (286489501@qq.com)
+ * @date    2016-06-06 13:29:08
+ */
+body,html{font-family: "宋体"; height: 100%; }
+body,header,footer,section,div,h1,h2,p,ul{padding: 0;margin:0;}
+li{list-style: none;}
+a{text-decoration: none;}
+
+@font-face {font-family: "iconfont";
+  src: url('../Img/iconfont/iconfont.eot?t=1465263965'); /* IE9*/
+  src: url('../Img/iconfont/iconfont.eot?t=1465263965#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../Img/iconfont/iconfont.woff?t=1465263965') format('woff'), /* chrome, firefox */
+  url('../Img/iconfont/iconfont.ttf?t=1465263965') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../Img/iconfont/iconfont.svg?t=1465263965#iconfont') format('svg'); /* iOS 4.1- */
+}
+.icon{font-family: "iconfont";}
+.main{width: 960px;margin:0 auto;}
+
+#header{
+	background: url(../Img/bg.jpg) no-repeat top center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	display: table;
+}
+#header .main{
+	display: table-cell;
+	vertical-align: middle;
+}
+#header h1{
+	font-size: 60px;
+	color: #333;
+	line-height: 80px;
+}
+#header p{
+	font-size: 30px;
+	color: #666;
+	line-height: 60px;
+}
+#header a{
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+	display: inline-block;
+	font-size: 18px;
+	line-height: 40px;
+	margin-top: 10px;
+	width:70px;
+}
+#header a:hover{
+	background: rgba(0,0,0,0.8);
+}
+.about{
+	background: #fff;
+	padding: 60px 0;
+	text-align: center;
+}
+.about h2{
+	font-size: 30px;
+	line-height: 50px;
+}
+.about p{
+	font-size: 20px;
+	line-height: 30px;
+}
+.skill{
+	background:#337ab7;
+	padding: 60px 0;
+	color: #fff;
+}
+.skill h2{
+	font-size: 30px;
+	height: 60px;
+	line-height: 40px;
+	text-align: center;
+}
+.skill h2:after{
+	content: " ";
+	display: block;
+	width: 100px;
+	border-bottom: 1px solid #fff;
+	margin:20px auto 0;
+}
+.skill .skill-list{margin: 20px 0;}
+.skill .skill-list:after{
+	content: " ";
+	display: block;
+	clear: both;
+}
+.skill .skill-list>li{
+	float: left;
+	text-align: center;
+	width: 25%;
+}
+.skill .skill-list>li ul{
+	padding: 0 20px;
+}
+.skill .skill-list>li .pic{
+	width: 100px;
+	height: 100px;
+	background: #fff;
+	border-radius: 100%;
+	margin: 0 auto;
+	color: #337ab7;
+	line-height: 100px;
+	font-size: 56px;
+}
+.skill .skill-list>li .name{
+	line-height: 46px;
+	font-size: 24px;
+}
+.skill .skill-list>li .context{
+	line-height: 20px;
+	font-size: 16px;
+}
+.skill .skill-list>li .btn{
+	margin-top:18px;
+}
+.skill .skill-list>li .btn a{
+	background: #fff;
+	color: #333;
+	font-size: 14px;
+	display: inline-block;
+	padding: 8px 16px;
+}
+.skill .skill-list>li .btn a:hover{
+	background: rgba(255,255,255,0.5);
+	color: #fff;
+}
+.callout{
+	background: url(../Img/callout.jpg) no-repeat top center;
+	background-size: cover;
+	width: 100%;
+	height: 400px;
+	text-align: center;
+}
+.callout h2{
+	color: #fff;
+	font-size: 50px;
+	line-height: 400px;
+}
+
+
+.works{
+	background: #fff;
+	padding: 60px 0 40px;
+}
+
+
+.hobbies{
+	background:#337ab7;
+	padding: 60px 0;
+	color: #fff;
+	text-align: center;
+}
+
+#footer{
+	background: #fff;
+	text-align: center;
+	padding: 80px 0;
+}
