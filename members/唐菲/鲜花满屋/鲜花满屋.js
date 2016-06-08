@@ -1,4 +1,4 @@
-reated by Administrator on 2016/6/6.
+reated by Administrator on 2016/6/8.
  */
  function check() {
      if(document.forms[0].elements[0].value.length<4){
