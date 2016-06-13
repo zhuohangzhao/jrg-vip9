@@ -32,10 +32,11 @@
     background: url(http://csssprites.com/results/fa42653fe5856ab6cf61778dcda31845/result.png) no-repeat;
     height: 35px;
     padding-left: 35px;
-    width: 72px;
+    width: auto;
     line-height: 35px;
     text-decoration: none;
     font-size: 18px;
+    margin: 15px
 }
 .player-btn:hover{
     color: rgb(166,99,190)
