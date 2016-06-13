@@ -15,34 +15,34 @@
 </label></br>
 
 <label>性别：
-    <input type="radio" id="性别-男" name="性别"  ><label for="性别-男">男</label>
-	<input type="radio" id="性别-女"  name="性别"  ><label for="性别-女">女</label>
+    <input type="radio" id="sex-man" name="sex" value="男"  ><label for="性别-男">男</label>
+	<input type="radio" id="sex-woman"  name="sex" value="女" ><label for="性别-女">女</label>
 </label></br>
 
 <label>取向：
-	<input type="radio"  id="取向-男" name="取向"  ><label for="取向-男">男</label>
-	<input type="radio" id="取向-女" name="取向"  ><label for="取向-女">女</label>
+	<input type="radio"  id="sexuality-man" name="sexuality" value="男"  ><label for="取向-男">男</label>
+	<input type="radio" id="sexuality-woman" name="sexuality" value="女"  ><label for="取向-女">女</label>
 </label> </br>
 
 <label>爱好：
-	<input id="dota" type="checkbox" name="爱好"><label for="dota">dota</label>   
-	<input id="旅游" type="checkbox" name="爱好"><label for="旅游">旅游</label>    
-	<input id="宠物" type="checkbox" name="爱好"><label for="宠物">宠物</label> 
+	<input id="dota" type="checkbox" name="hobby[]" value="dota"><label for="dota">dota</label>   
+	<input id="tourism" type="checkbox" name="hobby[]" value="旅游"><label for="tourism">旅游</label>    
+	<input id="pet" type="checkbox" name="hobby[]" value="宠物"><label for="pet">宠物</label> 
 </label></br>
 
 
-<label for="评论">评论：</label><textarea placeholder="ddd"   name="评论" id="评论" cols="30" rows="10"></textarea></br>
+<label for="comment">评论：</label><textarea placeholder="ddd"   name="comment" id="comment" cols="30" rows="10"></textarea></br>
 
 
 <label for="mycar">mycar：</label>
 	<select name="mycar" id="mycar" >
-	<option  value="volvo">皮卡车</option>
+	<option value="volvo">皮卡车</option>
 	<option value="saab">跑丁车</option>
 	<option value="fiat" selected="selected">萨博</option>
 	<option value="audi">f1赛车</option>
 	</select>
 
-<input type="submit"  name="提交">
+<input type="submit"  name="submit">
 
 </form>
 </body>
