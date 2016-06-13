@@ -16,6 +16,9 @@
     font-size: 25px;
     margin: 5px;
     cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none; 
 }
 .btn:hover{
     background-color: #c14d21;
