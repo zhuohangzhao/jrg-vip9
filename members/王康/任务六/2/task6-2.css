@@ -14,7 +14,7 @@
 	margin-top:-55px;
 }
 .content {
-	height:50px;
+	height:100px;
 }
 .content a {
 	text-decoration:none;
@@ -24,11 +24,16 @@
 	color:red;
 }
 .footer {
+
 	height:50px;
+	text-align:center;
+	
 }
 .footer .btn {
 	border:#ccc solid 1px;
 	padding:4px 3px;
-	display:inline;
-	line-height:50px;
+	border-radius:3px;
+	display:inline-block;
+	margin:0 auto;
+	text-decoration:none;
 }
