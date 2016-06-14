@@ -24,10 +24,10 @@
 	<input type="radio" id="sexuality-woman" name="sexuality" value="女"  ><label for="取向-女">女</label>
 </label> </br>
 
-<label>爱好：
-	<input id="dota" type="checkbox" name="hobby[]" value="dota"><label for="dota">dota</label>   
-	<input id="tourism" type="checkbox" name="hobby[]" value="旅游"><label for="tourism">旅游</label>    
-	<input id="pet" type="checkbox" name="hobby[]" value="宠物"><label for="pet">宠物</label> 
+<label id="label1">爱好：
+	<input id="dota" type="checkbox" name=hobby[] value="dota"><label for="dota">dota</label>   
+	<input id="tourism" type="checkbox" name=hobby[] value="旅游"><label for="tourism">旅游</label>    
+	<input id="pet" type="checkbox" name=hobby[] value="宠物"><label for="pet">宠物</label> 
 </label></br>
 
 
@@ -45,5 +45,15 @@
 <input type="submit"  name="submit">
 
 </form>
+<script type="text/javascript">
+var a=[1,2,3];
+var oLabl1=document.getElementById('label1');
+var oinput=document.getElementById("dota");
+var inputName=oLabl1.getElementsByTagName('input');
+alert(inputName.name);	
+alert(oinput.name);
+
+</script>
+
 </body>
 </html>	
