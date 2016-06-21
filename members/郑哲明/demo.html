@@ -2,70 +2,100 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>task9-2-3</title>
+	<title>task10-1</title>
 	<style>
-	div{
-		width: 0px;
-		margin: 10px;
-	}
-		.border1{
-			border:20px solid;
-			border-top-color:blue;
-			border-right-color: yellow;
-			border-bottom-color: green;
-			border-left-color: red;
+
+		body{
+			margin:0;
 		}
-		.border2{
-			border:20px solid;
-			border-top-color:blue;
-			border-right-color: white;
-			border-bottom-color: white;
-			border-left-color: white;
+		.nav{
+			padding-left: 0;
+			margin:0;
+			background: #333;
+			height: 50px;
+			line-height: 50px;
+			padding-left: 830px;
 		}
-		.border3{
-			border:20px solid;
-			border-top-color:white;
-			border-right-color: white;
-			border-bottom-color: white;
-			border-left-color: red;
+		li{
+			display: inline-block;
+			list-style: none;
+			color: white;
+			font-size: 18px;
+			margin-left: 40px;
 		}
-		.border4{
-			border:20px solid;
-			border-top-color:white;
-			border-right-color: yellow;
-			border-bottom-color: white;
-			border-left-color: white;
+		img{
+			float: left;
+			height: 40px;
+			margin-left: 195px;
 		}
-		.border5{
-			border:20px solid;
-			border-top-color:white;
-			border-right-color: white;
-			border-bottom-color: green;
-			border-left-color: white;
+		.aside{
+			width: 220px;
+			height: 600px;
+			background-color: #eee;
+			float:left;
+			margin-left:195px; 
+			margin-top: 10px;
 		}
-		.border6{
-			border:20px solid;
-			border-top-color:white;
-			border-right-color: white;
-			border-bottom-color: red;
-			border-left-color: red;
+		.main{
+			width: 750px;
+			height: 200px;
+			background-color: #eee;
+			float:left;
+			margin-left:10px; 
+			margin-top: 10px;
 		}
-		.border7{
-			border:20px solid;
-			border-top-color:white;
-			border-right-color: green;
-			border-bottom-color: green;
-			border-left-color: white;
+		h1{
+			margin-top: 44px;
+			margin-left: 10px;
+			opacity:0.5;
+			font-weight: normal;
+		}
+		p{
+			line-height: 10px;
+			margin-left: 10px;	
+			opacity:0.5;
+		}
+		.footer-nav{
+			/*clear:left;*/
+			padding-left: 0;
+			background: #333;
+			height: 40px;
+			line-height: 40px;
+			padding-left: 170px;
+			margin-bottom:0;
+			margin-top: 500px;
+			position: absolute;
+
 		}
 	</style>
 </head>
 <body>
-	<div class="border1"></div>
-	<div class="border2"></div>
-	<div class="border3"></div>
-	<div class="border4"></div>
-	<div class="border5"></div>
-	<div class="border6"></div>
-	<div class="border7"></div>
+	<div class="header">
+			<img src="http://cdn.jirengu.com/public/logo-tiny.png" alt="饥人谷">
+
+			<ul class="nav">
+				<li>技能</li>
+				<li>经历</li>
+				<li>作品</li>
+				<li>关于</li>
+			</ul>
+	</div>
+	<div class="content">
+		<div class="aside"></div>
+		<div class="main">
+			<h1>我的作品</h1>
+			<p>生活很美好</p>
+			<p>心情不错</p>
+			<p>代码写的很漂亮</p>
+		</div>
+	</div>
+	<div class="footer">
+		<ul class="footer-nav">
+			<li>饥人谷</li>
+			<li>JSCODE</li>
+			<li>JSBIN</li>
+		</ul>
+	</div>
+
 </body>
 </html>
