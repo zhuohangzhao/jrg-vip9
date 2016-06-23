@@ -4,18 +4,15 @@
     background-color: red;
     height: 50px;
 }
-
 #content {
     overflow: auto;
 }
-
 .aside {
     color: blue;
     background-color: yellow;
     width: 25%;
     display: inline-block;
 }
-
 .main {
     font-size: 25px;
     height: 300px;
@@ -24,7 +21,6 @@
     float: right;
     display: inline-block;
 }
-
 #footer {
     background-color: red;
     width: 100%;
