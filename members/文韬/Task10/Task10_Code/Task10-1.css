@@ -55,9 +55,9 @@ li {
     width: 680px;
     height: 250px;
     background-color: #eee;
-    float: right;
+    float: left;
     margin-top: 10px;
-    margin-right: 20%;
+    margin-left:10px;
 }
 
 p:first-child {
