@@ -12,6 +12,7 @@
       }
       html, body {
         height: 100%;
+        font-family: PingFangSC-Regular, "微软雅黑", SimHei
       }
       a {
         text-decoration: none;
@@ -65,6 +66,9 @@
         padding-top: 1px;
         padding-bottom: 1px;
       }
+      .clear {
+        clear: both;
+      }
       .line {
         align: center;
         width: 80px;
@@ -115,7 +119,6 @@
       }
       .skill-list>li {
         display: inline-block;
-        margin: 5px;
       }
       .skill-list>li>ul>li {
         margin-top: 20px;
@@ -153,7 +156,6 @@
         color: white;
       }
       .works-list {
-        width: 1050px;
         margin: 20px auto;
       }
       .works-list>li {
@@ -178,7 +180,6 @@
       /*info part*/
       .info-list {
         margin-top: 100px;
-        margin-bottom: 100px;
       }
       .info-list>li {
         margin: 15px;
@@ -245,32 +246,35 @@
       <p class="word-style text-center">这里换个背景图，写一句个性的话</p>
     </div>
     <div id="works-part">
-      <h2 class="text-center title-font">我的作品</h2>
-      <hr class="line">
-      <ul class="works-list">
-        <li>
-          <a href="#">
-            <img src="../Resources/portfolio-1.jpg" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="../Resources/portfolio-2.jpg" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="../Resources/portfolio-3.jpg" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="../Resources/portfolio-4.jpg" alt="" />
-          </a>
-        </li>
-      </ul>
-      <p class="text-center"><a class="button-padding normal-button-bg normal-font-size" href="#">更多作品</a></p>
-      <div class="offset"></div>
+
+        <h2 class="text-center title-font">我的作品</h2>
+        <hr class="line">
+        <ul class="works-list text-center">
+          <li>
+            <a href="#">
+              <img src="../Resources/portfolio-1.jpg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../Resources/portfolio-2.jpg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../Resources/portfolio-3.jpg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../Resources/portfolio-4.jpg" alt="" />
+            </a>
+          </li>
+        </ul>
+        <div class="clear"></div>
+        <p class="text-center"><a class="button-padding normal-button-bg normal-font-size" href="#">更多作品</a></p>
+        <div class="offset"></div>
+
     </div>
     <div id="else-part" class="clear-merge">
       <div class="content text-center">
@@ -296,6 +300,7 @@
         </li>
         <li><hr class="line"></li>
         <li><h6>Copyright (c) 2016 lidee92805</h6></li>
+        <li><p class="offset"></p></li>
       </ul>
     </div>
   </body>
