@@ -66,9 +66,6 @@
         padding-top: 1px;
         padding-bottom: 1px;
       }
-      .clear {
-        clear: both;
-      }
       .line {
         align: center;
         width: 80px;
@@ -86,46 +83,42 @@
         width: 100%;
         background-image: url(../Resources/bg.jpg);
         background-position: center;
+        position: relative;
       }
-      #title-part>.title-list {
+      #title-part>.container {
+        color: white;
         position: absolute;
-        top: 35%;
+        bottom: 30%;
         width: 100%;
       }
-      .title-list>li {
-        margin: 20px;
-        color: white;
-      }
-      .title-list>li:first-child {
+      #title-part>.container p {
         font-size: 60px;
       }
+      #title-part>.container h1 {
+        margin-top: 10px;
+        margin-bottom: 80px;
+      }
       /*introduce part*/
-      #introduce-part {
-        padding-top: 1px;
-      }
-      #introduce-part ul {
-        margin: 50px;
-      }
-      #introduce-part ul>li {
-        margin-top: 20px;
-        margin-bottom: 20px;
+      #introduce-part h2 {
+        margin-bottom: 50px;
       }
       /*skill part*/
       #skill-part h2:first-child {
         color: white;
       }
       #skill-part>ul {
+        margin-top: 20px;
         margin-bottom: 60px;
       }
       .skill-list>li {
         display: inline-block;
       }
-      .skill-list>li>ul>li {
-        margin-top: 20px;
-        margin-bottom: 20px;
+      .skill-list>li h3:first-of-type {
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
-      #skill-part>ul>li>ul>li.title-font {
-        font-size: 20px;
+      .skill-list>li h5:first-of-type {
+        margin-bottom: 20px;
       }
       .skill-list.text-center, .text-center.content {
         color: white;
@@ -190,55 +183,44 @@
     </style>
   </head>
   <body>
-    <div id="title-part">
-      <ul class="title-list text-center">
-        <li>李德华</li>
-        <li><h1>做一个有思想的工程师</h1></li>
-        <li class="offset"></li>
-        <li><a class="button-padding clear-button-bg normal-font-size" href="#">更多</a></li>
-      </ul>
+    <div id="title-part" class="clear-merge">
+      <div class="container text-center">
+        <p>李德华</p>
+        <h1>做一个有思想的工程师</h1>
+        <a class="button-padding clear-button-bg normal-font-size" href="#">更多</a>
+      </div>
     </div>
-    <div id="introduce-part">
-      <ul class="text-center">
-        <li><h2 class="title-font">一句话简介</h2></li>
-        <li><h2 class="light-font">这是我的简介，可以对自己做个简单的介绍。这里的背景图自己找个合适的，后期学完js可以做成轮播或者渐变，或者加入一些CSS3的特效</h2></li>
-      </ul>
+    <div id="introduce-part" class="text-center clear-merge">
+      <p class="title-font">一句话简介</p>
+      <h2 class="light-font">一枚喜欢折腾的程序员，热爱新鲜科技和新奇技术，在尝试和摸索中前进</h2>
     </div>
     <div id="skill-part" class="normal-bg clear-merge">
       <h2 class="text-center title-font">我的技能</h2>
       <hr class="line">
       <ul class="skill-list text-center">
         <li>
-          <ul>
-            <li class="icon-globe icon-style"></li>
-            <li class="title-font">静态页面</li>
-            <li class="max-length"><h5>Lorem ipsum dolor sit amet, consectefur adipisicing elit.</h5></li>
-            <li><a class="button-padding normal-button-bg normal-bg" href="#">learn more</a></li>
-          </ul>
+          <p class="icon-globe icon-style"></p>
+          <h3>静态页面</h3>
+          <h5 class="max-length">Lorem ipsum dolor sit amet, consectefur adipisicing elit.</h5>
+          <a class="button-padding normal-button-bg normal-bg" href="#">learn more</a>
         </li>
         <li>
-          <ul>
-            <li class="icon-cog-alt icon-style"></li>
-            <li class="title-font">JS组件插件</li>
-            <li class="max-length"><h5>Lorem ipsum dolor sit amet, consectefur adipisicing elit.</h5></li>
-            <li><a class="button-padding normal-button-bg normal-bg" href="#">learn more</a></li>
-          </ul>
+          <p class="icon-cog-alt icon-style"></p>
+          <h3>JS组件插件</h3>
+          <h5 class="max-length">Lorem ipsum dolor sit amet, consectefur adipisicing elit.</h5>
+          <a class="button-padding normal-button-bg normal-bg" href="#">learn more</a>
         </li>
         <li>
-          <ul>
-            <li class="icon-wrench icon-style"></li>
-            <li class="title-font">工具构建</li>
-            <li class="max-length"><h5>Lorem ipsum dolor sit amet, consectefur adipisicing elit.</h5></li>
-            <li><a class="button-padding normal-button-bg normal-bg" href="#">learn more</a></li>
-          </ul>
+          <p class="icon-wrench icon-style"></p>
+          <h3>工具构建</h3>
+          <h5 class="max-length">Lorem ipsum dolor sit amet, consectefur adipisicing elit.</h5>
+          <a class="button-padding normal-button-bg normal-bg" href="#">learn more</a>
         </li>
         <li>
-          <ul>
-            <li class="icon-html5 icon-style"></li>
-            <li class="title-font">HTML5&CSS3</li>
-            <li class="max-length"><h5>Lorem ipsum dolor sit amet, consectefur adipisicing elit.</h5></li>
-            <li><a class="button-padding normal-button-bg normal-bg" href="#">learn more</a></li>
-          </ul>
+          <p class="icon-html5 icon-style"></p>
+          <h3>HTML5&CSS3</h3>
+          <h5 class="max-length">Lorem ipsum dolor sit amet, consectefur adipisicing elit.</h5>
+          <a class="button-padding normal-button-bg normal-bg" href="#">learn more</a>
         </li>
       </ul>
     </div>
@@ -271,7 +253,6 @@
             </a>
           </li>
         </ul>
-        <div class="clear"></div>
         <p class="text-center"><a class="button-padding normal-button-bg normal-font-size" href="#">更多作品</a></p>
         <div class="offset"></div>
 
