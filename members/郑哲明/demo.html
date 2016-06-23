@@ -2,117 +2,89 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>task10-1</title>
+	<title>task11-1</title>
 	<style>
-		body,ul{
-			margin:0;
-		}
+		/*重置默认样式*/
 		li{
 			list-style: none;
-			margin: 0;
 		}
 		a{
-			color: white;
+			color: black;
 			text-decoration: none;
 		}
-		.container{
-			width: 900px;
-			margin: 0 auto;
+		body,ul,li{
+			margin:0;
+			padding: 0;
 		}
-		#header{
-			height: 50px;
-			background-color: #333;
-		}
-		#header .logo img{
+		/*重置默认样式*/
+		.navbar{
 			height: 40px;
+			background: #ccc;
+			font-size: 18px;
+			line-height: 40px;
 		}
-		#header .nav{
-			float: right;
-		}
-			#header .nav > li{
-		float: left;
-		margin-right: 15px;
-	}
-		#header .nav a{
-		display: block;
-		font-size: 16px;
-		height: 50px;
-		line-height: 50px;
-		padding: 0 10px;
-		color: #fff;
-		}
-		#header .nav a:hover{
-		background-color: #fff;
-		color: #333;
-		}
-		#content {
-			margin-top: 10px;
-		}
-		#content:after{
-			content: '';
-			display: table;
-			clear: both;
-		}
-		/*什么意思*/
-		#content .aside{
+		.navbar>.item{
 			float: left;
-			width: 200px;
-			min-height: 500px;
-			background-color: #eee;
+			padding-left: 20px;
+			padding-right: 20px;
+			position: relative;
 		}
-		#content .main{
-			margin-left: 210px;
-			padding:20px 10px;
-			background-color: #eee;
+		.navbar>.item:hover{
+			background: #aaa;
 		}
-		#footer{
-			background-color: #333;
-			padding: 10px 0;
+		.navbar .item ul{
+			display: none;
 		}
-		#footer:after{
-			content: '';
-			display: table;
-			clear: both;
+		.navbar .item:hover ul{
+			display: block;
+			position: absolute;
+			background: white;
+			border:1px solid silver;
+			left: 0;
+			top: 100%;
 		}
-		/*什么意思*/
-		#float li{
-			float: left;
-			margin-left: 10px;
+		.navbar .item li{
+			padding-right: 10px;
+			padding-left: 10px;
 		}
+		.navbar .item li:hover{
+			background: #ccc;
+		}
+
 	</style>
 </head>
 <body>
-	<div id="header">
-		<div class="container">
-			<a href="#" class="logo"><img src="http://cdn.jirengu.com/public/logo-tiny.png" alt="#"></a>
-			<ul class="nav">
-				<li><a href="#">技能</a></li>
-				<li><a href="#">经历</a></li>
-				<li><a href="#">作品</a></li>
-				<li><a href="#">关于</a></li>
-			</ul>
-		</div>
-	</div>
-	<div id="content">
-		<div class="container">
-			<div class="aside">
-			</div>
-			<div class="main">
-				<h1>我的作品</h1>
-				<p>生活很美好</p>
-				<p>继续码代码</p>
-				<p>代码写的很漂亮</p>
-			</div>
-		</div>
-	</div>
-	<div id="footer">
-		<div class="container">
+	<ul class="navbar">
+		<li class="item">
+			<a href="#">前端</a>
 			<ul>
-				<li><a href="#">饥人谷</a></li>
-				<li><a href="#">JSCODE</a></li>
-				<li><a href="#">JSBIN</a></li>
+				<li><a href="#">javascript</a></li>
+				<li><a href="#">css</a></li>
+				<li><a href="#">html</a></li>
 			</ul>
-		</div>
-	</div>
+		</li>
+		<li class="item">
+			<a href="#">服务端</a>
+			<ul>
+				<li><a href="#">NODE</a></li>
+				<li><a href="#">PHP</a></li>
+				<li><a href="#">java</a></li>
+			</ul>
+		</li>
+		<li class="item">
+			<a href="#">前端工具</a>
+			<ul>
+				<li><a href="#">sublime</a></li>
+				<li><a href="#">webstorm</a></li>
+				<li><a href="#">Git</a></li>
+			</ul>
+		</li>
+		<li class="item">
+			<a href="#">HTML</a>
+		</li>
+		<li class="item">
+			<a href="#">NODE</a>
+		</li>
+	</ul>
 </body>
 </html>
