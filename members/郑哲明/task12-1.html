@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>task12-1</title>
+  <style>
+    *{
+      margin: 0;
+    }
+    .box{
+      width: 400px;
+      height: 200px;
+      float: left;
+      background: #004400;
+    }
+    .container{
+      background: silver;
+      padding-top: 30px;
+      padding-bottom: 20px;
+      width: 1300px;
+      margin:0 auto;
+    }
+    .container:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .box2,.box5{
+      width: 100%;
+      background: transparent;
+    }
+    .box2-child,.box5-child{
+      width: 400px;
+      height: 200px;
+      margin:0 auto;
+      background: #004400;
+    }
+    .box1,.box4{
+      margin-left: -100%
+    }
+    .box3,.box6{
+      margin-left: -400px;
+    }
+    .content1:after,.content2:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .content1{
+      margin-bottom: 20px;
+    }
+
+  </style>
+</head>
+<body>
+    <div class="container">
+      <div class="content1">
+        <div class="box2 box">
+          <div class="box2-child">2</div>
+        </div>
+        <div class="box1 box">1</div>
+        <div class="box3 box">3</div>
+      </div>
+      <div class="content2">
+        <div class="box5 box">
+          <div class="box5-child">5</div>
+        </div>
+        <div class="box4 box">4</div>
+        <div class="box6 box">6</div>
+      </div>
+
+    </div>
+</body>
+</html>

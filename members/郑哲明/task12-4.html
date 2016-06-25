@@ -11,22 +11,28 @@
       height: 30px;
       background: silver;
     }
+    .aside,.extra{
+      width: 200px;
+      height:150px;
+    }
     .main{
       width: 100%;
       height: 150px;
     }
-    .aside,.main{
+    .aside,.extra,.main{
       float: left;
     }
     .aside{
-      width: 200px;
-      height:150px;
+      margin-left: -100%;
+      background: red;
+    }
+    .extra{
       margin-left: -200px;
       background: yellow;
     }
     .child{
       height: 100%;
-      margin-right: 200px;
+      margin:0 200px;
       background: green;
     }
     #content:after{
@@ -42,7 +48,8 @@
     <div class="main">
       <div class="child">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae libero, possimus? Eaque quod adipisci minima reprehenderit hic, itaque officia numquam maiores aperiam architecto consequuntur accusamus laboriosam recusandae molestiae reiciendis, dolorem!</div>
     </div>
-    <div class="aside">右侧边栏，宽度固定</div>
+    <div class="aside">左侧边栏，宽度固定</div>
+    <div class="extra">右侧边栏，宽度固定</div>
   </div>
   <div id="footer">尾部</div>
 </body>
