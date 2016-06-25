@@ -1,0 +1,129 @@
+body,html,ol,ul,dd,dl,dt,
+p,h1,h2,h3{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration:none;
+}
+li,dt,dd{
+    list-style:none
+}
+body,html{
+    height:100%
+}
+/*清除默认样式*/
+.clear:after{
+    content:"";
+    clear:both;
+    display:block;
+}
+.clear{
+    *zoom:1;
+}
+#header{
+    height:100%;
+    background:url(../img/bg.jpg) no-repeat;
+    background-size:cover;
+    text-align:center;
+}
+#header h1{
+    font-size:60px;
+    text-align:center;
+    padding:220px 0 0 0;
+}
+#header p{
+    font-size:24px;
+    text-align:center;
+    line-height:76px;
+}
+#header>a{
+    display:inline-block;
+    background:#6D7D83;
+    font-size:17px;
+    color:#fff;
+    padding:14px 19px;
+    margin-top:5px;
+}
+#content{
+    text-align:center;
+    padding-top:63px;
+}
+#content h2{
+    font-size:30px;
+    line-height:50px;
+}
+#content>p{
+    font-size:20px;
+    line-height:30px;
+    padding:0 105px 70px 105px;
+}
+#content .skill-ct{
+    padding-top:63px;
+    background:#337ab7;
+    padding-bottom:83px;
+}
+#content .skill-ct .skill{
+    width:1068px;
+    margin:0 auto;
+}
+#content .skill-ct .skill h2{
+    color:#fff;
+}
+.skill span{
+    display:inline-block;
+    width:100px;
+    height:1px;
+    margin:13px auto 29px auto;
+    background:#fff;
+}
+.skill li{
+    width:200px;
+    float:left;
+    padding:0 33px 0 34px;
+    text-align:center;
+    color:#fff;
+}
+.skill li div:first-child{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin:0 auto 14px auto;
+}
+.skill li .round1{
+     background:url(../img/icon.png) 19px 24px no-repeat #fff;
+ }
+.skill li .round2{
+    background:url(../img/icon.png) 23px -69px no-repeat #fff;
+}
+.skill li .round3{
+    background:url(../img/icon.png) 26px -165px no-repeat #fff;
+}
+.skill li .round4{
+    background:url(../img/icon.png) 31px -260px no-repeat #fff;
+}
+.skill li h3{
+    font-size:17px;
+    line-height:32px;
+}
+.skill li p{
+    font-size:13px;
+    line-height:20px;
+    margin-bottom:10px;
+}
+.skill li a{
+    display:inline-block;
+    font-size:15px;
+    padding:10px 15px;
+    background:#fff;
+    color:#000;
+    margin-bottom:83px;
+}
+#content .text2{
+    height:55px;
+    background:url(../img/callout.jpg) no-repeat center center scroll;
+    padding:170px 197px 175px 195px;
+}
+#content .text2 p{
+    font-size:55px;
+}
