@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+	.content{
+		background-color: #ccc;
+	}
+	.header{background-color: #ccc;}
+	.footer{background-color: #ccc;}
+	.content:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	.main{
+		width: 100%;
+		height: 100px;
+		float: left;
+	}
+	.aside{
+		width: 200px;
+		height: 100px;
+		background-color: yellow;
+		float: left;
+		margin-left: -200px;
+	}
+	.wrap{
+		height: 100px;
+		background-color: green;
+		margin-right: 200px;
+	}
+	
+
+</style>
+</head>
+<body>
+<div class="header">header</div>
+    <div class="content">
+    	<div class="main"><div class="wrap">内容区</div></div>
+    	<div class="aside">右侧边栏</div>
+    </div>
+<div class="footer">footer</div>
+</body>
+</html>
