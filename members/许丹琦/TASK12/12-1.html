@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<style type="text/css">
+body,html,ul,li{
+  margin: 0;
+  padding:0;
+}
+li{
+  list-style: none;
+}
+.content{
+  width:900px;
+  margin: 0 auto;
+}
+
+.content .main{
+  margin-top: 10px;
+  padding: 10px 0;
+  background:#ccc;
+}
+
+.main .panels{
+  margin-left: -20px;
+}
+
+.panels:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.panels > li{
+  float: left;
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 286px;
+  height: 80px;
+  background-color: #004210;
+}
+
+</style>
+
+</head>
+<body>
+<div class="content">
+ <div class="main">
+  <ul class="panels">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+  </ul>
+ </div>
+</div>   
+</body>
+</html>
