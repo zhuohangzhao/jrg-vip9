@@ -35,7 +35,7 @@ typeof a+2;  // Number
 var arr = [3, 4, 5];
 
 for (var a in arr) {
-  console.log(a*a);
+  console.log(arr[a]*arr[a]);
 }
 
 // 代码5
