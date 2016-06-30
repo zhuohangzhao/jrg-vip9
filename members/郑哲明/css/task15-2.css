@@ -110,9 +110,12 @@ a{
 	display: block;
 	clear: both;
 }
-.work li a:nth-of-type(1) img{
+.work  a:nth-of-type(1) img{
 	width: 298px;
 	height: 200px;
+}
+.work  a:nth-of-type(1):hover{
+	opacity: 0.7;
 }
 .work h4{
 	margin: 10px;
