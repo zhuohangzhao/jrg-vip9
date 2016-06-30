@@ -69,6 +69,11 @@
       .clear {
         clear: both;
       }
+      .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
       .red-bg {
         background: rgb(182, 78, 72);
       }
@@ -160,25 +165,25 @@
   </head>
   <body>
     <div id="nav-bar">
-      <div class="layout">
+      <div class="layout clearfix">
         <ul class="nav-items">
           <li><a href="#">饥人谷</a></li>
           <li>
             <a class="icon-down-dir" href="#">我的作品</a>
-            <ul class="nav-works-list">
+            <ul class="nav-works-list clearfix">
               <li><a class="nav-item-hover icon-paper-plane-empty" href="#">作品1</a></li>
               <li><a class="nav-item-hover icon-shield" href="#">作品2</a></li>
               <li><a class="nav-item-hover icon-book" href="">作品3</a></li>
               <li><hr></li>
               <li><a href="#">作品4</a></li>
-              <div class="clear"></div>
+              <!-- <div class="clear"></div> -->
             </ul>
           </li>
           <li><a href="#">博客</a></li>
           <li><a href="#">项目</a></li>
           <li><a href="#">关于我</a></li>
         </ul>
-        <div class="clear"></div>
+        <!-- <div class="clear"></div> -->
       </div>
     </div>
     <div id="header" class="red-bg">
@@ -189,12 +194,12 @@
     </div>
     <div id="content">
       <div class="layout">
-        <div class="segment-bar">
+        <div class="segment-bar clearfix">
           <p><a class="index-a-style" href="#">首页</a></p>
           <p>/ 我的作品</p>
-          <div class="clear"></div>
+          <!-- <div class="clear"></div> -->
         </div>
-        <ul class="content-list">
+        <ul class="content-list clearfix">
           <li>
             <a href="#">
               <img src="http://sbootstrap.startbootstrapc.netdna-cdn.com/assets/img/templates/creative.jpg" alt="" />
@@ -275,7 +280,7 @@
             <h4>A full image slider template</h4>
             <a href="#">查看</a>
           </li>
-          <div class="clear"></div>
+          <!-- <div class="clear"></div> -->
         </ul>
       </div>
       </div>

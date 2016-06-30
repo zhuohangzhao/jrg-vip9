@@ -1,79 +1,79 @@
-html,body,ul,li,p,h1,h2,h3,h4,p{
+    html,body,ul,li,p,h1,h2,h3,h4,p{
             margin: 0;
             padding: 0;
-        }
-        html,body{
+    }
+    html,body{
             height: 100%;
-        }
-        #header{
+    }
+    #header{
             height: 100%;
             width: 100%;
             background: url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/header-bg.jpg) center center;
             background-size: cover;
             display: table;
-        }
-        .header-title{
+    }
+    .header-title{
             width: 100%;
             position: fixed;
             z-index: 1;
             background: #232227
-        }
-        .title-left{
+    }
+    .title-left{
             float: left;
             margin-left: 50px;
-        }
-        .title-left h2{
+    }
+    .title-left h2{
             padding: 15px 20px;
             color: #f8cb13;
             font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
             font-style: oblique;
-        }
-        .title-right{
+    }
+    .title-right{
             margin-right: 50px;
-        }
-        .title-right li{
+    }
+    .title-right li{
             float: right;
             list-style-type: none;
 
-        }
-        .title-right>li>a{
+    }
+    .title-right>li>a{
             color: white;
             font-size: 15px;
             padding: 20px;
             text-decoration: none;
             display: inline-block;
-        }
-        .title-right a:hover{
+    }
+    .title-right a:hover{
             color: #f8cb13;
-        }
-        .title-right:after{
+    }
+    .title-right:after{
             content: '';
             display: block;
             clear: both;
-        }
-        .header-title:after{
+    }
+    .header-title:after{
             content: '';
             display: block;
             clear: both;
-        }
-        .header-layout{
+    }
+    .header-layout{
             width: 1200px;
             margin: 0 auto;
-        }
-        .header-content{
+    }
+    .header-content{
             text-align: center;
             line-height: 1.5;
             color: white;
             padding-top: 300px;
             padding-bottom: 100px;
-        }
-        .header-content h1{
+    }
+    .header-content h1{
             font-style: oblique;
-        }
-        .header-content h2{
+    }
+    .header-content h2{
             font-size: 75px;
-        }
-        .header-content>a{
+    }
+    .header-content>a{
             text-decoration: none;
             color: white;
             font-size: 15px;
@@ -83,10 +83,10 @@ html,body,ul,li,p,h1,h2,h3,h4,p{
             border-radius: 4px;
             margin: 10px 0;
             display: inline-block;
-        }
-        .header-content>a:hover{
+    }
+    .header-content>a:hover{
             opacity: 0.9;
-        }   
+    }   
     #services{
         width: 1200px;
         margin: 150px auto;
@@ -118,6 +118,27 @@ html,body,ul,li,p,h1,h2,h3,h4,p{
         text-align: center;
         padding: 0 50px;
     }
+    .fa-shopping-cart{
+        font-size: 2em;
+        background: #f8cb13;
+        border-radius: 50%;
+        padding: 28px 29px;
+        color: white;
+    }
+    .fa-laptop{
+        font-size: 2em;
+        background: #f8cb13;
+        border-radius: 50%;
+        padding: 28px 28px;
+        color: white;
+    }
+    .fa-lock{
+        font-size: 3em;
+        background: #f8cb13;
+        border-radius: 50%;
+        padding: 19px 30px;
+        color: white;
+    }
     .services-list h4{
         padding: 10px 0;
         color: #5a5858;
@@ -147,9 +168,29 @@ html,body,ul,li,p,h1,h2,h3,h4,p{
         margin-top: 30px;
         list-style: none;
         line-height: 1.75;
+        position: relative;
     }
-    .portfolio-list>li>a:hover{
-        opacity: 0.7;
+    .cover {
+        display: none;
+      
+    }
+    .portfolio-list>li:hover .cover{
+        display: block;
+        background: #f8cb13;
+        width: 350px;
+        height: 250px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0.85;
+    }
+    .cover .fa-plus{
+        padding-top: 104px;
+        border-radius: 50%;
+        color: white;
+        font-size: 50px;
+        height: 250px;
+        width: 350px;
     }
     .portfolio-content img{
         width: 350px;
@@ -160,6 +201,7 @@ html,body,ul,li,p,h1,h2,h3,h4,p{
         margin-left: -25px;
 
     }
+
     .portfolio-title h1{
         font-size: 40px;
         padding-bottom: 10px;
@@ -317,7 +359,11 @@ html,body,ul,li,p,h1,h2,h3,h4,p{
     }
     .team-contact{
         width: 200px;
-        margin-left: 50px;
+        margin-left: 65px;
+        margin-top: 20px;
+    }
+    .team-contact>li>a:hover{
+        color: #f8cb13;
     }
     .team-introduction{
         text-align: center;
@@ -423,13 +469,13 @@ html,body,ul,li,p,h1,h2,h3,h4,p{
     }
     .footer-list{
         float: left;
-        padding: 5px 68px;
+        padding: 12px 82px;
     }
     .copyright{
-        padding: 17px 105px;
+        padding: 22px 105px;
     }
     .footer-link{
-        padding: 10px 105px;
+        padding: 19px 68px;
     }
     .footer-list>li{
         float: left;
@@ -443,8 +489,9 @@ html,body,ul,li,p,h1,h2,h3,h4,p{
     .footer-list a{
         text-decoration: none;
         color: #454545;
-        font-size: 15px;
+        font-size: 20px;
     }
+
     .footer-list a:hover{
         color: #f8cb13;
     }
