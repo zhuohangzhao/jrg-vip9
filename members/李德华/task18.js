@@ -29,22 +29,24 @@ var prod = {
   styles: ['短款','冬季','春装']
 };
 function getTpl(data) {
-  var resultStr = '<dl class="product"\>';
+  var arr = [];
+  arr.push('<dl class="product"\>');
   for (var i in data) {
     if (data[i] instanceof Object) {
       var array = data[i];
       for (var j in array) {
-        resultStr = resultStr + "<dd>"
-        resultStr = resultStr + array[j];
-        resultStr = resultStr + "</dd>"
+        arr.push("<dd>");
+        arr.push(array[j]);
+        arr.push("/<dd>");
       }
     } else {
-      resultStr = resultStr + "<dt>"
-      resultStr = resultStr + data[i];
-      resultStr = resultStr + "</dt>"
+      arr.push("<dt>");
+      arr.push(data[i]);
+      arr.push("/<dt>");
     }
   }
-  return resultStr + "</dl>";
+  arr.push("</dl>");
+  return arr.join('');
 };
 var result = getTpl(prod);
 
