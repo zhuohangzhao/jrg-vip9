@@ -46,8 +46,8 @@ var obj = {
   age: 28
 };
 
-for (var a in object) {
-  console.log(a + ":" object[a]);
+for (var a in obj) {
+  console.log(a + ":" + obj[a]);
 }
 
 // 代码6
