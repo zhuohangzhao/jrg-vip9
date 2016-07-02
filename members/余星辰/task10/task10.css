@@ -32,8 +32,9 @@ a{
 }
 .navbar li a{
   font-size: 16px;
-  padding: 17px 10px;
+  padding: 17px 15px;
   color: #fff;
+  font-weight:800;
 
 }
 .navbar li a:hover{
