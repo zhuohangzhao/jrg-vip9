@@ -124,9 +124,13 @@ body{
     background:#f36e41;
     margin:10px auto;
 }
+.skill ul{
+    margin-left:-20px;
+}
 .skill li{
     float:left;
-    width:240px;
+    width:225px;
+    margin-left:20px;
 }
 .skill li .round{
     width:120px;
