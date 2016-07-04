@@ -106,80 +106,80 @@ body{
     background:#181818;
 }
 /***********content-introduction************/
-#content .introduction{
+.introduction{
     background:orange;
     color:#000;
     padding:100px;
 }
 /***********content-skill**************/
-#content .skill{
+.skill{
     padding:60px;
 }
-#content .skill ul{
+.skill ul{
     margin-left:-20px;
 }
-#content .skill li{
+.skill li{
     float:left;
     width:225px;
     margin-left:20px;
 }
-#content .skill li .round{
+.skill li .round{
     width:120px;
     height:120px;
     border-radius:50%;
     background:orange;
     margin:20px auto;
 }
-#content .skill i{
+.skill i{
     font-size:80px;
 }
-#content .skill li a{
+.skill li a{
     background:orange;
     color:#000;
 }
-#content .skill a:hover{
+.skill a:hover{
     background:#f5f5f5;
 }
 /*********content-pic*************/
-#content .pic{
+.pic{
     padding:100px;
     background:orange;
 }
-#content .pic h2{
+.pic h2{
     color:#000;
 }
 /*********content-works************/
-#content .works{
+.works{
     padding:60px;
 }
-#content .works li{
+.works li{
     padding:10px;
     width:460px;
     float:left;
 }
-#content .works li img{
+.works li img{
     width:460px;
     height:360px;
 }
-#content .works .layout>a{
+.works .layout>a{
     background:orange;
     color:#000;
 }
-#content .works .layout>a:hover{
+.works .layout>a:hover{
     background:#f5f5f5;
 }
 /*********content-others***********/
-#content .others{
+.others{
     background:orange;
     color:#000;
     padding:60px;
 }
-#content .others .layout>a{
+.others .layout>a{
     margin:10px 0;
     background:#181818;
     color:orange;
 }
-#content .others .layout>a:hover{
+.others .layout>a:hover{
     background:#f5f5f5;
 }
 /**********footer***********/
@@ -194,6 +194,6 @@ body{
 #footer span{
     background:#aaa;
 }
-#footer .copyright{
+.copyright{
     color:#aaa;
 }
