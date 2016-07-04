@@ -103,6 +103,9 @@ body{
 .introduction h2{
     font-size:36px;
 }
+.introduction i,.pic i{
+    font-size:36px;
+}
 /***********content-skill**************/
 .skill{
     padding:60px;
@@ -141,7 +144,7 @@ body{
     padding:100px;
     background:orange;
 }
-.pic p{
+.pic h2{
     font-size:36px;
     color:#000;
 }
