@@ -20,7 +20,7 @@ body,html{
 body{
     font-family: "宋体", Arial, Helvetica, sans-serif;
     color:#f5f5f5;
-    height:100%;
+    font-size:36px;
     line-height:1.5;
     background:#181818;
 }
@@ -70,53 +70,7 @@ body{
     padding:10px 18px;
     font-size:16px;
 }
-/***************头部样式****************/
-#header{
-    height:100%;
-    background:url(../img/bg.jpg)center center no-repeat;
-    background-size:cover;
-}
-.center{
-    padding:200px 0;
-}
-.center h1{
-    font-size:60px;
-}
-.center p{
-    font-size:24px;
-}
-.center a{
-    margin-top:20px;
-    color:#000;
-    background:orange;
-}
-.center a:hover{
-    background:#f5f5f5;
-}
-/*****************content******************/
-#content{
-    background:#181818;
-}
-/***********content-introduction************/
-.introduction{
-    background:orange;
-    color:#000;
-    padding:100px;
-}
-.introduction h2{
-    font-size:36px;
-}
-.introduction i,.pic i{
-    font-size:36px;
-}
-/***********content-skill**************/
-.skill{
-    padding:60px;
-}
-.skill h2,.works h2,.others h2{
-    font-size:32px;
-}
-.skill span,.works span,#footer span{
+.line{
     display:block;
     width:120px;
     height:2px;
@@ -124,77 +78,114 @@ body{
     background:#f36e41;
     margin:10px auto;
 }
-.skill ul{
+/***************头部样式****************/
+#header{
+    height:100%;
+    background:url(../img/bg.jpg)center center no-repeat;
+    background-size:cover;
+}
+#header .center{
+    padding:200px 0;
+}
+#header .center h1{
+    font-size:60px;
+}
+#header .center p{
+    font-size:24px;
+}
+#header .center a{
+    margin-top:20px;
+    color:#000;
+    background:orange;
+}
+#header .center a:hover{
+    background:#f5f5f5;
+}
+/*****************content******************/
+#content{
+    background:#181818;
+}
+/***********content-introduction************/
+#content .introduction{
+    background:orange;
+    color:#000;
+    padding:100px;
+}
+/***********content-skill**************/
+#content .skill{
+    padding:60px;
+}
+#content .skill ul{
     margin-left:-20px;
 }
-.skill li{
+#content .skill li{
     float:left;
     width:225px;
     margin-left:20px;
 }
-.skill li .round{
+#content .skill li .round{
     width:120px;
     height:120px;
     border-radius:50%;
     background:orange;
     margin:20px auto;
 }
-.skill i{
+#content .skill i{
     font-size:80px;
 }
-.skill li a{
+#content .skill li a{
     background:orange;
     color:#000;
 }
-.skill a:hover{
+#content .skill a:hover{
     background:#f5f5f5;
 }
 /*********content-pic*************/
-.pic{
+#content .pic{
     padding:100px;
     background:orange;
 }
-.pic h2{
-    font-size:36px;
+#content .pic h2{
     color:#000;
 }
 /*********content-works************/
-.works{
+#content .works{
     padding:60px;
 }
-.works li{
+#content .works li{
     padding:10px;
     width:460px;
     float:left;
 }
-.works li img{
+#content .works li img{
     width:460px;
     height:360px;
 }
-.works .layout>a{
+#content .works .layout>a{
     background:orange;
     color:#000;
 }
-.works .layout>a:hover{
+#content .works .layout>a:hover{
     background:#f5f5f5;
 }
 /*********content-others***********/
-.others{
+#content .others{
     background:orange;
     color:#000;
     padding:60px;
 }
-.others .layout>a{
+#content .others .layout>a{
     margin:10px 0;
     background:#181818;
     color:orange;
 }
-.others .layout>a:hover{
+#content .others .layout>a:hover{
     background:#f5f5f5;
 }
 /**********footer***********/
 #footer{
     padding:60px 0;
+    font-size:16px;
 }
 #footer a i{
     font-size:42px;
@@ -203,6 +194,6 @@ body{
 #footer span{
     background:#aaa;
 }
-.copyright{
+#footer .copyright{
     color:#aaa;
 }
