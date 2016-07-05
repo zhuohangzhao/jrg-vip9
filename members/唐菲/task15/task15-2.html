@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task15-2</title>
+    <link rel="stylesheet" href="iconfont.css">
+
+    <style>
+
+        html {
+            font-family:"Microsoft YaHei","Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive, sans-serif;
+        }
+
+        body, ul, li, header, h1, h2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {color: white;
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        .wapper {
+            width: 1170px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: url(header-bg.jpg) center center;
+            background-size: cover;
+
+        }
+
+        header .clearfix>a {
+            float: left;
+         padding-top: 20px;
+            padding-bottom: 20px;
+            margin-left: 100px;
+            font-size: 2rem;
+            font-family:"Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive, sans-serif;
+            color: #fed136;
+
+        }
+
+
+
+
+        header .clearfix>ul {
+            float: right;
+            margin-right: 100px;
+            line-height: 82px;
+        }
+
+        header ul > li {
+            display: inline-block;
+            letter-spacing:1px;
+
+        }
+        /*无法兼容ie8可以采用float替代*/
+
+        header ul > li a{
+            padding: 10px;
+            text-transform:uppercase;
+            font-weight: 700;
+
+        }
+
+        header ul > li:hover a{
+            color: #fed136;
+
+        }
+
+
+
+
+        header .nav-inner {
+            padding-top: 200px;
+            padding-bottom: 200px;
+      text-align: center;
+            color: white;
+            font-size: 5rem;
+            font-weight: 700;
+            line-height: 0;
+        }
+
+
+        header .nav-inner p:first-child{
+    font-size: 3rem;
+            color:white;
+
+            font-style: italic;
+            font-family: serif;
+        }
+
+        header .nav-inner a{
+            padding:  20px 30px 20px 30px;
+            font-size: 1rem;
+            border-radius:5px;
+            background-color: #fed136;
+        }
+        header .nav-inner a:hover{
+
+            background-color: #fec503;
+
+        }
+
+
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Kaushan Script';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Kaushan Script'), local('KaushanScript-Regular'), url(https://fonts.gstatic.com/s/kaushanscript/v5/qx1LSqts-NtiKcLw4N03IO87R-l0-Xx_7cYc0ZX1ifE.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Kaushan Script';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Kaushan Script'), local('KaushanScript-Regular'), url(https://fonts.gstatic.com/s/kaushanscript/v5/qx1LSqts-NtiKcLw4N03IEd0sm1ffa_JvZxsF_BEwQk.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+        }
+        main{
+            margin-top: 150px;
+            text-align: center;
+        }
+        main li{
+            display: inline-block;
+            width: 33%;
+
+        }
+
+        main li>div{
+            background: red;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+<header >
+    <div class="clearfix">
+    <a href="#">Start Bootstrap</a>
+    <ul>
+        <li><a href="">Services</a></li>
+        <li><a href="">Portfolio</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">team</a></li>
+        <li><a href="">contact</a></li>
+    </ul>
+    </div>
+    <div class="nav-inner wapper">
+        <p>Welcome To Our Studio!</p>
+        <p>IT'S NICE TO MEET YOU</p>
+        <a href="">TELL ME MORE</a>
+
+
+    </div>
+</header>
+<main>
+    <div class="wapper">
+    <h2>SERVICES</h2>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <ul>
+            <li><div><i class="iconfont icon-gouwuche"></i></div><p>12</p><p>12</p></li>
+            <li><div><i class="iconfont icon-bijiben"></i></div><p>12</p><p>12</p></li>
+            <li><div><i class="iconfont icon-lock"></i></div><p>12</p><p>12</p></li>
+        </ul>
+    </div>
+
+
+</main>
+<footer></footer>
+
+
+</body>
+</html>
