@@ -3,39 +3,137 @@
 <head>
 	<meta charset="UTF-8">
 	<title>task15-1</title>
-
-<link rel="stylesheet" href="http://at.alicdn.com/t/font_1467190978_0422394.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1467190978_0422394.css">
 	<style type="text/css">
 		html, body, h1, h2, h3, a ,ul ,li { margin: 0;padding: 0;}
 		body{font:1rem/1.5 "Microsoft Yahei",serif }
 		li{list-style: none;}
-		a{text-decoration: none;color: black;}  
+		a{text-decoration: none;color: black;color: #666;}  
+		a:hover{color: #333;}
 		.container{
 			margin: 0 auto;
 			width: 1000px;
-			border: 1px solid;
-			}
-			.clearfix:after{
+
+		}
+		.clearfix:after{
 			content: "";
 			display: block;
 			clear: both;
-			}
+		}
 
-	#header .nav{height: 50px; }		
-	#header .nav>h1,#header .nav ul>li { float: left;line-height: 50px; }
-	#header .nav>h1{
-		font-size: 1rem;
-	}
-	#header .nav-title{
-		position: relative;
-		padding-left: 25px;
-	}
-	#header .nav-title ul{
-		color: red;
-	}
+		#header .nav{height: 50px; }		
+		#header .nav>h1,#header .nav>ul>li { float: left;line-height: 50px; }
+		#header .nav>h1{
+			font-size: 1rem;
+		}
 
 
-                 
+		#header .nav-title{
+			position: relative;
+			padding-left: 25px;
+		}
+		#header .nav-title ul li{
+			padding-left: 10px;
+			padding-right: 10px;
+			border-bottom:1px dotted #ccc;
+		}
+
+		#header .nav-title ul li:hover{
+			background-color: #ccc;
+		}
+
+		#header .nav-title ul li:last-of-type{
+			border-bottom:1px solid #ccc;
+		}
+
+		#header .nav  ul ul {
+			display: none;
+			position: absolute;
+			top:50px;
+			line-height: 2;
+			border: 1px solid #ccc;
+			border-bottom:none; 
+			background-color: white;
+		}
+		#header .nav li:hover  ul
+		{	
+			display: block;
+		}
+
+		#header .introduction, #footer{
+			padding-top: 30px;
+			padding-bottom: 30px;
+			line-height: 1;
+			color: white;
+			background-color: #b84d45;
+		}
+
+		#main .breadcrumb{		
+			margin-top:50px; 
+			padding-top: 10px;
+			padding-bottom: 10px;
+			text-indent: 1rem;
+			background-color: #eee;
+		}
+		#main .breadcrumb a:first-of-type{
+			color: red;
+		}
+		#main .breadcrumb i{
+			padding-right: 5px;
+			padding-left: 5px;
+		}
+		
+		#main ul{
+			margin-left: -47px;
+
+		}
+
+
+		#main ul li{
+			float: left;
+			margin-top:30px; 
+			margin-left: 47px;
+			width: 300px;
+			height:300px;
+			border: 1px solid #ccc;
+			line-height: 1;
+			text-align: center;
+
+		}
+
+		#main ul li img{
+			width: 300px;
+		}
+		#main ul li h3,#main ul li p{
+			padding-left: 10px;
+			text-align: left;
+			
+		}
+
+
+		#main ul li a:last-of-type{
+			padding:5px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+
+
+		#footer{
+			margin-top: 50px;
+			text-align: center;
+		}
+		#footer h3{
+			font-size: 2rem;
+		}
+
+		#footer a{
+			padding: 5px;
+			color: white;
+			border: 1px solid white;
+			border-radius: 5px;
+		}
+
+
 
 	</style>
 </head>
@@ -47,9 +145,9 @@
 	<div id="header">
 
 		<div class="nav container clearfix">
-			<h1>饥人谷</h1>
+			<h1><a href="">饥人谷</a></h1>
 			<ul>
-				<li class="nav-title"><a href="javascript:">我的作品<i class="iconfont icon-xiangshang-copy"></i></a></li>
+				<li class="nav-title"><a href="javascript:">我的作品<i class="iconfont icon-xiangshang-copy"></i></a>
 					<ul>
 
 						<li><a href="javascript:">作品一</a></li>
@@ -68,32 +166,58 @@
 		</div>
 
 		<div class="introduction">
-			<h2>我的简介</h2>
-			<p>这是我的简介</p>
-			<p>我的简介简介</p>
+			<div class="container">
+				<h2>我的简介</h2>
+				<p>这是我的简介</p>
+				<p>我的简介简介</p>
+			</div>
 		</div>
 
 
 	</div>
 
 	<div id="main">
-		<div class="breadcrumb"> 首页/我的作品 </div>		
-
-		<ul>
-			<li><div>1</div></li>
-			<li><div>2</div></li>
-			<li><div>3</div></li>
-		</ul>
-
-
-
-
-
-
-
-
-
-
+		<div class="breadcrumb container"> <a href="javascript:">首页</a><i>/</i><span>我的作品</span> </div>		
+		<div class="container ">
+			<ul class="clearfix">
+				<li>
+					<a href=""><img src="1.jpg" alt=""></a>
+					<h3>作品标题</h3>
+					<p>作品介绍</p>
+					<a href="">查看</a>
+				</li>
+				<li>
+					<a href=""><img src="1.jpg" alt=""></a>
+					<h3>作品标题</h3>
+					<p>作品介绍</p>
+					<a href="">查看</a>
+				</li>
+				<li>
+					<a href=""><img src="1.jpg" alt=""></a>
+					<h3>作品标题</h3>
+					<p>作品介绍</p>
+					<a href="">查看</a>
+				</li>
+				<li>
+					<a href=""><img src="1.jpg" alt=""></a>
+					<h3>作品标题</h3>
+					<p>作品介绍</p>
+					<a href="">查看</a>
+				</li>
+				<li>
+					<a href=""><img src="1.jpg" alt=""></a>
+					<h3>作品标题</h3>
+					<p>作品介绍</p>
+					<a href="">查看</a>
+				</li>
+				<li>
+					<a href=""><img src="1.jpg" alt=""></a>
+					<h3>作品标题</h3>
+					<p>作品介绍</p>
+					<a href="">查看</a>
+				</li>
+			</ul>
+		</div>
 	</div>
 
 	<div id="footer">
