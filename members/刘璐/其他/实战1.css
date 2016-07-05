@@ -9,6 +9,7 @@ a{
 }
 img{
     overflow:hidden;
+    border:none;
 }
 li,dt,dd{
     list-style:none
@@ -98,9 +99,11 @@ body{
 .skill span{
     display:inline-block;
     width:100px;
-    height:1px;
-    margin:13px auto 29px auto;
+    height:2px;
+    margin-top: 13px;
+    margin-bottom: 29px;
     background:#fff;
+    font-size:0;
 }
 .skill-1{
     width:1068px;
@@ -174,6 +177,7 @@ body{
     height:1px;
     background:#ccc;
     margin-bottom:22px;
+    font-size:0;
 }
 .works ul{
     width:978px;
@@ -205,10 +209,11 @@ body{
     font-size:24px;
     padding-bottom:20px;
 }
-.others>a{
+.others a{
     display:inline-block;
     font-size:16px;
     padding:15px;
+    *background:#ccc;
 }
 #content .others a:hover{
     background:#ccc;
@@ -242,11 +247,12 @@ body{
     font-size: 36px;
 }
 #footer span{
-    display:inline-block;
+    display:block;
     width:100px;
     height:1px;
     background:#ccc;
-    margin-bottom:22px;
+    margin:0 auto 22px auto;
+    font-size:0;
 }
 #footer p:last-child{
     color: #999;
