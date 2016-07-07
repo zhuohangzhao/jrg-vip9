@@ -1,0 +1,108 @@
+/*======================清除重置样式======================*/
+h1,h2,h3,h4,h5,h6,p,body,html,ol,ul,li{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style:none;
+}
+img{
+    border:none;
+    overflow:hidden;
+}
+a{
+    text-decoration:none;
+}
+body,html{
+    height:100%
+}
+body{
+    font-size: 14px;
+    line-height: 1.75;
+    font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+/*======================组件通用样式======================*/
+.layout{
+    width:1000px;
+    margin:0 auto;
+    text-align:center;
+}
+.clearfix:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.table{
+    height:100%;
+    display:table;
+}
+.vertical-center{
+    display:table-cell;
+    vertical-align:middle;
+}
+.clear{
+    zoom:1;
+}
+.btn{
+    display:inline-block;
+    padding:20px 40px;
+    font-size:18px;
+    color:#fff;
+    background:rgb(254,209,54);
+    border-radius:6px;
+}
+.btn:hover{
+    background:orange;
+}
+/*======================#header样式======================*/
+#header{
+    height:100%;
+    background:url(../img/header-bg.jpg) no-repeat center center;
+    background-size:cover;
+}
+.fix-nav{
+    position:fixed;
+    top:0;
+    left:0;
+    padding:10px 0;
+    width:100%;
+    background:rgba(00,00,00,0.5);
+}
+.fix-nav .logo{
+    display:inline-block;
+    float:left;
+    color:rgb(254,209,54);
+    font-size:21px;
+    padding:22px 0;
+    margin-left:100px;
+}
+.fix-nav .nav{
+    float:right;
+    padding:10px 0;
+    margin-right:100px;
+}
+.fix-nav .nav>li{
+    float:left;
+    padding:15px 10px;
+    color:#fff;
+    border-radius:6px;
+}
+.fix-nav .nav>li:hover {
+    background: rgb(254, 209, 54);
+}
+#header .content{
+    color:#fff;
+}
+#header .content h1{
+    font-size:40px;
+}
+#header .content h2{
+    font-size:60px;
+}
+#header .btn{
+    margin-top:40px;
+}
+/*======================#content-services样式======================*/
+
+
+
