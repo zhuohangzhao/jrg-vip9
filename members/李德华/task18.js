@@ -31,19 +31,11 @@ var prod = {
 function getTpl(data) {
   var arr = [];
   arr.push('<dl class="product"\>');
-  for (var i in data) {
-    if (data[i] instanceof Object) {
-      var array = data[i];
-      for (var j in array) {
-        arr.push("<dd>");
-        arr.push(array[j]);
-        arr.push("/<dd>");
-      }
-    } else {
-      arr.push("<dt>");
-      arr.push(data[i]);
-      arr.push("/<dt>");
-    }
+  arr.push('<dd>' + prod.name + '/<dd>');
+  for (var i = 0; i < prod.styles.length; i++) {
+    arr.push('<dt>');
+    arr.push(prod.styles[i]);
+    arr.push('/<dt>');
   }
   arr.push("</dl>");
   return arr.join('');
@@ -153,7 +145,7 @@ function filter(array, callBack) {
     return;
   }
   var tmpArray = array.slice(0);
-  for (var i in tmpArray) {
+  for (var i = 0; i < tmpArray.length; i++) {
     if (!callBack(tmpArray[i])) {
       array.splice(array.indexOf(tmpArray[i]), 1);
     }

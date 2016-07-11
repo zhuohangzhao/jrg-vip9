@@ -20,7 +20,7 @@ function isFunction(el) {
 console.log(1+1);   // 2 Number
 console.log("2"+"4");  // 24 String
 console.log(2+"4");  // 24 String
-console.log(+new Date()); // Number  日期转换为number
+console.log(+new Date()); // 距离1970年1月1日 00:00:00的毫秒数
 console.log(+("4")); // 4 Number
 
 // 代码3

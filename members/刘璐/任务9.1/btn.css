@@ -4,7 +4,7 @@ button{
     border:none;
     outline: none;
 }
-.class{
+.btn{
     display:inline-block;
     width:58px;
     height:34px;
@@ -15,5 +15,5 @@ button{
     line-height:34px;
     font-size:20px;
 }
-.class:hover{background:#c14d21}
-.class:active{background:#e25f31}
+.btn:hover{background:#c14d21}
+.btn:active{background:#e25f31}
