@@ -9,7 +9,7 @@
   url('https://at.alicdn.com/t/font_1466042627_5927293.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
-* {
+html {
     font-family: "微软雅黑";
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -26,15 +26,12 @@
     line-height: 40px;
     text-decoration: none;
     border: 1px solid rgb(243, 110, 65);
-    padding: 0px;
+    padding: 0;
     box-sizing: content-box;
-    ;
     font-size: 25px;
     margin: 5px;
     cursor: pointer;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+    user-select: none;
 }
 .btn:hover {
     background-color: #c14d21;
@@ -57,19 +54,19 @@
     color: rgb(166, 99, 190)
 }
 .go {
-    background-position: 0px 0px;
+    background-position: 0 0;
 }
 .go:hover {
-    background-position: 0px -45px;
+    background-position: 0 -45px;
 }
 .play {
-    background-position: 3px -180px;
+    background-position: 3 -180px;
 }
 .play:hover {
-    background-position: 0px -225px;
+    background-position: 0 -225px;
 }
 .stop {
-    background-position: 0px -96px;
+    background-position: 0 -96px;
 }
 .stop:hover {
     background-position: 3px -137px;

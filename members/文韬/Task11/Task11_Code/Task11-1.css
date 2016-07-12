@@ -9,6 +9,8 @@ li {
 a {
     text-decoration: none;
     color: black;
+    display: block;
+    padding: 5px;
 }
 
 li {
@@ -16,18 +18,23 @@ li {
 }
 
 #content {
-    height: 50px;
+    height: 60px;
     background: #aaa;
+}
+.fir-ul:hover{
+  background-color: #ddd;
 }
 
 .fir-li {
     float: left;
-    margin-left: 13px;
+    margin-left: 5px;
     background-color: #aaa;
     position: relative;
     line-height: 50px;
 }
-
+.fir-li:hover{
+  background-color: #ddd;
+}
 .sec-ul {
     background-color: #eee;
     padding-top: 0px;
