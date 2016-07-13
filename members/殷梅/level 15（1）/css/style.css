@@ -62,14 +62,12 @@ p {
     color: #333;
 }
 
-
-
 .navbar>li:hover {
-    color:##b52e3c;
+    color: #b52e3c;
 }
 
 .navbar>li>a:hover {
-    color:##b52e3c;
+    color: ##b52e3c;
 }
 
 .navbar>li:hover .drop-list {
@@ -114,7 +112,11 @@ p {
 
 .brief {
     background: #b52e3c;
-    height: 150px;
+    /*height: 150px;*/
+}
+
+.brief>.layout {
+    padding-bottom: 40px;
 }
 
 .brief h1,
@@ -203,7 +205,7 @@ p {
 /*aboutme*/
 
 .aboutme {
-    height: 180px;
+    padding-bottom: 30px;
     background-color: #b52e3c;
     text-align: center;
     margin-top: 20px;
@@ -234,7 +236,8 @@ p {
 /*footer*/
 
 #footer {
-    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 30px;
     text-align: center;
     padding-top: 20px;
 }
