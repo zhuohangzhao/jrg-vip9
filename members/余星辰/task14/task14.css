@@ -19,6 +19,8 @@ a {
     text-decoration: none;
 }
 img {
+    margin: 0;
+    padding: 0;
     overflow: hidden;
     border: none;
 }
@@ -45,13 +47,12 @@ hr {
 }
 .background-container {
     min-width: 1000px;
-    min-height: 200px;
+    min-height: 150px;
     background-color: #389cff;
 }
 .left {
     float: left;
 }
-
 
 /*****************header********************/
 
@@ -94,12 +95,13 @@ hr {
 }
 
 /**************content*********************/
+
 .resources h1 {
     padding-top: 40px;
     padding-bottom: 20px;
 }
-.resource{
-  padding-bottom: 30px;
+.resource {
+    padding-bottom: 30px;
 }
 .resource li {
     width: 25%;
@@ -111,24 +113,49 @@ hr {
     width: 80%;
     margin-bottom: 20px;
 }
-.resource a{
-  border: 1px solid #fff;
-  padding: 5px;
-  border-radius: 3px;
-  color: #fff;
+.resource a {
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 3px;
+    color: #fff;
 }
-.resource a:hover{
-  border: 1px solid #000;
-  color: #000;
+.resource a:hover {
+    border: 1px solid #000;
+    color: #000;
 }
-.content-description{
-  background: url(http://i1.piimg.com/568609/82fee4f8f97e3962.jpg) 0 -50px;
-  background-size: cover;
-  height: 350px;
-  min-height: 1px;
-  min-width: 100px;
-  line-height: 50px;
-  font-size: 50px;
-  height: 50px;
-  padding: 100px 0;
+.content-description {
+    background: url(http://i1.piimg.com/568609/82fee4f8f97e3962.jpg) 0 -50px;
+    background-size: cover;
+    height: 350px;
+    min-height: 1px;
+    min-width: 100px;
+    line-height: 50px;
+    font-size: 50px;
+    height: 50px;
+    padding: 100px 0;
+}
+.characters {
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+.character>li {
+    float: left;
+}
+.character img {
+    width: 430px;
+    height: 350px;
+    overflow: hidden;
+    margin: 20px 10px 0 10px;
+}
+.more {
+    margin-bottom: 70px;
+}
+.more a {
+    border: 1px solid #454128;
+    padding: 5px;
+    border-radius: 3px;
+}
+link:first-child{
+  line-height: 50%;
+  height: 50%;
 }
