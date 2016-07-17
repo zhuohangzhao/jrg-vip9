@@ -153,9 +153,9 @@
         $(this).data('animating', false);
         $(this).data('currentIndex', 0);
       });
-      $('.page>li>a>img').first().on('load', function() {
-        imageWidth = $(this).width();
-        imageHeight = $(this).height();
+      // $('.page>li>a>img').first().on('load', function() {
+        imageWidth = 461;
+        imageHeight = 346;
         $('.content>a').each(function(index) {
           $(this).css({'left': function() {
             var left = index % 2 == 0 ? 0 : imageWidth - 50;
@@ -163,7 +163,7 @@
           }, 'top': function() {
             return imageHeight/2 - 50;
           }});
-        });
+        // });
         $('.content>a').show();
         $('.page-control').css({'left': function() {
           return imageWidth/2 - $(this).width()/2;
