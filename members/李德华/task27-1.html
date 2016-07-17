@@ -98,12 +98,6 @@
         }});
       });
       var timer = setInterval(forward, 3000);
-      $('.page>li').on('mouseover', 'a', function() {
-        clearInterval(timer);
-      });
-      $('.page>li').on('mouseout', 'a', function() {
-        timer = setInterval(forward, 3000);
-      });
       $('.previous').on('click', function() {
         back();
       });
