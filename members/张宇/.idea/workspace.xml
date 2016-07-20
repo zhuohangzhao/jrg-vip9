@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b9261d9-90b7-4115-8b7a-801d02dbc579" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/z5141.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/task15-2.css" afterPath="$PROJECT_DIR$/css/task15-2.css" />
     </list>
     <ignored path="张宇.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +26,8 @@
       <file leaf-file-name="task15-2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/task15-2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7467">
-              <caret line="371" column="14" selection-start-line="371" selection-start-column="14" selection-end-line="371" selection-end-column="14" />
+            <state relative-caret-position="589">
+              <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -74,7 +72,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-6" />
+    <option name="x" value="-7" />
     <option name="y" value="3" />
     <option name="width" value="1366" />
     <option name="height" value="1000" />
@@ -269,7 +267,7 @@
       <workItem from="1467720374813" duration="80000" />
       <workItem from="1467721892912" duration="4712000" />
       <workItem from="1467902237046" duration="1380000" />
-      <workItem from="1468835056728" duration="98000" />
+      <workItem from="1468835056728" duration="754000" />
     </task>
     <task id="LOCAL-00001" summary="test webstorm git">
       <created>1467728372120</created>
@@ -292,15 +290,22 @@
       <option name="project" value="LOCAL" />
       <updated>1467728688001</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="task15-2">
+      <created>1468835175875</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1468835175875</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10977000" />
+    <option name="totallyTimeSpent" value="11633000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="3" width="1366" height="1000" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="3" width="1366" height="1000" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25978917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -334,7 +339,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test webstorm git" />
     <MESSAGE value="end test" />
-    <option name="LAST_COMMIT_MESSAGE" value="end test" />
+    <MESSAGE value="task15-2" />
+    <option name="LAST_COMMIT_MESSAGE" value="task15-2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -422,8 +428,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/task15-2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7467">
-          <caret line="371" column="14" selection-start-line="371" selection-start-column="14" selection-end-line="371" selection-end-column="14" />
+        <state relative-caret-position="589">
+          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
           <folding />
         </state>
       </provider>
