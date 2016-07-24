@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    String.prototype.getMostOften = function() {
+      var dic = {};
+      for (var i = 0; i < this.length; i++) {
+        var ch = this.substr(i, 1);
+        dic[ch] = dic[ch] ? dic[ch] + 1 : 1;
+      }
+      var max;
+      var ch;
+      for (var key in dic) {
+        max = max || dic[key];
+        ch = ch || key;
+        if (dic[key] > max)
+          ch = key;
+      }
+      return ch;
+    }
+    var str = 'ahbbccdeddddfg';
+    console.log(str.getMostOften());
+    </script>
+  </body>
+</html>

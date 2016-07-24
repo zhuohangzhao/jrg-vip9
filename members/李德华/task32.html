@@ -57,29 +57,27 @@
     <script>
       var currentIndex = 1;
       var loadFinish = false;
-      // $('.loadTag').show();
-      var script = document.createElement('script');
-      script.src = 'http://platform.sina.com.cn/slide/album_tech?jsoncallback=getData&app_key=1271687855&num=9&page=' + currentIndex.toString();
-      document.body.appendChild(script);
-      window.getData = function(data) {
-        var count = parseInt(data.count);
-        var str = '';
-        for (var i = 0; i < count; i++) {
-          str += domStringFromObject(data.data[i]);
-        }
-        var items = $(str);
-        $('.layout').append(items);
-        items.find('img').on('load', function() {
-          console.log('image loaded');
-          count--;
-          if (count === 0) {
-            $('.layout').sb_flowLayout(items, function() {
-              // $('.loadTag').hide();
-              loadFinish = true;
-            });
+      var getPageData = function(){
+        $.getJSON('http://platform.sina.com.cn/slide/album_tech?jsoncallback=?&app_key=1271687855&num=9&page=' + currentIndex.toString(), function(data) {
+          var count = parseInt(data.count);
+          var str = '';
+          for (var i = 0; i < count; i++) {
+            str += domStringFromObject(data.data[i]);
           }
-        });
-      }
+          var items = $(str);
+          $('.layout').append(items);
+          items.find('img').on('load', function() {
+            console.log('image loaded');
+            count--;
+            if (count === 0) {
+              $('.layout').sb_flowLayout(items, function() {
+                loadFinish = true;
+              });
+            }
+          });
+        })
+      };
+      getPageData();
       var timer
       $(window).on('scroll', function() {
         if (timer) {
@@ -89,9 +87,7 @@
           timer = setTimeout(function() {
             loadFinish = false;
             currentIndex++;
-            var script = document.createElement('script');
-            script.src = 'http://platform.sina.com.cn/slide/album_tech?jsoncallback=getData&app_key=1271687855&num=9&page=' + currentIndex.toString();
-            document.body.appendChild(script);
+            getPageData();
           }, 200);
         }
       });
