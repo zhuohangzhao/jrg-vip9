@@ -14,7 +14,7 @@
     <script>
         var ct = document.getElementsByClassName('ct')[0]
         var preview = document.getElementsByClassName('img-preview')[0]
-        ct.addEventListener('mouseenter' , function (e) {
+        ct.addEventListener('mouseover' , function (e) {
             var target = e.target
             var dataImg = target.getAttribute('data-img')
             preview.innerHTML = '<img src=" ' + dataImg + '">'
