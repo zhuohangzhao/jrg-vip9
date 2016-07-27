@@ -17,7 +17,9 @@
         ct.addEventListener('mouseover' , function (e) {
             var target = e.target
             var dataImg = target.getAttribute('data-img')
-            preview.innerHTML = '<img src=" ' + dataImg + '">'
+            if (e.target !== ct) {
+                preview.innerHTML = '<img src=" ' + dataImg + '">'
+            }
         })
     </script>
 </body>
