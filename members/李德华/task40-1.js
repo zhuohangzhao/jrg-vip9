@@ -16,12 +16,12 @@ var Expouse = (function() {
   $(window).on('scoll', function() {
     for (var i = 0; i < store.length; i++) {
       if (isVisible(store[i]['target'])) {
-        store[i]['action']();
+        store[i]['action'].call(store['target']);
       }
     }
     for (var i = 0; i < oneStore.length; i++) {
       if (isVisible(oneStore[i]['target'])) {
-        store[i]['action']();
+        store[i]['action'].call(store['target']);
         oneStore.splice(i, 1);
       }
     }

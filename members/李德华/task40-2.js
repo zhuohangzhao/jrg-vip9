@@ -1,5 +1,7 @@
 $.fn.carousel = function() {
-  new Carousel(this);
+  this.each(function() {
+    new Carousel(this);
+  });
 }
 function Carousel($node) {
   this.node = $node;
