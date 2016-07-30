@@ -8,7 +8,6 @@
 <meta name="keywords" content="">
 <link href="" rel="stylesheet">
 <style>
-* {margin:0; padding: 0;}
 a {
 	text-decoration: none;
 	color: #888;
@@ -42,8 +41,11 @@ a {
 		clear: both;
 	}
 	#modal .modal-ct .header h3 {
-		padding-left: 10px;
+		
 		float: left;
+		margin: 0;
+		padding: 0;
+		padding-left: 10px;
 	}
 	#modal .modal-ct .header .close {
 		/*position: absolute;
@@ -95,6 +97,7 @@ a {
     	</div>
     </div>
     <script>
+    	var modalCt = document.querySelector('.modal-ct');
     	var modal = document.querySelector('#modal');
     	var oBtn = document.querySelector('#btn-modal');
     	var close = document.querySelector('.close');
@@ -103,12 +106,25 @@ a {
     		e.stopPropagation();
     		showModal(modal);
     	});
-    	close.addEventListener('click', function(e) {
-    		hideModal(modal);
-    	});
-    	cancel.addEventListener('click', function(e) {
-    		hideModal(modal);
-    	});
+    	modalCt.addEventListener('click', function(e) {
+    		e.stopPropagation();
+    		if (hasClass(e.target, 'close') || hasClass(e.target, 'cancel')) {
+    			hideModal(modal);
+    		}
+    		
+    	})
+    	//不用hasClass函数的写法
+    	// modalCt.addEventListener('click', function(e) {
+    	// 	e.stopPropagation();
+    	// })
+    	// close.addEventListener('click', function(e) {
+    	// 	e.stopPropagation();
+    	// 	hideModal(modal);
+    	// })
+    	// cancel.addEventListener('click', function(e) {
+    	// 	e.stopPropagation();
+    	// 	hideModal(modal);
+    	// })
     	document.body.addEventListener('click', function(e) {
     		hideModal(modal);
     	})
@@ -118,7 +134,9 @@ a {
     	function hideModal(modal) {
     		modal.style.display = 'none';
     	}
-
+    	function hasClass(ele, cls) {
+    		return !!ele.className.match(new RegExp('\\b' + cls + '\\b'));//双感叹号输出布尔值，!!字符串为true。
+    	}
     </script>
 </body>
 </html>
