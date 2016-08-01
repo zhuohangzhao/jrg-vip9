@@ -91,24 +91,22 @@ var a = 2;
 var a = 1;
 
 function fn(){
-	var a
-	console.log(a); //undefined
-	a = 5;
-	b = 4;
-	console.log(a);  //5
+	console.log(a); 
+	var a = 5;
+	console.log(a);  
 	function fn2(){
-		console.log(a); //6
+		console.log(a); 
 		a = 20;
 		d = 100;
 	}
 	a++;
 	fn2();
-	console.log(a); //20
+	console.log(a);
 }
 fn();
-console.log(a); //1
+console.log(a); 
 a = 10;
-console.log(a); //10
+console.log(a); 
 console.log(d);
 
 
@@ -124,13 +122,15 @@ level1:
 level2: 
 	[fnScope] 
 		- [fnActiveScope] = {a:20}
-		- [windActiveSope] = {a:1, b:4, d:100}
+		- [winSope] = {a:1, b:4, d:100}
 
 level3:
 	[fn2Scope]
 		- [fn2ActiveScope] = {}
-		- [fnActiveScope] = {a:20}
-		- [windActiveSope] = {a:1, b:4, d:100}
+		[fnScope] 
+			- [fnActiveScope] = {a:20}
+			- [winSope] = {a:1, b:4, d:100}
+
 
 
  */
