@@ -17,8 +17,8 @@
         .register h3{
             margin-bottom:15px;
         }
-        .regi-form .input{
-            display: inline;
+        .regi-form input{
+            border:1px solid ;
         } 
         .regi-form .title{
             float: left;
@@ -74,6 +74,7 @@
             xmlhttp.onreadystatechange = function (){
                 if (xmlhttp.readyState === 4) {
                     if ((xmlhttp.status >= 200 && xmlhttp.status < 300) || xmlhttp.status === 304) {
+                        console.log(xmlhttp.responseText)
                         var json = JSON.parse(xmlhttp.responseText)
                         opts.success(json)
                     } else {
@@ -99,28 +100,10 @@
         var btn = document.getElementsByClassName('btn')[0]
         var username = document.getElementById('username')
         var password1 = document.getElementById('password1')
-        var password2 = documnet.getElementById('password2')
+        var password2 = document.getElementById('password2')
         var despUserName= document.getElementsByClassName('desp')[0]
         var despPassWord1 = document.getElementsByClassName('desp')[1]
-        var despPassWord2 = document.getElementById('desp')[2]
-        var opts = {
-            url:'task2403.php',
-            type:'get',
-            data:{
-                username:username.value,
-                password:password1.value
-            },
-            success: function(json) {
-                if(json){
-                    despUserName.innerHTML = '用户名可用'
-                } else {
-                    despUserName.innerHTML = '用户名已注册'
-                }
-            },
-            error: function(e) {
-                alert(e)
-            }
-        }
+        var despPassWord2 = document.getElementsByClassName('desp')[2]
         function isValidUsername(str) {
             var reg = /^\w{3,10}$/
             return reg.test(str)
@@ -138,18 +121,44 @@
         username.addEventListener('change',function() {
             if (!isValidUsername(username.value)){
                 despUserName.innerHTML = '用户名格式不正确'
+                username.style.border = '1px solid red'
             } else{
+                var opts = {
+                    url:'task2403.php',
+                    type:'get',
+                    data:{
+                        username:username.value,
+                        password:password1.value
+                    },
+                    success: function(json) {
+                        if(json.status){
+                            despUserName.innerHTML = '用户名可用'
+                        } else {
+                            despUserName.innerHTML = '用户名已注册'
+                            username.style.border = '1px solid red'
+                        }
+                    },
+                    error: function(e) {
+                        alert(e)
+                    }
+                }
                 ajax(opts)
             }
         })
         password1.addEventListener('change',function() {
             if (!isValidPassword(password1.value)) {
                 despPassWord1.innerHTML = '密码格式不正确'
+                password1.style.border = '1px solid red'
+            } else{
+                despPassWord1.innerHTML = ''
             }
         })
         password2.addEventListener('change',function() {
             if (!(password1.value === password2.value)) {
                 despPassWord2.innerHTML = '两次输入的密码不一致'
+                password2.style.border = '1px solid red'
+            } else{
+                despPassWord2.innerHTML = ''
             }
         })
     </script>
