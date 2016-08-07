@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b9261d9-90b7-4115-8b7a-801d02dbc579" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task24-2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task24-3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task25-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task25-2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task25-2.html" afterPath="$PROJECT_DIR$/task25-2.html" />
     </list>
     <ignored path="张宇.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,10 +27,10 @@
       <file leaf-file-name="task25-2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/task25-2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="256" column="36" selection-start-line="256" selection-start-column="36" selection-end-line="256" selection-end-column="36" />
+            <state relative-caret-position="629">
+              <caret line="126" column="41" selection-start-line="126" selection-start-column="41" selection-end-line="126" selection-end-column="41" />
               <folding>
-                <marker date="1470534329682" expanded="true" signature="8856:8870" ph="..." />
+                <marker date="1470558277914" expanded="true" signature="7886:7900" ph="..." />
               </folding>
             </state>
           </provider>
@@ -49,6 +46,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="zhangyu921" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
@@ -71,8 +73,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
+    <option name="x" value="1234" />
+    <option name="width" value="693" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -240,7 +242,7 @@
       <workItem from="1469758214688" duration="3052000" />
       <workItem from="1469952329562" duration="11000" />
       <workItem from="1470108348300" duration="10473000" />
-      <workItem from="1470301954317" duration="18810000" />
+      <workItem from="1470301954317" duration="24324000" />
     </task>
     <task id="LOCAL-00001" summary="test webstorm git">
       <created>1467728372120</created>
@@ -274,14 +276,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50637000" />
+    <option name="totallyTimeSpent" value="56151000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="1234" y="0" width="693" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14196242" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28341013" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -331,7 +334,8 @@
     <MESSAGE value="test webstorm git" />
     <MESSAGE value="end test" />
     <MESSAGE value="task15-2" />
-    <option name="LAST_COMMIT_MESSAGE" value="task15-2" />
+    <MESSAGE value="task25-2" />
+    <option name="LAST_COMMIT_MESSAGE" value="task25-2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -525,10 +529,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/task25-2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="256" column="36" selection-start-line="256" selection-start-column="36" selection-end-line="256" selection-end-column="36" />
+        <state relative-caret-position="629">
+          <caret line="126" column="41" selection-start-line="126" selection-start-column="41" selection-end-line="126" selection-end-column="41" />
           <folding>
-            <marker date="1470534329682" expanded="true" signature="8856:8870" ph="..." />
+            <marker date="1470558277914" expanded="true" signature="7886:7900" ph="..." />
           </folding>
         </state>
       </provider>
