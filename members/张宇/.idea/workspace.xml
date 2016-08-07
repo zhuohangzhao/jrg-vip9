@@ -241,7 +241,7 @@
       <workItem from="1469758214688" duration="3052000" />
       <workItem from="1469952329562" duration="11000" />
       <workItem from="1470108348300" duration="10473000" />
-      <workItem from="1470301954317" duration="24364000" />
+      <workItem from="1470301954317" duration="24371000" />
     </task>
     <task id="LOCAL-00001" summary="test webstorm git">
       <created>1467728372120</created>
@@ -278,11 +278,18 @@
       <option name="project" value="LOCAL" />
       <updated>1470558369795</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="task25-2">
+      <created>1470558404849</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1470558404849</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56191000" />
+    <option name="totallyTimeSpent" value="56198000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1234" y="0" width="693" height="1047" extended-state="0" />
