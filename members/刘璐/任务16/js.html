@@ -6,58 +6,14 @@
 </head>
 <body>
     <script>
-//================================第一题=================================================
-        function isNumber(el){
-            return typeof el =="number";// todo ...
-        }
-        function isString(el){
-            return typeof el =="string";//todo ...
-        }
-        function isBoolean(el){
-            return typeof el =="boolean";//todo ...
-        }
-        function isFunction(el){
-            return typeof el =="function";//todo ...
-        }
-
-        var a = 2,
-                b = "jirengu",
-                c = false;
-        alert( isNumber(a) );  //true
-        alert( isString(a) );  //false
-        alert( isString(b) );  //true
-        alert( isBoolean(c) ); //true
-        alert( isFunction(a)); //false
-        alert( isFunction( isNumber ) ); //true
-//================================第二题=================================================
-        console.log(1+1);//2
-        console.log("2"+"4");//24
-        console.log(2+"4");//24
-        console.log(+new Date());//*********
-        console.log(+"4");//4
-//================================第三题=================================================
-        var m = 1;
-        console.log(m+++m);//3
-        console.log(typeof m+2);//number
-//================================第四题=================================================
-        var arr = [3,4,5];
-        for (var i in arr){
-            console.log( arr[ i ] * arr[ i ] )
+        console.log(say)
+        say(10);
+        function say(n){
+            console.log(n);
+            if(n<3) return;
+            say(n-1);
         };
-        // 输出 9, 16, 25
-//================================第五题=================================================
-        var obj = {
-            name: 'hunger',
-            sex: 'male',
-            age: 28
-        };
-        console.log(obj); //todo ...
-        // 输出 name: hunger, sex: male, age:28
-//================================第六题=================================================
-        console.log(x);//undefined
-        var x = 1;
-        console.log(x);//1
-        console.log(y);//报错
+        console.log(say);
     </script>
 </body>
 </html>
