@@ -2,131 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>tab-switch</title>
+    <title>test24-loadMore</title>
+    <style>
+        *{
+            font-family: '微软雅黑';
+        }
+        body,ul,li{
+            margin: 0;
+            padding: 0;
+        }
+        .list > li{
+            list-style: none;
+            border:1px solid silver;
+            padding: 5px 8px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .list > li:hover{
+            background: green;
+            color: aliceblue;
+        }
+        a{
+            text-decoration: none;
+            color: crimson;
+        }
+        .load-more{
+            display: block;
+            border: 1px solid crimson;
+            width: 70px;
+            margin: auto;
+            padding: 5px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .load-more:hover{
+            opacity: 0.7;
+        }
+        
+    </style>
 </head>
-<style>
-    body,h3,p{
-        margin: 0;
-    }    
-    a{
-        text-decoration: none;
-        color: rgba(0,0,0,1);
-    }
-    *{
-        font-family: '微软雅黑';
-    }
-    .wrap{
-        width: 350px;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        margin-top: -89px;
-        margin-left: -175px;
-        z-index: 1;
-        background: white;
-        border-radius: 5px;
-        display: none;
-    }
-    .title,.content{
-        padding: 5px 10px;
-    }
-    .title{
-        border-bottom: 1px solid silver
-    }
-    .content{
-        border-bottom: 1px solid #eee;
-        height: 100px;
-    }
-    .wrap-button{
-        padding:5px 10px;
-    }
-    .close{
-        float: right;
-        font-size: 20px;
-    }
-    h3{
-        display: inline;
-    }
-    .button{
-        float: right;
-        display: block;
-        margin-left: 10px;
-    }
-    .clearfix:after{
-        content: '';
-        display: block;
-        clear: both;
-    }
-    .cover{
-        background: rgba(3,3,3,0.3);
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 0;
-        display: none;
-    }
-    .active{
-        display: block;
-    }
-    
-    
-</style>
 <body>
-    <div class="modal">
-        <button class="btn">点我</button>
-        <div class="cover"></div>
-        <div class="wrap">
-            <div class="title">
-                <h3>我是标题</h3>
-                <a href="" class="close">×</a>
-            </div>
-            <div class="content">
-                <p>我是内容</p>
-                <p>我是内容</p>
-            </div>
-            <div class="wrap-button clearfix">
-                <a href="" class="cancle button">取消</a>
-                <a href="#" class="button">确定</a>
-            </div>
-        </div>
+    <div class="wrap">
+        <ul class="list">
+            <li>内容1</li>
+            <li>内容2</li>
+        </ul>
+        <a href="#" class="load-more">加载更多</a>
     </div>
+    <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
     <script>
-         function hasClass(obj , cls) {
-            var match = new RegExp('\\b' +cls + '\\b' , 'g')
-            return match.test(obj.className)
-        }
-        function addClass(obj , cls) {
-            if(!hasClass(obj , cls)) {
-                obj.className += ' ' + cls
+        var opts = {
+                url: 'task2402.php',
+                type: 'get',
+                data: {
+                    index:3,
+                    len:5
+                },
+                success: function(json) {
+                    var i = 0
+                    while(i < this.data.len) {
+                        $('.list').append(json[i])
+                        i++
+                        this.data.index++
+                    }
+                    flag = 0
+                },
+                error: function(val) {
+                    flag = 0
+                    console.log(val)
+                    alert('系统异常')
+                }
             }
-        }
-        function removeClass(obj , cls) {
-            if(hasClass(obj , cls)) {
-                var match = new RegExp('\\b' + cls +'\\b' , 'g')
-                obj.className = obj.className.replace(match , '')
-            }
-        }
-        var btn = document.getElementsByClassName('btn')[0]
-        var cover = document.getElementsByClassName('cover')[0]
-        var wrap = document.getElementsByClassName('wrap')[0]
-        btn.addEventListener('click' , function(){
-            addClass(cover , 'active')
-            addClass(wrap , 'active')
-        })
-        var close = document.getElementsByClassName('close')[0]
-        var cancle = document.getElementsByClassName('cancle')[0]
-        close.addEventListener('click' , function(){
-            removeClass(cover , 'active')
-            removeClass(wrap , 'active')
-        })
-        cover.addEventListener('click' , function() {
-            removeClass(cover , 'active')
-            removeClass(wrap , 'active')
-        })
+        var flag = 0 
+        $('.loadMore').on('click',function() {
+            if (flag === 1) return 
+            flag = 1
+            $.ajax(opts)
+        } )
     </script>
 </body>
 </html>
-
-

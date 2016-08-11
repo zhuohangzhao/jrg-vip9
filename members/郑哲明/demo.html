@@ -1,693 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>task15-3</title>
+	<meta charset="UTF-8">
+	<title>懒加载</title>
+	<style>
+		html,
+		body,
+		ul,
+		li {
+			margin: 0;
+			padding: 0;
+		}
+		.wrap {
+			margin:10px;
+			text-align: center;
+		}
+		.content >li {
+			list-style: none;
+			padding: 10px;
+			margin-bottom: 10px;
+			text-align: left;
+			border: 1px solid #000;
+		}
+		.content>li:hover {
+			background-color: green;
+		}
+		.btn {
+			display: inline-block;
+			padding: 10px;
+			border: 1px solid red;
+			text-decoration: none;
+			border-radius: 4px;
+			font-size: 16px;
+			color: red;
+		}
+	</style>
 </head>
 <body>
-    <div id="header">
-        <div class="wrap-nav">
-            <div class="layout">
-                <a href="#">Start Bootstrap</a>
-                <ul>
-                    <li><a href="">services</a></li>
-                    <li><a href="">portfolid</a></li>
-                    <li><a href="">about</a></li>
-                    <li><a href="">team</a></li>
-                    <li><a href="">contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="welcome">
-            <p>Welcome To Our studio!</p>
-            <p>IT's NICE TO MEET YOU</p>
-            <a href="#" class="btn-1">TELL ME MORE</a>
-        </div>
-    </div>
-    <div id="service">
-        <div class="layout">
-            <h1>SERVICES</h1>
-            <p class="opacity">Lorem ipsum dolor sit amet consectetur.</p>
-            <ul class="clearfix">
-                <li>
-                    <div class="e-commerce iconfont"></div>
-                    <h3>E-Commerce</h3>
-                    <p class="opacity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </li>
-                <li>
-                    <div class="design iconfont"></div>
-                    <h3>Responsive Design</h3>
-                    <p class="opacity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </li>
-                <li>
-                    <div class="security iconfont"></div>
-                    <h3>Web Security</h3>
-                    <p class="opacity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div id="portfolid">
-        <div class="layout">
-            <h1>PORTFOLID</h1>
-            <p class="opacity">Lorem ipsum dolor sit amet consectetur.</p>
-            <ul class="portfolid-item clearfix">
-                <li>
-                    <a href="#">
-                        <div class="hover"></div>
-                        <img src="image/task15-3/roundicons.png" alt="">
-                    </a>
-                    <h3>Round Icons</h3>
-                    <p>Graphic Design</p>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="hover"></div>
-                        <img src="image/task15-3/startup-framework.png" alt="">
-                    </a>
-                    <h3>Startup Framework</h3>
-                    <p>Website Design</p>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="hover"></div>
-                        <img src="image/task15-3/golden-preview.png" alt="">
-                    </a>
-                    <h3>Treehouse</h3>
-                    <p>Website Design</p>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="hover"></div>
-                        <img src="image/task15-3/treehouse-preview.png" alt="">
-                    </a>
-                    <h3>Golden</h3>
-                    <p>Website Design</p>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="hover"></div>
-                        <img src="image/task15-3/escape-preview.png" alt="">
-                    </a>
-                    <h3>Escape</h3>
-                    <p>Website Design</p>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="hover"></div>
-                        <img src="image/task15-3/dreams-preview.png" alt="">
-                    </a>
-                    <h3>Dreams</h3>
-                    <p>Website Design</p>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div id="about">
-        <div class="layout">
-            <h1>ABOUT</h1>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
-            <ul class="about-desp">
-                <li class="clearfix">
-                    <div>
-                        <h3>2009-2011</h3>
-                        <h3>Our Humble Beginnings</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                    </div>
-                    <img src="image/task15-3/1.jpg" alt="">
-                </li>
-                <li class="clearfix">
-                    <div>
-                        <h3>March 2011</h3>
-                        <h3>An Agency is Born</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                    </div>
-                    <img src="image/task15-3/2.jpg" alt="">
-                </li>
-                <li class="clearfix">
-                    <div>
-                        <h3>December 2012</h3>
-                        <h3>Transition to Full Service</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                    </div>
-                    <img src="image/task15-3/3.jpg" alt="">
-                </li>
-                <li class="clearfix">
-                    <div>
-                        <h3>July 2014</h3>
-                        <h3>Phase Two Expansion </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                    </div>
-                    <img src="image/task15-3/4.jpg" alt="">
-                </li>
-                <li>
-                    <div><h3>BE PART OF OUR STORY</h3></div>
-                </li>
-            </ul>
-            <hr>
-        </div>
-    </div>
-    <div id="team">
-        <div class="layout">
-            <h1>Our Amazing Team</h1>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
-            <ul class="clearfix team-item">
-                <li><img src="image/task15-3/5.jpg" alt="">
-                    <h3>Kay Garland</h3>
-                    <p>Lead Designer</p>
-                    <ul class="clearfix">
-                        <li><a href="" class="icon-fb"></a></li>
-                        <li><a href="" class="icon-tw"></a></li>
-                    </ul>
-                </li>
-                <li><img src="image/task15-3/6.jpg" alt="">
-                    <h3>Larry Parker</h3>
-                    <p>Lead Marketer</p>
-                    <ul class="clearfix">
-                        <li><a href="" class="icon-fb"></a></li>
-                        <li><a href="" class="icon-tw"></a></li>
-                    </ul>
-                </li>
-                <li><img src="image/task15-3/7.jpg" alt="">
-                    <h3>Diana Pertersen</h3>
-                    <p>Lead Developer</p>
-                    <ul class="clearfix">
-                        <li><a href="" class="icon-fb"></a></li>
-                        <li><a href="" class="icon-tw"></a></li>
-                    </ul>
-                </li>
-            </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-        </div>
-    </div>
-    <div id="friendlink">
-        <div class="layout">
-            <ul class="friendlink-item clearfix">
-                <li><a href=""><img src="image/task15-3/envato.jpg" alt=""></a></li>
-                <li><a href=""><img src="image/task15-3/designmodo.jpg" alt=""></a></li>
-                <li><a href=""><img src="image/task15-3/themeforest.jpg" alt=""></a></li>
-                <li><a href=""><img src="image/task15-3/creative-market.jpg" alt=""></a></li>
-            </ul>
-        </div>
-    </div>
-    </div>
-    <div id="contact">
-        <div class="layout">
-            <h1>CONTACT US</h1>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
-            <div class="contact-item clearfix">
-                <div>
-                    <input type="text" placeholder="YOUR NAME*">
-                    <input type="text" placeholder="YOUR EMAIL*">
-                    <input type="text" placeholder="YOUR PHONE*">
-                </div>
-                <div>
-                    <textarea name="" id="" placeholder="YOUR MESSAGE*"></textarea>
-                </div>
-            </div>
-            <a href="#" class="btn-1">SEND MESSAGE</a>
-        </div>
-    </div>
-    <div id="footer">
-        <div class="layout clearfix">
-            <div>Copyright © Your Website 2016</div>
-            <div>
-                <ul>
-                    <li><a href="" class="icon-fb"></a></li>
-                    <li><a href="" class="icon-tw"></a></li>
-                </ul>
-            </div>
-            <div>               
-                <ul>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href=""> Terms of Use </a></li>
-                </ul>
-            </div>
-        </div>
-    </div>  
-<style>
-    /*重置默认样式*/
-body,ul,li,h1,h3,p{
-    margin: 0;
-    padding: 0;
-}
-a{
-    text-decoration: none;
-    color: #fff;
-}
-li{
-    list-style: none;
-}
-/*重置默认样式*/
-/*固定宽度居中布局*/
-.layout{
-    width: 1140px;
-    margin: 0 auto;
-}
-/*固定宽度居中布局*/
-/*header：导航栏*/
-.wrap-nav ul{
-    float: right;
-}
-.wrap-nav li{
-    float: left;
-    font-size: 1rem;
-    color: white;
-    text-transform: uppercase;
-}
-.wrap-nav{
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    background: #222;
-    height: 70px;
-    line-height: 70px;
-}
-.wrap-nav .layout>a{
-    color: rgb(254,209,54);
-    font-size: 1.5rem;
-}
-.wrap-nav ul a:hover{
-    color: #f1de36
-}
-.wrap-nav ul a{
-    display: block;
-    padding: 0 15px;
-}
-/*header：导航栏*/
-/*header：首屏大图*/
-body,html{
-    height: 100%;
-    width: 100%;
-}
-#header{
-    display: table;
-    height: 100%;
-    width: 100%;
-}
-.welcome{
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    background: url(../image/task15-3/header-bg.jpg) no-repeat center center;
-    background-size: cover;
-    color: white;
-}
-.welcome p:nth-child(1){
-    font-size: 2.5rem;
-    font-style: italic;
-}
-.welcome p:nth-child(2){
-    font-size: 4.8rem;
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-
-/*header：首屏大图*/
-/*SERVICES*/
-@font-face {font-family: 'iconfont';
-    src: url('../iconfont/4/iconfont.eot'); /* IE9*/
-    src: url('../iconfont/4/iconfont.eot?#iefix') format('embedded-opentype'), 
-    url('../iconfont/4/iconfont.woff') format('woff'), 
-    url('../iconfont/4/iconfont.ttf') format('truetype'),
-    url('../iconfont/4/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
-}
-.e-commerce:after{
-    content: '\e73b';
-    font-family: 'iconfont';
-}
-.design:after{
-    content: '\e651';
-    font-family: 'iconfont'; 
-}
-.security:after{
-    content: '\e61b';
-    font-family: 'iconfont';
-}
-.clearfix:after{
-    content: '';
-    display: block;
-    clear: both;
-}
-.iconfont{
-    font-size: 3rem;
-    background: #f1de36;
-    color: white;
-    border:1px solid white;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    line-height: 100px;
-}
-#service ul li{
-    float: left;
-    width: 350px;
-    margin-left: 45px;
-}
-#service ul{
-    margin-left: -45px;
-}
-#service{
-    text-align: center;
-    padding: 150px 0;
-}
-#service .layout>p{
-    margin-top: 10px;
-    margin-bottom: 80px;
-    font-style: italic;
-}
-#service ul h3{
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-#service .layout>h1{
-    font-size: 3rem;
-}
-.opacity{
-    opacity: 0.6;
-}
-/*SERVICES*/
-/*PORTFOLID*/
-#portfolid{
-    padding: 150px 0;
-    text-align: center;
-    background: #f7f7f7;
-}
-#portfolid .layout>h1{
-    font-size: 3rem;
-}
-#portfolid .layout>p{
-    margin-top: 10px;
-    margin-bottom: 50px;
-    font-style: italic;
-}
-.portfolid-item li{
-    float: left;
-    width: 350px;
-    height: 355px;
-    margin-left: 45px;
-    margin-top: 30px;
-    background: #fff;
-}
-.portfolid-item{
-    margin-left: -45px;
-}
-.portfolid-item li img{
-    width: 350px;
-    height: 260px;
-}
-.portfolid-item p{
-    font-style: italic;
-    opacity: 0.7;
-}
-.portfolid-item h3{
-    margin-top: 20px;
-    margin-bottom: 5px;
-}
-.portfolid-item>li>a{
-    position: relative;
-    display: block;
-}
-.portfolid-item .hover{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
-    text-align: center;
-    opacity: 0;
-}
-
-.portfolid-item .hover:after{
-    content: '+';
-    font-size: 10rem;
-    line-height: 1.65;
-}
-.portfolid-item .hover:hover{
-    background: rgb(254,209,54);
-    opacity: 0.9;
-}
-/*PORTFOLID*/
-/*ABOUT*/
-#about{
-    padding-top:150px;
-    text-align: center;
-    position: relative;
-}
-#about .layout>h1{
-    font-size: 3rem;
-}
-#about .layout>p{
-    margin-top: 10px;
-    margin-bottom: 80px;
-    color: rgba(0,0,0,0.6);
-    font-style: italic;
-}
-.about-desp p{
-    margin-top: 8px;
-    margin-bottom: 8px;
-    color: rgba(0,0,0,0.6);
-}
-.about-desp li{
-    position: relative;
-    margin-bottom: 150px;
-    padding: 0 70px;
-}
-.about-desp li img{
-    width: 150px;
-    height: 150px;
-    position:absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -75px;
-    margin-top: -75px;
-    border: 5px solid #eee;
-    border-radius: 50%;
-}
-.about-desp li:nth-child(1) div:nth-child(1),
-.about-desp li:nth-child(3) div:nth-child(1)
-{
-    float: left;
-    width: 380px;
-    text-align: right;
-}
-.about-desp li:nth-child(2) div:nth-child(1),
-.about-desp li:nth-child(4) div:nth-child(1){
-    float: right;
-    width: 380px;
-    text-align: left;
-}
-.about-desp li:nth-child(5) div{
-    display: inline-block;
-
-}
-.about-desp li:nth-child(5) h3{
-    display: table-cell;
-    width: 150px;
-    height: 150px;
-    vertical-align: middle;
-    background: #f1de36;
-    border: 5px solid #eee;
-    border-radius: 50%;
-    color: white;   
-}
-#about hr{
-    border: 1px solid #eee;
-    height: 70%;
-    position: absolute;
-    left: 50%;
-    top:400px;
-    z-index: -1;
-}
-/*TEAM*/
-#team{
-    padding-top: 150px;
-    padding-bottom: 150px;
-    text-align: center;
-    background: #f7f7f7;
-}
-.team-item>li{
-    float: left;
-    width: 33.3%;
-    box-sizing: border-box;
-    padding: 0 50px;
-}
-.team-item li img{
-    border-radius: 50%;
-}
-#team .layout>h1{
-    font-size: 3rem;
-}
-#team .layout>p:nth-of-type(1){
-    margin-top: 10px;
-    margin-bottom: 80px;
-    color: rgba(0,0,0,0.6);
-    font-style: italic;
-}
-#team .layout>p:nth-of-type(2){
-    color: rgba(0,0,0,0.6);
-    font-style: italic;
-}
-.team-item li>h3{
-    margin-top: 30px;
-}
-.team-item>li li{
-    float: left;
-    width: 50%;
-}
-.icon-fb:after{
-    content: '\e6d5';
-    font-family: 'iconfont';
-    font-size:2rem;
-    color: white;
-}
-.icon-fb{
-    border-radius: 50%;
-    border: 1px solid;
-    width: 35px;
-    height: 35px;
-    background: #000;
-    display: block;
-    margin: auto;
-}
-.icon-tw:after{
-    content: '\e6e5';
-    font-family: 'iconfont';
-    font-size:2rem;
-    color: white;
-}
-.icon-tw{
-    border: 1px solid;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    background: #000;
-    display: block;
-    margin: auto;
-}
-.icon-fb:hover,.icon-tw:hover{
-    background: #f1de36;
-}
-.team-item>li ul{
-    padding:0 82px;
-}
-.team-item>li>p{
-    margin-bottom: 15px;
-}
-#team .layout>p:nth-of-type(2){
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-}
-/*TEAM*/
-/*friendlink*/
-
-.friendlink-item li{
-    float: left;
-    margin: 40px 0;
-    width: 25%;
-    box-sizing: border-box;
-    text-align: center;
-}
-/*friendlink*/
-/*contact*/
-#contact{
-    color: white;
-    text-align: center;
-    background: url(../image/task15-3/map-image.png) #222 no-repeat center center;
-    background-size: contain;
-    padding: 150px 0;
-    height: 100%;
-}
-#contact .layout>h1{
-    font-size: 3rem;
-}
-#contact .layout>p{
-    margin-top: 10px;
-    margin-bottom: 80px;
-    color: rgba(200,200,200,0.6);
-    font-style: italic;
-}
-.contact-item div:nth-child(1){
-    width: 560px;
-    float: left;
-}
-.contact-item div:nth-child(1) input{
-    display: block;
-    width: 560px;
-    height: 55px;
-    border-radius: 5px;
-    margin-bottom: 25px;
-    padding-left: 15px;
-    font-size: 20px;
-}
-.contact-item div:nth-child(2){
-    margin-left: 600px;
-    text-align: left;
-}
-.contact-item div:nth-child(2) textarea{
-    border-radius: 5px;
-    width: 500px;
-    height: 227px;
-    padding-left: 15px;
-    font-size: 20px;
-}
-.contact-item{
-    margin-bottom: 30px;
-}
-input::-webkit-input-placeholder {  /* WebKit browsers */
-    font-size: 20px;
-    font-family: '微软雅黑'
-}
-input::-moz-placeholder { /* Mozilla Firefox 19+ */
-    font-size: 20px;
-    font-family: '微软雅黑'
-}
-textarea::-webkit-input-placeholder {  /* WebKit browsers */
-    font-size: 20px;
-    font-family: '微软雅黑'
-}
-textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
-    font-size: 20px;
-    font-family: '微软雅黑'
-}
-
-/*contact*/
-/*footer*/
-#footer{
-    padding: 20px 0;
-}
-#footer .layout>div{
-    width: 33.3%;
-    height: 40px;
-    float: left;
-    text-align: center;
-    line-height: 40px;
-}
-#footer div:nth-child(3) a{
-    color: #f1de36
-}
-#footer ul li{
-    display: inline-block;
-    padding: 0 10px;
-}
-/*footer*/
-/*按钮效果*/
-.btn-1{
-    font-size: 1.2rem;
-    padding: 20px 25px  ;
-    background: #fed136;
-    border-radius: 5px;
-}
-.btn-1:hover{
-    background: #fec503;
-}
-/*按钮效果*/
-
-</style>
-
+	<div class="wrap">
+		<ul class="content">
+			<li>内容1</li>
+			<li>内容2</li>
+		</ul>
+		<a href="#" class="btn">加载更多</a>
+	</div>
+	<script>
+		function ajax(opts){
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange=function(){
+				if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+					var json = JSON.parse(xmlhttp.responseText);
+					opts.success(json);
+				}
+				if(xmlhttp.status == 404){
+					opts.error();
+				}
+			}
+			var dataStr = '';
+			for(var key in opts.data){
+				dataStr += key + '='+ opts.data[key]+'&';
+			}
+			dataStr = dataStr.substr(0,dataStr.length-1);
+			if(opts.type.toLowerCase === 'post'){
+				xmlhttp.open(opts.type,opts.url,true);
+				xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+				xmlhttp.send(dataStr);
+			}
+			if(opts.type.toLowerCase() === 'get'){
+				xmlhttp.open(opts.type,opts.url+'?'+dataStr,true);
+				xmlhttp.send();
+			}
+		}
+		var content = document.querySelector('.content'),
+			btn = document.querySelector('.btn');
+		var cur = 2;
+		var status = 0;   //状态锁
+		btn.addEventListener('click',function(e){
+			if(status === 1){
+				return;
+			}
+			status = 1;
+			e.preventDefault();
+			ajax({
+				url: 'get.php', //接口地址
+				type: 'get',           //类型，post或者get,
+				data: {
+					start: cur,
+					len: 6
+				},
+				success: function(json){
+					success(json);
+				},
+				error: function(){
+					error();
+				}
+			});
+		});
+		function success(json){
+			if(json.status === 0){
+				for(var i = 0; i<json.data.length; i++){
+					var newLi = document.createElement('li');
+					newLi.innerText ='内容'+ json.data[i];
+					content.appendChild(newLi);
+				}
+				cur += 6;
+			}else{
+				alert('获取数据失败');
+			}
+			status = 0;
+		}
+		function error(){
+			alert('系统异常');
+			status = 0;
+		}
+	</script>
 </body>
 </html>
