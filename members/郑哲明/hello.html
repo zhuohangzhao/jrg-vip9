@@ -2,167 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>task2503</title>
+    <title>test24-loadMore</title>
     <style>
         *{
             font-family: '微软雅黑';
         }
-        ul,li{
+        body,ul,li{
             margin: 0;
             padding: 0;
         }
-        li{
+        .list > li{
             list-style: none;
+            border:1px solid silver;
+            padding: 5px 8px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .list > li:hover{
+            background: green;
+            color: aliceblue;
         }
         a{
             text-decoration: none;
-            color: black;
+            color: crimson;
         }
-        .list{
-            width: 800px;
-            text-align: justify;    
-            font-size: 0;
-            margin-bottom: 30px;
-        }
-        .list:after{
-            content: '';
-            width: 100%;
-            display: inline-block;
-        }
-        .list > li{
-            width: 32%;
-            box-sizing: border-box;
-            padding: 10px 10px;
-            display: inline-block;
-            border: 1px solid silver;
-            margin-bottom: 20px;
-            font-size: 16px;
-            margin-top: -1px;
-            position: relative;
-        }
-        .list .price{
-            color:red;
-        }
-        .list .cover{
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: rgba(200,200,200,0.7);
-            display: none;
-        }
-        .list .cover .click{
+        .load-more{
             display: block;
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            text-align: center;
-            line-height: 30px;
-            height: 30px;
-            width: 100px;
-            background: #fff;
-            border: 1px solid red;
+            border: 1px solid crimson;
+            width: 70px;
             margin: auto;
-            color: red;
-        }
-        .list img{
-            display: block;
-            margin: auto;
-        }
-        .tab-wrap{
-            width:800px;
-            margin:auto;
-        }
-        .btn{
-            color: #900;
-            border: 1px solid #900;
-            padding: 6px 10px;
+            padding: 5px;
             border-radius: 5px;
+            text-align: center;
         }
+        .load-more:hover{
+            opacity: 0.7;
+        }
+        
     </style>
 </head>
 <body>
-    <div class="tab-wrap">
-        <h2>珠宝首饰</h2>
-        <ul class="list item-1">
-            <li>
-                <img src="http://img12.360buyimg.com/N3/jfs/t2302/181/1562193880/220016/88a978ef/56cbbc11Nd6d3b04b.jpg" alt="">
-                <p class="desp">藏美千足金和田玉金镶玉路路通吊坠</p>
-                <div class="price">￥1699</div>
-                <div class="cover"><a href="#" class="click">点击抢购</a></div>
-
-            </li>
-            <li>
-                <img src="http://img12.360buyimg.com/N3/jfs/t2302/181/1562193880/220016/88a978ef/56cbbc11Nd6d3b04b.jpg" alt="">
-                <p class="desp">藏美千足金和田玉金镶玉路路通吊坠</p>
-                <div class="price">￥1699</div>
-                <div class="cover"><a href="#" class="click">点击抢购</a></div>
-
-            </li>
-            <li>
-                <img src="http://img12.360buyimg.com/N3/jfs/t2302/181/1562193880/220016/88a978ef/56cbbc11Nd6d3b04b.jpg" alt="">
-                <p class="desp">藏美千足金和田玉金镶玉路路通吊坠</p>
-                <div class="price">￥1699</div>
-                <div class="cover"><a href="#" class="click">点击抢购</a></div>
-
-            </li>
-            <li>
-                <img src="http://img12.360buyimg.com/N3/jfs/t2302/181/1562193880/220016/88a978ef/56cbbc11Nd6d3b04b.jpg" alt="">
-                <p class="desp">藏美千足金和田玉金镶玉路路通吊坠</p>
-                <div class="price">￥1699</div>
-                <div class="cover"><a href="#" class="click">点击抢购</a></div>
-            </li>
-            <li>
-                <img src="http://img12.360buyimg.com/N3/jfs/t2302/181/1562193880/220016/88a978ef/56cbbc11Nd6d3b04b.jpg" alt="">
-                <p class="desp">藏美千足金和田玉金镶玉路路通吊坠</p>
-                <div class="price">￥1699</div>
-                <div class="cover"><a href="#" class="click">点击抢购</a></div>
-            </li>
-            <li>
-                <img src="http://img12.360buyimg.com/N3/jfs/t2302/181/1562193880/220016/88a978ef/56cbbc11Nd6d3b04b.jpg" alt="">
-                <p class="desp">藏美千足金和田玉金镶玉路路通吊坠</p>
-                <div class="price">￥1699</div>
-                <div class="cover"><a href="#" class="click">点击抢购</a></div>
-            </li>
+    <div class="wrap">
+        <ul class="list">
+            <li>内容1</li>
+            <li>内容2</li>
         </ul>
-        <a href="javascript:void 0" class="btn">添加</a>
+        <a href="#" class="load-more">加载更多</a>
     </div>
     <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
     <script>
-        $('.list li').on('mouseenter',function(){
-            $(this).find('.cover').fadeIn(100)
-        })
-        $('.list li').on('mouseleave',function(){
-            $(this).find('.cover').fadeOut(100)
-        })
-        var products = [
-    {
-        img:'http://img10.360buyimg.com/N3/jfs/t2242/92/1446546284/374195/9196ac66/56af0958N1a723458.jpg',
-        name: '珂兰 黄金手 猴哥款',
-        price: '￥405.00'
-    },{
-        img:'http://img10.360buyimg.com/N3/jfs/t2242/92/1446546284/374195/9196ac66/56af0958N1a723458.jpg',
-        name: '珂兰 黄金转运珠 猴哥款',
-        price: '￥100.00'
-    },{
-        img:'http://img10.360buyimg.com/N3/jfs/t2242/92/1446546284/374195/9196ac66/56af0958N1a723458.jpg',
-        name: '珂兰 黄金手链 3D猴哥款',
-        price: '￥45.00'
-    }
-];
-        $('.btn').on('click',function(){
-            var i = 3;
-            while(i--){
-                var $newE = $('.list li').first().clone(true)
-                $newE.find('img').attr('src',products[i].img)
-                $newE.find('.desp').text(products[i].name)
-                $newE.find('.price').text(products[i].price)
-                $('.list').append($newE).append(' ')
+        var opts = {
+                url: 'task2402.php',
+                type: 'get',
+                data: {
+                    index:3,
+                    len:5
+                },
+                success: function(json) {
+                    var i = 0
+                    while(i < this.data.len) {
+                        $('.list').append(json[i])
+                        i++
+                        this.data.index++
+                    }
+                    flag = 0
+                },
+                error: function(val) {
+                    flag = 0
+                    console.log(val)
+                    alert('系统异常')
+                }
             }
-        })
+        var flag = 0 
+        $('.loadMore').on('click',function() {
+            if (flag === 1) return 
+            flag = 1
+            $.ajax(opts)
+        } )
     </script>
 </body>
 </html>
