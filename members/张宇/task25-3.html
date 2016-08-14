@@ -269,6 +269,12 @@
         $('.show-ct button').off('click');
         $('.show-ct button').on('click',function(){
             addLi($(this).parents('.show-ct').find('.content-ul'),products[idx]);//为button绑定要添加的内容
+            $('.content-ul li').on('mouseenter',function(){
+                $(this).find('.active').css('display','block');//再为每个商品绑定鼠标移动上去的样式
+            });
+            $('.content-ul li').on('mouseleave',function(){
+                $(this).find('.active').css('display','none');
+            });
         });
     });
 
