@@ -7,7 +7,7 @@
         *{
             font-family:'微软雅黑'
         }
-        html,body,ul,li{
+        ul,li{
             margin: 0;
             padding: 0;
         }
@@ -18,31 +18,21 @@
             color: white;
             text-decoration:none;
         }
-        body,html{
-            width:100%;
-            height:100%;
-        }
         .slideshow{
-            width: 100%;
-            height: 100%;
+            width: 600px;
+            height: 300px;
             position: relative;
             overflow: hidden;
         }
-        .slide li{
-            width: 20%;
+        .slide,.slide li,.slide img{
+            width: 600px;;
             height: 100%;
-        }
-        .slide img{
-            width:100%;
-            height:100%;
         }
         .slide li{
             float: left;
         }
         .slide{
             position:absolute;
-            width: 500%;
-            height:100%;
         }
         .clearfix:after{
             content: '';
@@ -99,9 +89,9 @@
 <body>
     <div class="slideshow slideshow-1">
         <ul class="slide clearfix">
-            <li class="active"><img src="http://pic.windows7en.com/140829/2009120309142160.jpg" alt=""></li>
-            <li><img src="http://pic3.bbzhi.com/xitongbizhi/jipinjingxuan1680x1/computer_kuan_186995_11.jpg" alt=""></li>
-            <li><img src="http://pic.pp3.cn/uploads//201408/2014082704.jpg" alt=""></li>
+            <li class="active"><img src="http://cdn.jirengu.com/book.jirengu.com/img/30.jpg" alt=""></li>
+            <li><img src="http://cdn.jirengu.com/book.jirengu.com/img/24.jpg" alt=""></li>
+            <li><img src="http://cdn.jirengu.com/book.jirengu.com/img/26.jpg" alt=""></li>
         </ul>
         <a href="javascript:void 0" class="pre">&lt</a>
         <a href="javascript:void 0" class="next">&gt</a>
