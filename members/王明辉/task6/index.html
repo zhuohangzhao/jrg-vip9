@@ -48,7 +48,14 @@
 
         table{
             width: 100%;
+            border-left: 1px solid #ccc;
+            border-top: 1px solid #ccc;
         }
+        table th,table td{
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+
         table th{
             line-height: 30px;
             background: rgb(34,170,170);
@@ -58,7 +65,7 @@
             line-height: 30px;
             text-align: center;
             background: #fff;
-            border: 1px solid #ccc;
+
         }
         table tr:hover td{
             background: #ccc;
@@ -106,7 +113,7 @@
 
 <h3>4. 写一个如下表格:表头是蓝色，表行是白色。 当鼠标放置到表行时背景色变为淡灰色</h3>
 
-<table>
+<table cellpadding="0" cellspacing="0">
     <tr>
         <th>姓名</th>
         <th>性别</th>
