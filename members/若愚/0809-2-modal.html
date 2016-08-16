@@ -16,20 +16,23 @@
             display: none;
         }
         
-        .wrap {
+/*        .wrap {
             height: 1300px;
-        }
+        }*/
     </style>
 </head>
 
 <body>
     <button id="btn">点我</button>
-    <div class="wrap"></div>
-    <a id="site" href="javascript:;">饥人谷</a>
+
     <div class="box">
         <button>点我2</button>
 
     </div>
+
+
+    <div class="wrap"></div>
+    <a id="site" href="javascript:;">饥人谷</a>
 
     <script>
         var btn = document.querySelector('#btn');
@@ -37,22 +40,28 @@
         var site = document.querySelector('#site');
 
         btn.addEventListener('click', function(e) {
-            console.log(this);
             e.stopPropagation();
             box.style.display = 'block';
         })
-        box.addEventListener('click', function(e) {
-            console.log(this);
-            e.stopPropagation();
-        })
-        window.addEventListener('click', function() {
-            console.log(this);
+        document.addEventListener('click', function(e){
             box.style.display = 'none';
         })
-
-        site.addEventListener('click', function(e) {
-            //e.preventDefault();
+        box.addEventListener('click', function(e){
+            e.stopPropagation();
         })
+
+        // box.addEventListener('click', function(e) {
+        //     console.log(this);
+        //     e.stopPropagation();
+        // })
+        // window.addEventListener('click', function() {
+        //     console.log(this);
+        //     box.style.display = 'none';
+        // })
+
+        // site.addEventListener('click', function(e) {
+        //     //e.preventDefault();
+        // })
     </script>
 </body>
 
