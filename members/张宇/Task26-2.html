@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>task26</title>
+    <title>task26实现以下操作</title>
     <script src="//cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>
     <style media="screen">
         #input{
@@ -86,6 +86,8 @@
             $(this).css('border-color',borderColor);
             console.log($(this).val());
         });
+
+
         $('#select select').on('change',function () {
             $('#select p').text('所选的value是：'+$(this).val());
         });
