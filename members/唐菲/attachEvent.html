@@ -14,7 +14,7 @@ window.innerText="this is window";
 	var oA=document.getElementsByTagName('a')[0];
 	if (!oA) return false;
 	if (oA.addEventListener){oA.addEventListener("click",function(){
-		alert(this.innerText)
+		alert(this.innerText+"&"+that.innerText)
 	})}
 		else if(oA.attachEvent){
 			oA.attachEvent("onclick",function(){

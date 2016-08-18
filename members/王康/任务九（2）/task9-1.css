@@ -65,14 +65,14 @@ ul li {
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-stop:before { 
-    content: "\e8c2"; 
+.icon-stop:before {
+    content: "\e8c2";
 }
-.icon-begin:before { 
-    content: "\e61f"; 
+.icon-begin:before {
+    content: "\e61f";
 }
-.icon-go:before { 
-    content: "\e62b"; 
+.icon-go:before {
+    content: "\e62b";
 }
 .control2 a {
 	letter-spacing:2px;
