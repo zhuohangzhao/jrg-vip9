@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b9261d9-90b7-4115-8b7a-801d02dbc579" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Task2603.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task26-3.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task24-2.html" afterPath="$PROJECT_DIR$/task24-2.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Task26.html" afterPath="$PROJECT_DIR$/Task26-2.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Task26-2.html" afterPath="$PROJECT_DIR$/task26-2.html" />
     </list>
     <ignored path="张宇.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,11 +63,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="task14.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="task14.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task14.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="320" column="30" selection-start-line="320" selection-start-column="30" selection-end-line="320" selection-end-column="30" />
+            <state relative-caret-position="121">
+              <caret line="306" column="21" selection-start-line="306" selection-start-column="21" selection-end-line="306" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="task26-2.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/task26-2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="924">
+              <caret line="95" column="13" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -104,7 +111,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Task26-2.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/task26-2.html" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -350,7 +357,7 @@
       <workItem from="1471328765536" duration="6250000" />
       <workItem from="1471337424838" duration="617000" />
       <workItem from="1471481674701" duration="36000" />
-      <workItem from="1471481753885" duration="59000" />
+      <workItem from="1471481753885" duration="413000" />
     </task>
     <task id="LOCAL-00001" summary="test webstorm git">
       <created>1467728372120</created>
@@ -426,7 +433,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86204000" />
+    <option name="totallyTimeSpent" value="86558000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -514,7 +521,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Task26-2.html">
+    <entry file="file://$PROJECT_DIR$/task26-2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -542,7 +549,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Task26-2.html">
+    <entry file="file://$PROJECT_DIR$/task26-2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -770,13 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Task26-2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="95" column="13" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task24-2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2079">
@@ -819,8 +819,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/task14.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="320" column="30" selection-start-line="320" selection-start-column="30" selection-end-line="320" selection-end-column="30" />
+        <state relative-caret-position="121">
+          <caret line="306" column="21" selection-start-line="306" selection-start-column="21" selection-end-line="306" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task26-2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="95" column="13" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
           <folding />
         </state>
       </provider>
