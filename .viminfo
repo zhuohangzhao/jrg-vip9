@@ -9,6 +9,7 @@
 ~h
 # Command Line History (newest to oldest):
 :wq
+:qw
 
 # Search String History (newest to oldest):
 
@@ -39,12 +40,20 @@
 	
 
 # File marks:
-'0  2  18  ~/.bashrc
-'1  2  0  /.bashrc
-'2  1  0  /.bashrc
-'3  1  28  ~/.bashrc
+'0  1  0  ~/.git/MERGE_MSG
+'1  2  18  ~/.bashrc
+'2  2  0  /.bashrc
+'3  1  0  /.bashrc
+'4  1  28  ~/.bashrc
 
 # Jumplist (newest first):
+-'  1  0  ~/.git/MERGE_MSG
+-'  2  18  ~/.bashrc
+-'  1  28  ~/.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
 -'  2  18  ~/.bashrc
 -'  1  28  ~/.bashrc
 -'  2  0  /.bashrc
@@ -53,6 +62,9 @@
 -'  1  0  /.bashrc
 
 # History of marks within files (newest to oldest):
+
+> ~/.git/MERGE_MSG
+	"	1	0
 
 > ~/.bashrc
 	"	2	18

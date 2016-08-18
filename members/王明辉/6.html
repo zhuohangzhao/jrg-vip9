@@ -1,22 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+
+    <style>
+
+        .btn{
+
+            display:inline-block;
+            color:#fff;
+            background:#f27145;
+            border-radius:5px;
+            font-size:16px;
+            line-height:28px;
+
+            padding:0px 10px;
+            border:none;
+            text-decoration: none;
+
+        }
+
+        .btn:hover{
+            background:#c14d21;
+
+            text-align: center;
+        }
+        
+
+    </style>
 </head>
 <body>
-<style>
-    .item1:first-child{
-        color: red;
-    }
-    .item1:first-of-type{
-        background: blue;
-    }
-</style>
-<div class="ct">
-    <p class="item1">aa</p>
-    <h3 class="item1">bb</h3>
-    <h3 class="item1">ccc</h3>
-</div>
+<p>写一个 btn 的class，
+    任何 a，span,div,button 添加此class后后变成如下按钮的样式(鼠标hover背景色#c14d21, 鼠标按下背景色#e25f31)</p>
+
+
+
+<a class="btn" href="#">确定</a>
+<span class="btn" >取消</span>
+<div class="btn">提交</div>
+<button class="btn"> 发送</button>
 </body>
 </html>
