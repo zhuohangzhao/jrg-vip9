@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b9261d9-90b7-4115-8b7a-801d02dbc579" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Z_example.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task27-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task27-2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task27-3-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task27-3-2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task27-4.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="张宇.iws" />
@@ -41,8 +35,8 @@
       <file leaf-file-name="task27-4.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/task27-4.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="148" column="6" selection-start-line="148" selection-start-column="6" selection-end-line="148" selection-end-column="6" />
+            <state relative-caret-position="441">
+              <caret line="143" column="28" selection-start-line="143" selection-start-column="28" selection-end-line="143" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -346,7 +340,7 @@
       <workItem from="1471481674701" duration="36000" />
       <workItem from="1471481753885" duration="3889000" />
       <workItem from="1471751923020" duration="47050000" />
-      <workItem from="1472046793228" duration="10712000" />
+      <workItem from="1472046793228" duration="10861000" />
     </task>
     <task id="LOCAL-00001" summary="test webstorm git">
       <created>1467728372120</created>
@@ -418,11 +412,18 @@
       <option name="project" value="LOCAL" />
       <updated>1471192724884</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="task27">
+      <created>1472062827197</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1472062827197</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147796000" />
+    <option name="totallyTimeSpent" value="147945000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -476,7 +477,8 @@
     <MESSAGE value="task25-3" />
     <MESSAGE value="some update" />
     <MESSAGE value="task26" />
-    <option name="LAST_COMMIT_MESSAGE" value="task26" />
+    <MESSAGE value="task27" />
+    <option name="LAST_COMMIT_MESSAGE" value="task27" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -820,8 +822,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/task27-4.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="148" column="6" selection-start-line="148" selection-start-column="6" selection-end-line="148" selection-end-column="6" />
+        <state relative-caret-position="441">
+          <caret line="143" column="28" selection-start-line="143" selection-start-column="28" selection-end-line="143" selection-end-column="28" />
           <folding>
             <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
