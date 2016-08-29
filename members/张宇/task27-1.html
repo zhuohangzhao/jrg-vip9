@@ -167,44 +167,6 @@
             imgNum = $imgCt.children().length;
 
     var idx = 0;
-/*
-
-    $arrowNext.on('click',function(){
-        pageNext();
-        return false;
-    });
-    $arrowPre.on('click',function () {
-        pagePre();
-        return false;
-    });
-    $sliderBtn.find('li').on('click',function(){
-        idx = $(this).index();
-        console.log(idx);
-        $imgCt.children().removeClass('active');
-        $imgCt.children().eq(idx).addClass('active');
-        setBtn();
-        return false;
-    });
-
-    function pageNext(val) {
-        var val = val || 1;
-        idx = (idx + val) % imgNum;
-        $imgCt.children().removeClass('active');
-        $imgCt.children().eq(idx).addClass('active');
-        setBtn();
-    }
-    function pagePre(val) {
-        var val = val || 1;
-        idx = (idx - val + imgNum)%imgNum;
-        $imgCt.children().removeClass('active');
-        $imgCt.children().eq(idx).addClass('active');
-        setBtn();
-    }
-    function setBtn() {
-        $sliderBtn.children().removeClass('active');
-        $sliderBtn.children().eq(idx).addClass('active');
-    }
-*/
 
     function setPage(idx) {
         $imgCt.children().removeClass('active');
@@ -216,18 +178,33 @@
     $arrowNext.on('click',function(){
         idx = (idx + 1)%imgNum;
         setPage(idx);
+        stopPlay();
         return false;
     });
     $arrowPre.on('click',function(){
         idx = (idx-1+imgNum)%imgNum;
         setPage(idx);
+        stopPlay();
         return false;
     });
     $sliderBtn.find('li').on('click',function(){
         idx = $(this).index();
         setPage(idx);
+        stopPlay();
         return false;
     });
+
+    var clock;
+    function autoPlay() {
+        clock = setInterval(function () {
+            idx = (idx + 1)%imgNum;
+            setPage(idx);
+        },2000);
+    }
+    function stopPlay() {
+        clearInterval(clock);
+    }
+    autoPlay();
 
 
 </script>

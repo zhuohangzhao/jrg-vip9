@@ -202,6 +202,17 @@
         return false;
     });
 
+    var clock;
+    function autoPlay() {
+        clock = setInterval(function(){
+            $arrowNext.click();
+        },2000)
+    }
+    function stopPlay() {
+        clearInterval(clock);
+    }
+    autoPlay();
+
 
 </script>
 

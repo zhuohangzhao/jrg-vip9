@@ -281,19 +281,35 @@
         $arrowNext.on('click',function(){
             idx = (idx + 1)%imgNum;
             setPage(idx);
+            stopPlay();
             return false;
         });
         $arrowPre.on('click',function(){
             idx = (idx-1+imgNum)%imgNum;
             setPage(idx);
+            stopPlay();
             return false;
         });
         $sliderBtn.find('li').on('click',function(){
             idx = $(this).index();
             setPage(idx);
+            stopPlay();
             return false;
         });
-    };
+
+
+        var clock;
+        function autoPlay() {
+            clock = setInterval(function () {
+                idx = (idx + 1)%imgNum;
+                setPage(idx);
+            },2000);
+        }
+        function stopPlay() {
+            clearInterval(clock);
+        }
+        autoPlay();
+    }
 
     sliderBar($('#slider1'));
     sliderBar($('#slider2'));

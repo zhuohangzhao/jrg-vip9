@@ -11,7 +11,7 @@
             display: block;
             clear: both;
         }
-        #header,#body,.nav,#aside,#main,#footer{
+        #header,#body,#nav,#aside,#main,#footer{
             padding:5px;
             margin-bottom: 5px;
         }
@@ -20,7 +20,7 @@
             background: #22aaaa;
             height: 100px;
         }
-        .nav{
+        #nav{
             text-align: center;
         }
         #body{
@@ -48,7 +48,7 @@
     <p>It's Header. </p>
 </div>
 
-<div id="nav1" class="nav" style="background: #5ca2cf;">
+<div id="nav" class="nav" style="background: #5ca2cf;">
     <p>It's Nav. 我跟随浏览器窗口宽度。</p>
 </div>
 
@@ -61,7 +61,7 @@
     </div>
 </div>
 
-<div id="nav2" class="nav" style="background: #57cf63;">
+<div id="nav" class="nav" style="background: #57cf63;">
     <p>It's Nav. 我跟随浏览器窗口宽度。</p>
 </div>
 
@@ -74,7 +74,7 @@
     </div>
 </div>
 
-<div id="nav3" class="nav" style="background: #cf4f5d;">
+<div id="nav" class="nav" style="background: #cf4f5d;">
     <p>It's Nav. 我跟随浏览器窗口宽度。</p>
 </div>
 
@@ -92,12 +92,11 @@
 </div>
 
 <script>
-    fixNav($('#nav1'), 100);
-    fixNav($('#nav2'), 200);
-    fixNav($('#nav3'), 300);
+    $('.nav').each(function () {
+        fixNav($(this));
+    });
 
-
-    function fixNav(ele, index) {
+    function fixNav(ele) {
         var $nav = ele,
                 navH = $nav.height(),
                 navW = $nav.width(),
@@ -111,7 +110,7 @@
                     'left':offsetLeft,
                     'width':navW,
                     'margin':0,
-                    'z-index':index
+                    'z-index':100
                 })
                 .hide()
                 .insertBefore($nav)
