@@ -19,7 +19,7 @@ app.get('/getMusic', function(req, res) {
 		setTimeout(function(){
 			res.send('我不认识你');
 		}, 10000)
-		
+
 	}
 	// var data = {
 	// 	name: 'hunger'
