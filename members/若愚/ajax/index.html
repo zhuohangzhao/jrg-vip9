@@ -28,17 +28,17 @@
   $('#btn2').addEventListener('click', function(){
     var article = $('#article').value;
 
-    // var xhr = new XMLHttpRequest();
-    // xhr.open('post', '/postArticle', true);
-    // xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    // xhr.send("article="+article);
+    var xhr = new XMLHttpRequest();
+    xhr.open('post', '/postArticle', true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.send("article="+article);
 
-    // xhr.onreadystatechange = function(){
-    //   if(xhr.readyState === 4 && xhr.status === 200 ){
-    //     $('#container').innerText = xhr.responseText;
-    //     console.log(xhr.responseText)
-    //   }
-    // }
+    xhr.onreadystatechange = function(){
+       if(xhr.readyState === 4 && xhr.status === 200 ){
+         $('#container').innerText = xhr.responseText;
+         console.log(xhr.responseText)
+       }
+    }
 
     ajax({
       url: '/postArticle',
