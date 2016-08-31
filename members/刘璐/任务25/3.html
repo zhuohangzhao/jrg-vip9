@@ -163,7 +163,7 @@
     }
 
 
-    $('.wrap .btn').on('click', function(){
+    $('.wrap>.btn').on('click', function(){
         $.each(products, function(idx, prod){
             var html = getProdHtml(prod);
             $('.list-wrap').append(html);
