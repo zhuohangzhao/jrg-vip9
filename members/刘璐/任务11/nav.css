@@ -34,7 +34,8 @@ li{
     left:0;
     top:100%;
     display:none;
-    border:1px solid rgb(203,203,203)
+    border:1px solid rgb(203,203,203);
+    background:#fff;
 }
 .nav>li:hover {
     background:rgb(169,169,169);
