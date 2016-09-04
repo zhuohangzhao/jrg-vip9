@@ -24,6 +24,7 @@
         return typeof el === 'function';
     }
 
+    // 测试
     var a = 2,
         b = "jirengu",
         c = false;
@@ -34,7 +35,7 @@
     console.log( isFunction(a)); //false
     console.log( isFunction( isNumber ) ); //true
 
-    console.log('---------- 华丽的分割线 -----------')
+    console.log('---------- 2. 以下代码的输出结果是? -----------')
     // 2. 以下代码的输出结果是?
     console.log(1+1);           // 2
     console.log("2"+"4");       // "24"
@@ -43,12 +44,11 @@
     console.log(0+new Date());  // +new
     console.log(+"4");          // "4"
 
-    console.log('---------- 华丽的分割线 -----------')
+    console.log('---------- 3. 以下代码的输出结果是? -----------')
     // 3. 以下代码的输出结果是?
 
     var a = 1;
-    a+++a;
-
+    a+++a
     console.log(typeof a+2); // number2
 
     console.log('---------- 华丽的分割线 -----------')
