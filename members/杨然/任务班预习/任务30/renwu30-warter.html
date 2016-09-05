@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>renwu30-warter</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style>
+		.container{
+			position: relative;
+
+		}
+
+
+
+		.item{
+			position: absolute;
+			width: 200px;
+			margin-right: 10px;
+			margin-top: 10px;
+			transition: all 1s;
+		}
+
+		.h1{
+			height: 200px;
+			background-color: #f4b300;
+		}
+
+		.h2{
+			height: 300px;
+			background-color: #691BB8;
+		}
+
+		.h3{
+			height: 400px;
+			background-color: #006ac1;
+		}
+
+		</style>
+</head>
+<body>
+<div class="container">
+			<div class="item h1">
+				1
+			</div>
+			<div class="item h3">
+				2
+			</div>
+			<div class="item h2">
+				3
+			</div>
+			<div class="item h1">
+				4
+			</div>
+			<div class="item h1">
+				5
+			</div>
+			<div class="item h3">
+				6
+			</div>
+			<div class="item h3">
+				7
+			</div>
+			<div class="item h2">
+				8
+			</div>
+    		<div class="item h1">
+				9
+			</div>
+			<div class="item h3">
+				10
+			</div>
+			<div class="item h3">
+				11
+			</div>
+			<div class="item h3">
+				12
+			</div>
+			<div class="item h2">
+				13
+			</div>
+			<div class="item h2">
+				14
+			</div>
+</div>
+ <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+// function render(){
+// 	var nodeWidth = $('.item').outerWidth(true),
+// 		colNum = parseInt($(window).width() / nodeWidth),
+// 		colSumHeight = [];
+
+// 		for (var i = 0; i < colNum; i++) {
+// 			colSumHeight.push(0);//先设置一段数组0,0,0,0,0,0
+// 		}
+
+// 		$('.item').each(function(){
+// 			var $cur = $(this);//拿出每个.item逐个执行
+
+// 			var idx = 0;
+// 			var minSumHeight = colSumHeight[0];//假设第一个为最小的
+// 			//这里数组中一开始都为0，所以第一行每次判断都可以成功，第一行正常排列并赋值
+// 			for (var i = 0; i < colSumHeight.length; i++) {
+// 				if (colSumHeight[i] < minSumHeight) {
+// 					//找出最小的
+// 					idx = i;
+// 					minSumHeight = colSumHeight[i];
+// 					//一旦找出最小的，记录下位置和高度。
+// 				}
+// 			}//一行有几个执行几次
+
+// 			$cur.css({//把当前这个正在查找的元素添加到上述代码找到的最小高度的下面并添加高度
+// 				left: nodeWidth * idx,
+// 				top: minSumHeight
+// 			});
+// 			colSumHeight[idx] = $cur.outerWidth(true) + colSumHeight[idx];
+// 			//用idx 就是i
+// 			//
+// 		})
+// }
+// render();
+// $(window).on('resize', function(){//resize重新定义尺寸时
+// 	render();
+// })
+/*。。。。。。。。。。。。。。。。。。。*/
+// (function($){
+// $.fn.warter = (function(){
+// 	function render(){
+// 		var nodeWidth = $('.item').outerWidth(true),
+// 			colNum = parseInt($(window).width() / nodeWidth),
+// 			colSumHeight = [];
+
+// 			for (var i = 0; i < colNum; i++) {
+// 				colSumHeight.push(0);//先设置一段数组0,0,0,0,0,0
+// 			}
+
+// 			$('.item').each(function(){
+// 				var $cur = $(this);//拿出每个.item逐个执行
+
+// 				var idx = 0;
+// 				var minSumHeight = colSumHeight[0];//假设第一个为最小的
+// 				//这里数组中一开始都为0，所以第一行每次判断都可以成功，第一行正常排列并赋值
+// 				for (var i = 0; i < colSumHeight.length; i++) {
+// 					if (colSumHeight[i] < minSumHeight) {
+// 						//找出最小的
+// 						idx = i;
+// 						minSumHeight = colSumHeight[i];
+// 						//一旦找出最小的，记录下位置和高度。
+// 					}
+// 				}//一行有几个执行几次
+
+// 				$cur.css({//把当前这个正在查找的元素添加到上述代码找到的最小高度的下面并添加高度
+// 					left: nodeWidth * idx,
+// 					top: minSumHeight
+// 				});
+// 				colSumHeight[idx] = $cur.outerWidth(true) + colSumHeight[idx];
+// 				//用idx 就是i
+// 				//
+// 			})
+// 	}
+// 	// render();
+// 	$(window).on('resize', function(){//resize重新定义尺寸时
+// 		render();
+// 	})
+// 	return {
+// 		init: render//闭包，调出接口
+// 	}
+// })()//这里给设置成了自执行，$node.warter就不用加()了
+// })(jQuery)
+// $('.container').warter.init();//这个是选择了node后调用..用轮播或stickfix可以用，这个没意思- -
+// // warter.init();
+/*。。。。。。。。。。。。。。。。。。。*/
+
+var warter = (function(){
+	function render(){
+		var nodeWidth = $('.item').outerWidth(true),
+			colNum = parseInt($(window).width() / nodeWidth),
+			colSumHeight = [];
+
+			for (var i = 0; i < colNum; i++) {
+				colSumHeight.push(0);//先设置一段数组0,0,0,0,0,0
+			}
+
+			$('.item').each(function(){
+				var $cur = $(this);//拿出每个.item逐个执行
+
+				var idx = 0;
+				var minSumHeight = colSumHeight[0];//假设第一个为最小的
+				//这里数组中一开始都为0，所以第一行每次判断都可以成功，第一行正常排列并赋值
+				for (var i = 0; i < colSumHeight.length; i++) {
+					if (colSumHeight[i] < minSumHeight) {
+						//找出最小的
+						idx = i;
+						minSumHeight = colSumHeight[i];
+						//一旦找出最小的，记录下位置和高度。
+					}
+				}//一行有几个执行几次
+
+				$cur.css({//把当前这个正在查找的元素添加到上述代码找到的最小高度的下面并添加高度
+					left: nodeWidth * idx,
+					top: minSumHeight
+				});
+				colSumHeight[idx] = $cur.outerWidth(true) + colSumHeight[idx];
+				//用idx 就是i
+				//
+			})
+	}
+	// render();
+	$(window).on('resize', function(){//resize重新定义尺寸时
+		// render();
+		warter.init();
+	})
+	return {
+		init: render//闭包，调出接口
+	}
+})()//设置为自执行函数。
+warter.init();
+//不需要选用node 
+    </script>
+</body>
+</html>
