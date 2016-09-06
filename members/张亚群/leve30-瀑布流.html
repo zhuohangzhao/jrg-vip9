@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>瀑布流</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .content{
+            position: relative;
+        }
+        .item{
+            position: absolute;
+            width:200px;
+            margin-left: 10px;
+            margin-right:10px;
+            margin-top: 10px;
+            transition: all 1s;
+        }
+        .h3{
+            height:400px;
+            background: yellowgreen;
+        }
+        .h2{
+            height:300px;
+            background: cadetblue;
+        }
+        .h1{
+            height:200px;
+            background: orangered;
+        }
+
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="item h1">1</div>
+    <div class="item h3">2</div>
+    <div class="item h2">3</div>
+    <div class="item h2">4</div>
+    <div class="item h1">5</div>
+    <div class="item h2">6</div>
+    <div class="item h3">7</div>
+    <div class="item h3">8</div>
+    <div class="item h3">9</div>
+    <div class="item h1">10</div>
+    <div class="item h2">11</div>
+    <div class="item h1">12</div>
+    <div class="item h2">13</div>
+    <div class="item h3">14</div>
+    <div class="item h1">15</div>
+    <div class="item h3">16</div>
+</div>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $(function () {
+        function render() {
+               var windWidth = $(window).width(),
+                    nodeWith =  $('.item').outerWidth(true),    //考虑到内外边距
+                    nodeNum = parseInt(windWidth/nodeWith),       //取整
+
+                    nodeHeight = [];
+            for(var i = 0;i<nodeNum;i++){
+                nodeHeight.push(0);
+            }
+
+            $('.item').each(function () {
+                var $cur = $(this);
+                var idx = 0;
+                //nodeHeight[200,50,90,300,40]
+                var minHeight = nodeHeight[0];
+
+                for(var i = 0;i<nodeHeight.length;i++){
+                    if(nodeHeight[i]<minHeight){
+                        idx = i;
+                        minHeight = nodeHeight[i]
+                    }
+                }
+                $cur.css({
+                    left:nodeWith * idx,
+                    top:minHeight
+                });
+                nodeHeight[idx] = nodeHeight[idx] + $cur.outerHeight(true)
+            })
+        }
+        render();
+        $(window).on('resize',function () {                          //重新渲染
+            render();
+        })
+
+    })
+
+
+</script>
+</body>
+</html>
