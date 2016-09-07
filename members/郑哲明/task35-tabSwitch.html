@@ -10,7 +10,7 @@
         padding: 0;
         font-family: '微软雅黑';
     }    
-    #tab-ct{
+    .tab-ct{
         width: 600px;
         margin: auto;
         margin-top: 30px;
@@ -50,7 +50,19 @@
     }
 </style>
 <body>
-    <div id="tab-ct">
+    <div class="tab-ct">
+        <ul class="clearfix tab">
+            <li class='active'>tab1</li>
+            <li class=''>tab2</li>
+            <li class=''>tab3</li>
+        </ul>
+        <div class="text-ct">
+            <p class="active-content content">这里是</p>    
+            <p class="content">tab切换</p>    
+            <p class="content">演示</p>    
+        </div>
+    </div>
+     <div class="tab-ct">
         <ul class="clearfix tab">
             <li class='active'>tab1</li>
             <li class=''>tab2</li>
@@ -76,7 +88,7 @@
             })
         }
         
-        $('#tab-ct').each(function(){
+        $('.tab-ct').each(function(){
             new TabSwitch($(this))
         })
     </script>
