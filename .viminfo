@@ -9,6 +9,7 @@
 ~h
 # Command Line History (newest to oldest):
 :wq
+:q
 :qw
 
 # Search String History (newest to oldest):
@@ -20,7 +21,7 @@
 # Input Line History (newest to oldest):
 
 # Registers:
-""1	LINE	0
+"1	LINE	0
 	  * n. ▒▒▒▒▒▒Ƥ▒▒▒▒▒▒▒▒▒▒
 "2	LINE	0
 	       ▒▒▒▒▒; ▒▒▒▒▒; ▒▒▒▒
@@ -38,15 +39,28 @@
 	  Web Reference:
 "9	LINE	0
 	
+""-	CHAR	0
+	3
 
 # File marks:
-'0  1  0  ~/.git/MERGE_MSG
-'1  2  18  ~/.bashrc
-'2  2  0  /.bashrc
-'3  1  0  /.bashrc
-'4  1  28  ~/.bashrc
+'0  1  15  /c/projects/tutorial/.git/TAG_EDITMSG
+'1  1  6  /c/projects/tutorial/.git/MERGE_MSG
+'2  1  0  /c/projects/tutorial/.git/rebase-merge/git-rebase-todo
+'3  1  0  /c/projects/tutorial/.git/COMMIT_EDITMSG
+'4  2  0  /c/projects/tutorial/.git/COMMIT_EDITMSG
+'5  10  0  /c/projects/tutorial/.git/COMMIT_EDITMSG
+'6  1  0  ~/.git/MERGE_MSG
+'7  2  18  ~/.bashrc
+'8  2  0  /.bashrc
+'9  1  0  /.bashrc
 
 # Jumplist (newest first):
+-'  1  15  /c/projects/tutorial/.git/TAG_EDITMSG
+-'  1  6  /c/projects/tutorial/.git/MERGE_MSG
+-'  1  0  /c/projects/tutorial/.git/rebase-merge/git-rebase-todo
+-'  1  0  /c/projects/tutorial/.git/COMMIT_EDITMSG
+-'  2  0  /c/projects/tutorial/.git/COMMIT_EDITMSG
+-'  10  0  /c/projects/tutorial/.git/COMMIT_EDITMSG
 -'  1  0  ~/.git/MERGE_MSG
 -'  2  18  ~/.bashrc
 -'  1  28  ~/.bashrc
@@ -60,8 +74,105 @@
 -'  1  0  /.bashrc
 -'  2  0  /.bashrc
 -'  1  0  /.bashrc
+-'  1  0  ~/.git/MERGE_MSG
+-'  2  18  ~/.bashrc
+-'  1  28  ~/.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  2  18  ~/.bashrc
+-'  1  28  ~/.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  1  0  ~/.git/MERGE_MSG
+-'  2  18  ~/.bashrc
+-'  1  28  ~/.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  2  18  ~/.bashrc
+-'  1  28  ~/.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  1  0  ~/.git/MERGE_MSG
+-'  2  18  ~/.bashrc
+-'  1  28  ~/.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  2  18  ~/.bashrc
+-'  1  28  ~/.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  1  0  ~/.git/MERGE_MSG
+-'  2  18  ~/.bashrc
+-'  1  28  ~/.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  2  18  ~/.bashrc
+-'  1  28  ~/.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  1  0  ~/.git/MERGE_MSG
+-'  2  18  ~/.bashrc
+-'  1  28  ~/.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  2  18  ~/.bashrc
+-'  1  28  ~/.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  1  0  ~/.git/MERGE_MSG
+-'  2  18  ~/.bashrc
+-'  1  28  ~/.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  2  18  ~/.bashrc
+-'  1  28  ~/.bashrc
+-'  2  0  /.bashrc
+-'  1  0  /.bashrc
+-'  1  0  ~/.git/MERGE_MSG
+-'  1  6  /c/projects/tutorial/.git/MERGE_MSG
+-'  1  0  /c/projects/tutorial/.git/rebase-merge/git-rebase-todo
 
 # History of marks within files (newest to oldest):
+
+> /c/projects/tutorial/.git/TAG_EDITMSG
+	"	1	15
+	^	1	16
+	.	1	15
+	+	1	15
+
+> /c/projects/tutorial/.git/MERGE_MSG
+	"	1	6
+
+> /c/projects/tutorial/.git/rebase-merge/git-rebase-todo
+	"	1	0
+	.	2	0
+	+	3	0
+	+	2	0
+
+> /c/projects/tutorial/.git/COMMIT_EDITMSG
+	"	1	0
 
 > ~/.git/MERGE_MSG
 	"	1	0
