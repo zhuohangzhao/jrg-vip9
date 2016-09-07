@@ -155,15 +155,22 @@
     }); 
 
 
-
-
-    $('.tab-ct>li').on('mouseenter', function(e){
+    $('.tab-ct').on('mouseenter','li', function(e){
         $(this).addClass('hover')
     })
 
-    $('.tab-ct>li').on('mouseleave', function(e){
+    $('.tab-ct').on('mouseleave', 'li',function(e){
         $(this).removeClass('hover')
     }) 
+
+    // $('.tab-ct>li').on('mouseenter', function(e){
+    //     $(this).addClass('hover')
+    // })
+
+    // $('.tab-ct>li').on('mouseleave', function(e){
+    //     $(this).removeClass('hover')
+    // }) 
+
 
 
  	// $('.add-button').on('click', function(){
