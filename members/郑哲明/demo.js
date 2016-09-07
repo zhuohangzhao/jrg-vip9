@@ -1,11 +1,8 @@
-function Carousel($node){
-//todo...
+function Person(name){
+    this.name = name;
 }
-Carousel.prototype = {
-//todo ..
-};
-
-var $node1 = $('.ct').eq(0);
-var $node2 = $('.ct').eq(1);
-var carousel1 = new Carousel($node1);
-var carousel2 = new Carousel($node2);
+Person.prototype.sayName = function(){
+    console.log('My name is :' + this.name);
+}
+var p = new Person("若愚")
+p.sayName();
