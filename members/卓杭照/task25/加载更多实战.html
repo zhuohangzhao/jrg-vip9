@@ -193,12 +193,15 @@
  					$('.prod-ct').append(html)
  				})
  			})
- 			$('.prod-ct ').on('mouseenter','.prod',function(){
- 				$(this).find('.cover').addClass('hover')
+
+// 把 事件绑定在 父元素上，新增加的元素，也能监听到
+ 			$('.prod-ct ').on('mouseenter','.cover',function(){
+ 				$(this).addClass('hover')
  			})
- 			$('.prod-ct ').on('mouseleave','.prod',function(){
- 				$(this).find('.cover').removeClass('hover')
+ 			$('.prod-ct ').on('mouseleave','.cover',function(){
+ 				$(this).removeClass('hover')
  			})
+
  		</script>	
 </body>
 </html>
