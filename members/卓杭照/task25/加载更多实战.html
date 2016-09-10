@@ -28,7 +28,7 @@
 	}
 	.panel-ct .panel li{
 		float: left;
-		border: 1px solid #ccc;
+		border: 1px solid #e8e4e4;
 	}
 	.clearfix:after{
 		content:'';
@@ -91,7 +91,13 @@
 		cursor: pointer;
 		background: #fffbfb;
 	}
-
+    .btn-add{
+        border: 1px solid #e8e4e4;
+        padding: 5px 10px;
+        background: #d6cd9a;
+        border-radius: 4px;
+        cursor: pointer;
+    }
 </style>
 <body>
 	<div class="mod-tab">
@@ -187,11 +193,11 @@
  					$('.prod-ct').append(html)
  				})
  			})
- 			$('.mod-tab .cover').on('mouseenter',function(){
- 				$(this).addClass('hover')
+ 			$('.prod-ct ').on('mouseenter','.prod',function(){
+ 				$(this).find('.cover').addClass('hover')
  			})
- 			$('.mod-tab .cover').on('mouseleave',function(){
- 				$(this).removeClass('hover')
+ 			$('.prod-ct ').on('mouseleave','.prod',function(){
+ 				$(this).find('.cover').removeClass('hover')
  			})
  		</script>	
 </body>
