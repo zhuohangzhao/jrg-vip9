@@ -11,6 +11,10 @@
             margin: 0;
             padding: 0;
         }
+        img{
+            width:100%;
+            height:100%;
+        }
         li{
             list-style: none;
         }
@@ -20,11 +24,16 @@
         }
         .slideshow{
             width: 600px;
-            height: 300px;
+            height: 400px;
             position: relative;
             overflow: hidden;
+            margin-bottom:30px;
+            border:1px solid silver;
         }
-        .slide,.slide li,.slide img{
+        .slide-ct{
+            position:relative
+        }
+        .slide-ct,.slide,.slide li,.slide img{
             width: 600px;;
             height: 300px;
         }
@@ -65,54 +74,55 @@
             opacity: 0.8;
         }
         .slideshow > .slide-nav > li{
-            width: 20px;
-            height: 5px;
-            border-radius:5px;
-            display: inline-block;
+            width: 200px;
+            height: 100px;
+            float: left;
             background: white;
             cursor: pointer;
-        }
-        .slide-nav li:nth-child(2){
-            margin: 0 5px;
+            box-sizing: border-box;
+            padding: 10px;
         }
         .slideshow .slide-nav{
-            position: absolute;
-            bottom: 10px;
-            width: 100%;
-            text-align: center
+            position:absolute;
+            bottom:0;
+            height:100px;
         }
         .slide-nav li.active{
-            background: #888;
+            background: #ddd;
         }
     </style>
 </head>
 <body>
     <div class="slideshow slideshow-1 ct">
-        <ul class="slide clearfix">
+        <div class="slide-ct">
+            <ul class="slide clearfix">
+                <li class="active"><img src="http://cdn.jirengu.com/book.jirengu.com/img/30.jpg" alt=""></li>
+                <li><img src="http://cdn.jirengu.com/book.jirengu.com/img/24.jpg" alt=""></li>
+                <li><img src="http://cdn.jirengu.com/book.jirengu.com/img/26.jpg" alt=""></li>
+            </ul>
+            <a href="javascript:void 0" class="pre">&lt;</a>
+            <a href="javascript:void 0" class="next">&gt;</a>
+        </div>
+        <ul class="slide-nav">
             <li class="active"><img src="http://cdn.jirengu.com/book.jirengu.com/img/30.jpg" alt=""></li>
             <li><img src="http://cdn.jirengu.com/book.jirengu.com/img/24.jpg" alt=""></li>
             <li><img src="http://cdn.jirengu.com/book.jirengu.com/img/26.jpg" alt=""></li>
-        </ul>
-        <a href="javascript:void 0" class="pre">&lt</a>
-        <a href="javascript:void 0" class="next">&gt</a>
-        <ul class="slide-nav">
-            <li class="active"></li>
-            <li></li>
-            <li></li>
         </ul>
     </div>
     <div class="slideshow slideshow-1 ct">
-        <ul class="slide clearfix">
+        <div class="slide-ct">
+            <ul class="slide clearfix">
+                <li class="active"><img src="http://cdn.jirengu.com/book.jirengu.com/img/30.jpg" alt=""></li>
+                <li><img src="http://cdn.jirengu.com/book.jirengu.com/img/24.jpg" alt=""></li>
+                <li><img src="http://cdn.jirengu.com/book.jirengu.com/img/26.jpg" alt=""></li>
+            </ul>
+            <a href="javascript:void 0" class="pre">&lt</a>
+            <a href="javascript:void 0" class="next">&gt</a>
+        </div>
+        <ul class="slide-nav">
             <li class="active"><img src="http://cdn.jirengu.com/book.jirengu.com/img/30.jpg" alt=""></li>
             <li><img src="http://cdn.jirengu.com/book.jirengu.com/img/24.jpg" alt=""></li>
             <li><img src="http://cdn.jirengu.com/book.jirengu.com/img/26.jpg" alt=""></li>
-        </ul>
-        <a href="javascript:void 0" class="pre">&lt</a>
-        <a href="javascript:void 0" class="next">&gt</a>
-        <ul class="slide-nav">
-            <li class="active"></li>
-            <li></li>
-            <li></li>
         </ul>
     </div>
     <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
@@ -121,12 +131,13 @@
         function Carousel($node){
             var $pre = $node.find('.pre')
             var $next = $node.find('.next')
-            var $nav = $node.find('.slide-nav')
             var _this = this
             
+            this.$nav = $node.find('.slide-nav')
             this.$node = $node.find('.slide')
             this.$navLi = $node.find('.slide-nav li')
             this.$imageWidth = $node.find('.slide li').first().width()
+            this.$liWidth = this.$navLi.outerWidth(true)
             this.$pointer = 0
             this.$navIdx = 0
             this.isAnimate = false
@@ -138,6 +149,9 @@
             $LastLi.prependTo(this.$node)
             this.$imageRealCount = this.$node.children().length
             
+            this.$nav.css({
+                width:this.$imageRealCount*this.$liWidth
+            })
             this.$node.css({
                 width:this.$imageRealCount*this.$imageWidth,
                 left:-this.$imageWidth
@@ -155,10 +169,10 @@
                 _this.resetClock()
                 _this.playNext()
             })
-            $nav.on('click',function(e){
-                if (e.target.tagName === 'UL') return 
+            this.$nav.on('click',function(e){
+                if (e.target.tagName === 'LI') return 
                 _this.resetClock()
-                _this.$navIdx = $(e.target).index()
+                _this.$navIdx = $(e.target).parents('li').index()
                 _this.play()
             })
             
@@ -168,6 +182,7 @@
         Carousel.prototype = {
             playPre:function () {
                 var $node = this.$node,
+                    $nav = this.$nav,
                     _this = this
                 this.$pointer--
                 $node.animate({"left":"+=" + _this.$imageWidth},function(){
@@ -178,36 +193,54 @@
                     _this.isAnimate = false
                     _this.setNav(_this.$pointer)
                 })
+                $nav.prepend($nav.find('li').last().clone())
+                $nav.css({left : -this.$liWidth})
+                $nav.animate({left:'+=' + _this.$liWidth},function(){
+                    $nav.find('li').last().remove()
+                    
+                    _this.setNav()
+                    
+                })
             },
             playNext:function () {
                 var $node = this.$node,
+                    $nav = this.$nav,
                     _this = this
-                this.$pointer++
+                $node.queue(function() {
+                      _this.$pointer++  
+                      $(this).dequeue()
+                })
                 $node.animate({left:'-=' + _this.$imageWidth},function(){
                     if(_this.$pointer === (_this.$imageRealCount-2)) {
                         $node.css({left : - _this.$imageWidth})
                         _this.$pointer = 0
                     }
                     _this.isAnimate = false
-                    _this.setNav(_this.$pointer)
+                })
+                $nav.queue(function() {
+                    $nav.append($nav.find('li').first().clone().removeClass('active'))
+                    $(this).dequeue()
+                })
+                $nav.animate({left:'-=' + _this.$liWidth},function(){
+                    $nav.find('li').first().remove()
+                    $nav.css({left : 0})
+                    _this.setNav()
+                    
                 })
             },
             play:function () {
-                if(this.$pointer < this.$navIdx) {
-                    var i = this.$navIdx - this.$pointer
-                    while(i--) {
-                        this.playNext()
-                    }
-                } else {
-                    var j = this.$pointer - this.$navIdx
-                    while(j--) {
-                        this.playPre()
+                var _this = this,
+                    pointer = 0
+                if(pointer <= this.$navIdx) {
+                    var i = this.$navIdx - pointer
+                    while(i--){
+                        _this.playNext()
                     }
                 }
             },
-            setNav:function (idx) {
-                this.$navLi.removeClass('active')
-                            .eq(idx).addClass('active')
+            setNav:function () {
+                this.$nav.find('li').removeClass('active')
+                            .eq(0).addClass('active')
             },
             autoPlay:function () {
                 var _this = this

@@ -1,8 +1,11 @@
-function Person(name){
-    this.name = name;
+$(window).on('mousemove',function(e){
+    console.log(e.pageX,e.pageY)
+})
+
+
+function fn(){
+    this.name = 'jirengu'
+    console.log(this)
 }
-Person.prototype.sayName = function(){
-    console.log('My name is :' + this.name);
-}
-var p = new Person("若愚")
-p.sayName();
+
+new fn()
