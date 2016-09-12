@@ -22,10 +22,9 @@
             border:1px solid silver;
             box-shadow: 2px 2px 2px #dfdfdf;
             position:fixed;
-            left: 0;
-            right:0;
+            left: 50%;
             top:30%;
-            margin:auto;
+            margin-left: -200px;
             -webkit-user-select:none;
             -moz-user-select:none;
             -ms-user-select:none;
@@ -140,8 +139,8 @@
                     _this = this
                 this.dialog.on('mousedown',function(e){
                     draging = true
-                    _this.originX = e.clientX
-                    _this.originY = e.clientY
+                    _this.originX = e.pageX
+                    _this.originY = e.pageY
                     _this.offset = _this.dialog.offset()
                     _this.dialog.css({cursor:'move'})
                 })
@@ -156,8 +155,8 @@
                 })
             },
             drag:function (e) {
-                this.endX = e.clientX
-                this.endY = e.clientY
+                this.endX = e.pageX
+                this.endY = e.pageY
                 var distanceX = this.endX - this.originX,
                     distanceY = this.endY - this.originY,
                     top = this.offset.top + distanceY,
