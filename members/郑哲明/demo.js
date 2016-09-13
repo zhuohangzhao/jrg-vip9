@@ -1,11 +1,7 @@
-$(window).on('mousemove',function(e){
-    console.log(e.pageX,e.pageY)
-})
+**AMD与CMD**的区别：
 
+1、对依赖的处理不同。AMD推崇依赖前置，在定义模块的时候就要声明其依赖的模块；CMD推崇就近依赖，只有在用到某个模块的时候再去require。
 
-function fn(){
-    this.name = 'jirengu'
-    console.log(this)
-}
+2、对依赖的执行时机不同。AMD在加载模块完成后就执行该模块，所有模块执行完成后则进入require的回调并执行。而CMD加载模块后并不执行该模块，在所有模块加载完成执行callback，遇到require才执行相应的模块。
 
-new fn()
+    
