@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>task15-3</title>
 	<link rel="stylesheet" href="css/task15-3.css">
+	<link rel="stylesheet" href="css/task39.css">
 </head>
 <body>
 	<div id="header">
@@ -11,23 +12,25 @@
 			<div class="layout">
 				<a href="#">Start Bootstrap</a>
 				<ul>
-					<li><a href="">services</a></li>
-					<li><a href="">portfolid</a></li>
-					<li><a href="">about</a></li>
-					<li><a href="">team</a></li>
-					<li><a href="">contact</a></li>
+					<li><a href="#services-id">services</a></li>
+					<li><a href="#portfolid-id">portfolid</a></li>
+					<li><a href="#about-id">about</a></li>
+					<li><a href="#team-id">team</a></li>
+					<li><a href="#contact-id">contact</a></li>
 				</ul>
 			</div>
 		</div>
-		<div class="welcome">
-			<p>Welcome To Our studio!</p>
-			<p>IT's NICE TO MEET YOU</p>
-			<a href="#" class="btn-1">TELL ME MORE</a>
+		<div class="big-picture">
+		    <div class="welcome">
+                <p>Welcome To Our studio!</p>
+                <p>IT's NICE TO MEET YOU</p>
+                <a href="#" class="btn-1">TELL ME MORE</a>
+            </div>
 		</div>
 	</div>
 	<div id="service">
 		<div class="layout">
-			<h1>SERVICES</h1>
+			<h1 id="services-id">SERVICES</h1>
 			<p class="opacity">Lorem ipsum dolor sit amet consectetur.</p>
 			<ul class="clearfix">
 				<li>
@@ -50,7 +53,7 @@
 	</div>
 	<div id="portfolid">
 		<div class="layout">
-			<h1>PORTFOLID</h1>
+			<h1 id="portfolid-id">PORTFOLID</h1>
 			<p class="opacity">Lorem ipsum dolor sit amet consectetur.</p>
 			<ul class="portfolid-item clearfix">
 				<li>
@@ -106,7 +109,7 @@
 	</div>
 	<div id="about">
 		<div class="layout">
-			<h1>ABOUT</h1>
+			<h1 id="about-id">ABOUT</h1>
 			<p>Lorem ipsum dolor sit amet consectetur.</p>
 			<ul class="about-desp">
 				<li class="clearfix">
@@ -150,7 +153,7 @@
 	</div>
 	<div id="team">
 		<div class="layout">
-			<h1>Our Amazing Team</h1>
+			<h1 id="team-id">Our Amazing Team</h1>
 			<p>Lorem ipsum dolor sit amet consectetur.</p>
 			<ul class="clearfix team-item">
 				<li><img src="image/task15-3/5.jpg" alt="">
@@ -194,7 +197,7 @@
 	</div>
 	<div id="contact">
 		<div class="layout">
-			<h1>CONTACT US</h1>
+			<h1 id="contact-id">CONTACT US</h1>
 			<p>Lorem ipsum dolor sit amet consectetur.</p>
 			<div class="contact-item clearfix">
 				<div>
@@ -226,5 +229,7 @@
 			</div>
 		</div>
 	</div>	
+	<script  data-main="scripts/main" src="scripts/require.js"></script>
+	<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
 </body>
 </html>

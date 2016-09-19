@@ -2,88 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>demo</title>
+    <title>Document</title>
     <style>
-        p{
-            word-spacing:.2em;
-            font-size: 140%;
-            font-family: '微软雅黑';
-            line-height: 1.4em;
-            border: 1px solid green
-
+        body,html{
+            width: 100%;
+            height: 100%;
+            margin:0;
         }
-        span{
-            border: 1px solid red;
-            margin-right:2em;
-            padding-left: 300px;
-            font-size: 1.2em;
-/*            padding: 10px;*/
-        }
-        p::first-letter{
-/*            color: red;*/
-            float: left;
-            font-size: 90px;
-            line-height: .65;
-            border:1px solid;
-            padding: 0.085em 3px 0 0;
-        }
-        body{
-            font-size: 20px;
-        }
-        a::first-letter{
-            color:red;
+        div{
+            width: 100%;
+            height: 100%;
+            background: url(image/task39/working-3-min.jpg);
+            background-size: cover
         }
     </style>
 </head>
 <body>
-    <p><span>中国 ipsum dolor sit amet, consectetur adipisicing elit. Odit, quasi id. Odit, perferendis dolorem? Praesentium explicabo voluptatum in vitae officia eaque facilis, dolorum unde, deleniti tenetur aliquam earum doloremque illum?
-        汉字 demo</span>
-    </p>
-    <p><a href="">aaabbbloreawmovue</a></p>    
-    <script>
-    var Car = (function () {
-    
-    var tmp = {
-            'init': function () {
-            var speed = 0
-            return speed
-        },
-        'setSpeed': function setSpeed(spd) {
-            speed = spd
-        },
-        'getSpeed': function getSpeed() {
-            console.log(speed)
-        },
-        'accelerate': function accelerate() {
-            speed += 10
-        },
-        'decelerate': function decelerate() {
-            speed -= 10
-        },
-        'getStatus': function getStatus() {
-            if (speed > 0) console.log('running')
-            else console.log('stop')
-        }
-    }
-        var speed = tmp.init()
-    return tmp
-})()
-
-
-
-
-Car.setSpeed(30);
-Car.getSpeed(); //30
-Car.accelerate();
-Car.getSpeed(); //40;
-Car.decelerate();
-Car.decelerate();
-Car.getSpeed(); //20
-Car.getStatus(); // 'running';
-Car.decelerate();
-Car.decelerate();
-Car.getStatus(); //'stop';
-//Car.speed;  //error
-    </script>
+    <div></div>
 </body>
 </html>

@@ -1,8 +1,14 @@
-function Person(name){
-    this.name = name;
-}
-Person.prototype.sayName = function(){
-    console.log('My name is :' + this.name);
-}
-var p = new Person("若愚")
-p.sayName();
+var deferreds = []
+$imgs.each(function(){
+    var dfd = $.Deferred()
+    $(this).on('load',function(){
+        dfd.resolve()
+    })
+    deferreds.push(dfd)
+})
+
+$.when.apply(null,deferreds).done(function(){
+    console.log('load complete')
+})
+
+<img src="" display="none"></img>
