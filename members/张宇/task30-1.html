@@ -68,7 +68,7 @@
 
 <script type="text/javascript">
 
-    WaterFull = function ($ct) {
+    WaterFall = function ($ct) {
 
         var $ct = $($ct),
             $items = $ct.find('.img'),
@@ -107,14 +107,14 @@
         });
     };
 
-    WaterFull($('.ct'));
+    WaterFall($('.ct'));
 
     var clock;
 
     $(window).on('resize', function () {
         clearTimeout(clock);
         clock = setTimeout(function () {
-            WaterFull($('.ct'));
+            WaterFall($('.ct'));
         },50);
     });
 
