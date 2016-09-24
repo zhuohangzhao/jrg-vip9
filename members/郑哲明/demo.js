@@ -1,14 +1,11 @@
-var deferreds = []
-$imgs.each(function(){
-    var dfd = $.Deferred()
-    $(this).on('load',function(){
-        dfd.resolve()
-    })
-    deferreds.push(dfd)
-})
+// 要求：html 里有多个carousel，当调用时启动全部的 carousel
 
-$.when.apply(null,deferreds).done(function(){
-    console.log('load complete')
-})
+//方式1
+//通过插件的方式启动所有轮播
+$('.carousel').carousel();
 
-<img src="" display="none"></img>
+//方式2
+//通过创建对象的方式启动所有轮播
+$('.carousel').each(function(){
+    new Carousel($(this));
+});

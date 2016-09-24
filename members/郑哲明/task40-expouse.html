@@ -42,28 +42,32 @@
 var Expouse = (function() {
     var showed,
         fns = {
-        bind:function($target,callback) {
+        bind:function($node,callback) {
             var _this = this
-            $(window).on('scroll',function($target){
-                if(_this.isShow($target)) {
-                    callback.call($target[0])
+            $(window).on('scroll',function(){
+                if(_this.isShow($node)) {
+                    callback.call($node[0])
                 }
             })
         },
-        one:function($target,callback) {
-            if(showed) return
-            fns.bind()
-            showed = true
+        one:function($node,callback) {
+            var _this = this
+            $(window).on('scroll',function(){
+                if(_this.isShow($node) && !showed) {
+                    callback.call($node[0])
+                    showed = true
+                }
+            })
         },
         isShow:function ($target) {
-            if($target.length) {
+            if($target.length){
                 var targetTop = $target.offset().top,
-                    targetH = $target.height()  
+                    targetH = $target.height()
             }
             var winH = $(window).height(),
-            winTop = $(window).scrollTop()
+                winTop = $(window).scrollTop()
             
-            if((winH + winTop > targetTop) && (winH + winTop < targetTop + targetH)) {
+            if((winH + winTop > targetTop) && (winTop < (targetTop + targetH))) {
                 return true
             } else{
                 return false
@@ -73,16 +77,17 @@ var Expouse = (function() {
     return fns
 })()
 
-var target1 = $('.yellow')
-var target2 = $('.red')
+var $target1 = $('.yellow'),
+    $target2 = $('.red')
+
 //$target 是 jquery 对象
 // 当窗口滚动时，如果$target 出现在可见区域，执行回调函数里面的代码，且在回调函数内，$(this)代表$target
-Expouse.bind(target1, function(){
+Expouse.bind($target1, function(){
     console.log($(this));    // $target
-});
+})
 
 // 当窗口滚动时，如果$target 出现在可见区域，执行回调函数里面的代码，且在回调函数内，$(this)代表$target。 仅执行一次回调函数，下次$target 曝光不再执行
-Expouse.one(target2, function(){
+Expouse.one($target2, function(){
     console.log($(this));    // $target
 })
     </script>
