@@ -1,4 +1,7 @@
 /*重置默认样式*/
+*{
+    font-family: '微软雅黑'
+}
 body,ul,li,h1,h3,p{
 	margin: 0;
 	padding: 0;
@@ -28,14 +31,14 @@ li{
 	text-transform: uppercase;
 }
 .wrap-nav{
-	position: fixed;
-	left: 0;
-	top: 0;
-	right: 0;
-	z-index: 2;
-	background: #222;
-	height: 70px;
-	line-height: 70px;
+    padding: 25px 0;
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    z-index: 3;
+	background: rgba(0,0,0,0);
+	line-height: 50px;
 }
 .wrap-nav .layout>a{
 	color: rgb(254,209,54);
@@ -50,11 +53,11 @@ li{
 }
 /*header：导航栏*/
 /*header：首屏大图*/
-body,html{
+body,html,#header{
 	height: 100%;
 	width: 100%;
 }
-#header{
+.big-picture{
 	display: table;
 	height: 100%;
 	width: 100%;
@@ -451,10 +454,10 @@ textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
 .btn-1{
 	font-size: 1.2rem;
 	padding: 20px 25px	;
-	background: #fed136;
+	background: #fec503;
 	border-radius: 5px;
 }
 .btn-1:hover{
-	background: #fec503;
+	background: #fed136;
 }
 /*按钮效果*/

@@ -131,7 +131,7 @@
 		$imgCt.append($firstImg.clone())
 
 		$imgCt.width($firstImg.width() * $imgCt.children().length)
-		$imgCt.css('left', '-300px')
+		$imgCt.css({'left': '-300px'})
 
 		$preBtn.on('click', function(e){
 			e.preventDefault();
@@ -149,32 +149,32 @@
 			if(isAnimate) return;
 			isAnimate = true;
 			$imgCt.animate({
-				left: '-=300'
+				left: '-=300px'
 			}, function(){
 				curPageIndex++;
 				if(curPageIndex === imgLength){
 					$imgCt.css({'left': '-300px'})
 					curPageIndex = 0
 				}
+			})
 				isAnimate = false;
 				setBullet();
-			})
 		}
 
 		function playPre(){
 			if(isAnimate) return;
 			isAnimate = true;
 			$imgCt.animate({
-				left: '+=300'
+				left: '+=300px'
 			}, function(){
 				curPageIndex--;
 				if(curPageIndex < 0){
 					$imgCt.css('left', -(imgLength*$firstImg.width()));
 						curPageIndex = imgLength - 1
 				}
+			})
 				isAnimate = false;
 				setBullet()
-			})
 		}
 
 		function setBullet(){

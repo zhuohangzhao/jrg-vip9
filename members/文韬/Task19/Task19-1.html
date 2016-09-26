@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task19-1</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function getIntv(date) {
+            var time_cell = Date.parse(date) - Date.now();
+            var days = Math.floor(time_cell / (24 * 60 * 60 * 1000));
+            var hours = Math.floor((time_cell - days * 24 * 60 * 60 * 1000) / (60 * 60 * 1000));
+            var minutes = Math.floor((time_cell - days * 24 * 60 * 60 * 1000 - hours * 60 * 60 * 1000) / (60 * 1000));
+            var seconds = Math.floor((time_cell - days * 24 * 60 * 60 * 1000 - hours * 60 * 60 * 1000 - minutes * 60 * 1000) / 1000);
+            var result = "距2017春节还有" + days + "天" + hours + "小时" + minutes + "分钟" + seconds + "秒";
+            return result;
+        }
+        var str = getIntv("2017-01-28");
+        console.log(str);
+    </script>
+</body>
+
+</html>
