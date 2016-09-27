@@ -1,264 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>task15-3</title>
-	<link rel="stylesheet" href="css/task15-3.css">
-	<link rel="stylesheet" href="css/task39.css">
+    <meta charset="UTF-8">
+    <title>task2703</title>
+    <style>
+        *{
+            font-family:'微软雅黑'
+        }
+        ul,li{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            color: white;
+            text-decoration:none;
+        }
+        .slideshow{
+            width: 600px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide,.slide li,.slide img{
+            width: 600px;;
+            height: 300px;
+        }
+        .slide li{
+            float: left;
+        }
+        .slide{
+            position:absolute;
+        }
+        .clearfix:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .slideshow .pre,.slideshow .next{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 30px;
+            height: 30px;
+            background: #555;
+            border-radius:100%;
+            line-height: 30px;
+            text-align: center;
+            box-shadow: 0 0 5px #000;
+        }
+        .slideshow .pre{
+            left:10px;
+        }
+        .slideshow .pre:hover{
+            opacity: 0.8;
+        }
+        .slideshow .next{
+            right:10px;
+        }
+        .slideshow .next:hover{
+            opacity: 0.8;
+        }
+        .slideshow > .slide-nav > li{
+            width: 20px;
+            height: 5px;
+            border-radius:5px;
+            display: inline-block;
+            background: white;
+            cursor: pointer;
+        }
+        .slide-nav li:nth-child(2){
+            margin: 0 5px;
+        }
+        .slideshow .slide-nav{
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center
+        }
+        .slide-nav li.active{
+            background: #888;
+        }
+    </style>
 </head>
 <body>
-	<div id="header">
-		<div class="wrap-nav">
-			<div class="layout">
-				<a href="#">Start Bootstrap</a>
-				<ul>
-					<li><a href="#services-id">services</a></li>
-					<li><a href="#portfolid-id">portfolid</a></li>
-					<li><a href="#about-id">about</a></li>
-					<li><a href="#team-id">team</a></li>
-					<li><a href="#contact-id">contact</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="big-picture">
-            <div class="slideshow slideshow-1 ct">
-                <ul class="slide clearfix">
-                    <li class="active"><img src="image/task39/working-1-min.jpg" alt=""></li>
-                    <li><img src="image/task39/working-2-min.jpg" alt=""></li>
-                    <li><img src="image/task39/working-3-min.jpg" alt=""></li>
-                </ul>
-<!--
-                <a href="javascript:void 0" class="pre">&lt</a>
-                <a href="javascript:void 0" class="next">&gt</a>
--->
-                <ul class="slide-nav">
-                    <li class="active"></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-		    <div class="welcome">
-                <p>Welcome To Our studio!</p>
-                <p>IT's NICE TO MEET YOU</p>
-                <a href="#" class="btn-1">TELL ME MORE</a>
-            </div>
-		</div>
-	</div>
-	<div id="service">
-		<div class="layout">
-			<h1 id="services-id">SERVICES</h1>
-			<p class="opacity">Lorem ipsum dolor sit amet consectetur.</p>
-			<ul class="clearfix">
-				<li>
-					<div class="e-commerce iconfont"></div>
-					<h3>E-Commerce</h3>
-					<p class="opacity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-				</li>
-				<li>
-					<div class="design iconfont"></div>
-					<h3>Responsive Design</h3>
-					<p class="opacity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-				</li>
-				<li>
-					<div class="security iconfont"></div>
-					<h3>Web Security</h3>
-					<p class="opacity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div id="portfolid">
-		<div class="layout wrap">
-            
-			<h1 id="portfolid-id">PORTFOLID</h1>
-			<p class="opacity">Lorem ipsum dolor sit amet consectetur.</p>
-			
-			<ul class="img-ct">
-                <!--
-                <li>
-                    <img src="" alt="">
-                    <h3></h3>
-                    <p></p>
-                </li>
-        -->
-            </ul>
-            <a href="javascript:void 0" class="loadMore btn-1">Load More</a>
-<!--
-			<ul class="portfolid-item clearfix">
-				<li>
-					<a href="#">
-						<div class="hover"></div>
-						<img src="image/task15-3/roundicons.png" alt="">
-					</a>
-					<h3>Round Icons</h3>
-					<p>Graphic Design</p>
-				</li>
-				<li>
-					<a href="#">
-						<div class="hover"></div>
-						<img src="image/task15-3/startup-framework.png" alt="">
-					</a>
-					<h3>Startup Framework</h3>
-					<p>Website Design</p>
-				</li>
-				<li>
-					<a href="#">
-						<div class="hover"></div>
-						<img src="image/task15-3/golden-preview.png" alt="">
-					</a>
-					<h3>Treehouse</h3>
-					<p>Website Design</p>
-				</li>
-				<li>
-					<a href="#">
-						<div class="hover"></div>
-						<img src="image/task15-3/treehouse-preview.png" alt="">
-					</a>
-					<h3>Golden</h3>
-					<p>Website Design</p>
-				</li>
-				<li>
-					<a href="#">
-						<div class="hover"></div>
-						<img src="image/task15-3/escape-preview.png" alt="">
-					</a>
-					<h3>Escape</h3>
-					<p>Website Design</p>
-				</li>
-				<li>
-					<a href="#">
-						<div class="hover"></div>
-						<img src="image/task15-3/dreams-preview.png" alt="">
-					</a>
-					<h3>Dreams</h3>
-					<p>Website Design</p>
-				</li>
-			</ul>
--->
-		</div>
-	</div>
-	<div id="about">
-		<div class="layout">
-			<h1 id="about-id">ABOUT</h1>
-			<p>Lorem ipsum dolor sit amet consectetur.</p>
-			<ul class="about-desp">
-				<li class="clearfix">
-					<div>
-						<h3>2009-2011</h3>
-						<h3>Our Humble Beginnings</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-					</div>
-					<img src="image/task15-3/1.jpg" alt="">
-				</li>
-				<li class="clearfix">
-					<div>
-						<h3>March 2011</h3>
-						<h3>An Agency is Born</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-					</div>
-					<img src="image/task15-3/2.jpg" alt="">
-				</li>
-				<li class="clearfix">
-					<div>
-						<h3>December 2012</h3>
-						<h3>Transition to Full Service</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-					</div>
-					<img src="image/task15-3/3.jpg" alt="">
-				</li>
-				<li class="clearfix">
-					<div>
-						<h3>July 2014</h3>
-						<h3>Phase Two Expansion	</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-					</div>
-					<img src="image/task15-3/4.jpg" alt="">
-				</li>
-				<li>
-					<div><h3>BE PART OF OUR STORY</h3></div>
-				</li>
-			</ul>
-			<hr>
-		</div>
-	</div>
-	<div id="team">
-		<div class="layout">
-			<h1 id="team-id">Our Amazing Team</h1>
-			<p>Lorem ipsum dolor sit amet consectetur.</p>
-			<ul class="clearfix team-item">
-				<li><img src="image/task15-3/5.jpg" alt="">
-					<h3>Kay Garland</h3>
-					<p>Lead Designer</p>
-					<ul class="clearfix">
-						<li><a href="" class="icon-fb"></a></li>
-						<li><a href="" class="icon-tw"></a></li>
-					</ul>
-				</li>
-				<li><img src="image/task15-3/6.jpg" alt="">
-					<h3>Larry Parker</h3>
-					<p>Lead Marketer</p>
-					<ul class="clearfix">
-						<li><a href="" class="icon-fb"></a></li>
-						<li><a href="" class="icon-tw"></a></li>
-					</ul>
-				</li>
-				<li><img src="image/task15-3/7.jpg" alt="">
-					<h3>Diana Pertersen</h3>
-					<p>Lead Developer</p>
-					<ul class="clearfix">
-						<li><a href="" class="icon-fb"></a></li>
-						<li><a href="" class="icon-tw"></a></li>
-					</ul>
-				</li>
-			</ul>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-		</div>
-	</div>
-	<div id="friendlink">
-		<div class="layout">
-			<ul class="friendlink-item clearfix">
-				<li><a href=""><img src="image/task15-3/envato.jpg" alt=""></a></li>
-				<li><a href=""><img src="image/task15-3/designmodo.jpg" alt=""></a></li>
-				<li><a href=""><img src="image/task15-3/themeforest.jpg" alt=""></a></li>
-				<li><a href=""><img src="image/task15-3/creative-market.jpg" alt=""></a></li>
-			</ul>
-		</div>
-	</div>
-	</div>
-	<div id="contact">
-		<div class="layout">
-			<h1 id="contact-id">CONTACT US</h1>
-			<p>Lorem ipsum dolor sit amet consectetur.</p>
-			<div class="contact-item clearfix">
-				<div>
-					<input type="text" placeholder="YOUR NAME*">
-					<input type="text" placeholder="YOUR EMAIL*">
-					<input type="text" placeholder="YOUR PHONE*">
-				</div>
-				<div>
-					<textarea name="" id="" placeholder="YOUR MESSAGE*"></textarea>
-				</div>
-			</div>
-			<a href="#" class="btn-1">SEND MESSAGE</a>
-		</div>
-	</div>
-	<div id="footer">
-		<div class="layout clearfix">
-			<div>Copyright © Your Website 2016</div>
-			<div>
-				<ul>
-					<li><a href="" class="icon-fb"></a></li>
-					<li><a href="" class="icon-tw"></a></li>
-				</ul>
-			</div>
-			<div>				
-				<ul>
-					<li><a href="">Privacy Policy</a></li>
-					<li><a href=""> Terms of Use </a></li>
-				</ul>
-			</div>
-		</div>
-	</div>	
-	<script  data-main="scripts/task39/task39.merge" src="scripts/require.js"></script>
+    <div class="slideshow slideshow-1 ct">
+        <ul class="slide clearfix">
+            <li class="active"><img src="http://cdn.jirengu.com/book.jirengu.com/img/30.jpg" alt=""></li>
+            <li><img src="http://cdn.jirengu.com/book.jirengu.com/img/24.jpg" alt=""></li>
+            <li><img src="http://cdn.jirengu.com/book.jirengu.com/img/26.jpg" alt=""></li>
+        </ul>
+        <a href="javascript:void 0" class="pre">&lt</a>
+        <a href="javascript:void 0" class="next">&gt</a>
+        <ul class="slide-nav">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="slideshow slideshow-1 ct">
+        <ul class="slide clearfix">
+            <li class="active"><img src="http://cdn.jirengu.com/book.jirengu.com/img/30.jpg" alt=""></li>
+            <li><img src="http://cdn.jirengu.com/book.jirengu.com/img/24.jpg" alt=""></li>
+            <li><img src="http://cdn.jirengu.com/book.jirengu.com/img/26.jpg" alt=""></li>
+        </ul>
+        <a href="javascript:void 0" class="pre">&lt</a>
+        <a href="javascript:void 0" class="next">&gt</a>
+        <ul class="slide-nav">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $.fn.carousel = function() {
+            this.each(function() {
+                var $this = $(this)
+                var $pre = $this.find('.pre')
+                var $next = $this.find('.next')
+                var $nav = $this.find('.slide-nav')
+                var $navLi = $this.find('.slide-nav li')
+                var $slide = $this.find('.slide')
+                var $imageWidth = $this.find('.slide li').first().width()
+                var $firstLi = $slide.children().first().clone()
+                var $LastLi = $slide.children().last().clone()
+                var $pointer = 1
+                var $navIdx = 0
+                var isAnimate = false
+                var $imageCount = $slide.children().length
+                var clock
+                $firstLi.appendTo($slide)
+                $LastLi.prependTo($slide)
+                var $imageRealCount = $slide.children().length
+                $slide.css({
+                    width:$imageRealCount*$imageWidth,
+                    left:-$imageWidth
+                })
+                
+                $pre.on('click',function(){
+                    if (isAnimate) return
+                    isAnimate = true
+                    resetClock()
+                    playPre()
+                })
+                $next.on('click',function(){
+                    if (isAnimate) return
+                    isAnimate = true
+                    playNext()
+                    resetClock()
+                })
+                $nav.on('click',function(e){
+                    resetClock()
+                    $navIdx = $(e.target).index() + 1
+                    play()
+                    setNav($navIdx)
+                })
+                autoPlay()
+                function playPre() {
+                    $pointer--
+                    $slide.animate({"left":"+=" + $imageWidth},function(){
+                        if($pointer === 0) {
+                            $slide.css({"left":-$imageWidth*$imageCount})
+                            $pointer = $imageCount
+                        }
+                        isAnimate = false
+                    })
+                    setNav($pointer)
+                }
+                function playNext() {
+                    $pointer++
+                    $slide.animate({left:'-=' + $imageWidth},function(){
+                        if($pointer === ($imageRealCount-1)) {
+                            $slide.css({left : - $imageWidth})
+                            $pointer = 1
+                        }
+                        isAnimate = false
+                    })
+                    setNav($pointer)
+                }
+                function play() {
+                    if($pointer < $navIdx) {
+                        var i = $navIdx - $pointer
+                        while(i--) {
+                            playNext()
+                        }
+                    } else {
+                        var j = $pointer - $navIdx
+                        while(j--) {
+                            playPre()
+                        }
+                    }
+                }
+                function setNav(idx) {
+                    if (idx === ($imageRealCount - 1) || idx === 1) {
+                        $navLi.removeClass('active')
+                                    .eq(0).addClass('active')
+                    } else if (idx === 0 || idx === ($imageRealCount - 2)) {
+                        $navLi.removeClass('active')
+                                    .eq($navLi.length - 1).addClass('active')
+                    } else {
+                        $navLi.removeClass('active')
+                                    .eq(idx - 1).addClass('active')
+                    }
+                }
+
+                function autoPlay() {
+                    clock = setInterval(function(){
+                        playNext()
+                    },3000)
+                }
+                function resetClock() {
+                    clearInterval(clock)
+                    autoPlay()
+                }
+            }) 
+        }
+        $('.ct').carousel()
+    </script>
 </body>
 </html>
