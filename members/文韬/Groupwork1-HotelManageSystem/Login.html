@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎登陆酒店管理系统！</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="Login.css">
+    <link rel="stylesheet" href="Button.css">
+</head>
+
+<body>
+    <div id="end">
+        <!-- <img src="../Groupimg/LoginPng/end.png" alt=""> -->
+        <div class="button button-block button-rounded button-large button-glow">开始</div>
+        <header>
+            <div class="login_logo">
+                <div class="login_wd">
+                    <div class="login_wd-username">账&nbsp&nbsp户:
+                        <input id="username" type="text" class="login_wd-username-input">
+                        <span class="warning-username"></span>
+                    </div>
+                    <div class="login_wd-password">密&nbsp&nbsp码:
+                        <input id="password" type="password" class="login_wd-password-input">
+                    </div>
+                    <ul class="login_li">
+                        <a href="Welcome.html">
+                            <li class="login_btn">登录</li>
+                        </a>
+                        <li class="login_btn login_btn-end">退出</li>
+                    </ul>
+                </div>
+            </div>
+
+            <script src="../Groupwork1-HotelManageSystem/jquery-3.1.1.min.js">
+            </script>
+            <script type="text/javascript">
+                function changeuserBg() {
+                    $("#username").css("background-color", "rgba(255,255,0,0.7");
+                }
+
+                function changepassBg() {
+                    $("#password").css("background-color", "rgba(255,255,0,0.7");
+                }
+
+                function resetBg() {
+                    $("input").css("background-color", "white");
+                }
+
+                function endLogin() {
+                    $("header").fadeOut(3000);
+                    $(".button").fadeIn(3000);
+                }
+
+                function resetLogin() {
+                    $("header").fadeOut(1);
+                }
+
+                function starLogin() {
+                    $("header").fadeIn(2000);
+                    $(".button").fadeOut(1);
+                }
+
+                $("#username").focus(changeuserBg);
+                $("#username").blur(resetBg);
+
+                $("#password").focus(changepassBg);
+                $("#password").blur(resetBg);
+
+                $(".login_btn-end").click(endLogin);
+                $(".button").click(starLogin);
+
+                resetLogin();
+            </script>
+        </header>
+    </div>
+</body>
+
+</html>
