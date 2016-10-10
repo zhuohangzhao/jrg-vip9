@@ -3,16 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>欢迎登陆酒店管理系统！</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="Login.css">
-    <link rel="stylesheet" href="Button.css">
+    <title>酒店管理系统v1.5</title>
+    <link rel="stylesheet" href="./Groupwork1.Css/normalize.css">
+    <link rel="stylesheet" href="./Groupwork1.Css/Login.css">
+    <link rel="stylesheet" href="./Groupwork1.Css/Button.css">
+
 </head>
 
 <body>
     <div id="end">
+        <ul class="showlist">
+            <li>
+                <div class="button button-block button-rounded button-large button-glow btn-1">系统管理登录</div>
+            </li>
+            <li>
+                <div class="button button-block button-rounded button-large button-glow btn-2">酒店经理登录</div>
+            </li>
+            <li>
+                <div class="button button-block button-rounded button-large button-glow btn-3">酒店前台登录</div>
+            </li>
+        </ul>
         <!-- <img src="../Groupimg/LoginPng/end.png" alt=""> -->
-        <div class="button button-block button-rounded button-large button-glow">开始</div>
+
+
+
         <header>
             <div class="login_logo">
                 <div class="login_wd">
@@ -23,6 +37,8 @@
                     <div class="login_wd-password">密&nbsp&nbsp码:
                         <input id="password" type="password" class="login_wd-password-input">
                     </div>
+                    <span class="request"></span>
+
                     <ul class="login_li">
                         <a href="Welcome.html">
                             <li class="login_btn">登录</li>
@@ -31,47 +47,11 @@
                     </ul>
                 </div>
             </div>
-
-            <script src="../Groupwork1-HotelManageSystem/jquery-3.1.1.min.js">
+            <script src="./Groupwork1.Js/jquery-3.1.1.min.js">
             </script>
-            <script type="text/javascript">
-                function changeuserBg() {
-                    $("#username").css("background-color", "rgba(255,255,0,0.7");
-                }
-
-                function changepassBg() {
-                    $("#password").css("background-color", "rgba(255,255,0,0.7");
-                }
-
-                function resetBg() {
-                    $("input").css("background-color", "white");
-                }
-
-                function endLogin() {
-                    $("header").fadeOut(3000);
-                    $(".button").fadeIn(3000);
-                }
-
-                function resetLogin() {
-                    $("header").fadeOut(1);
-                }
-
-                function starLogin() {
-                    $("header").fadeIn(2000);
-                    $(".button").fadeOut(1);
-                }
-
-                $("#username").focus(changeuserBg);
-                $("#username").blur(resetBg);
-
-                $("#password").focus(changepassBg);
-                $("#password").blur(resetBg);
-
-                $(".login_btn-end").click(endLogin);
-                $(".button").click(starLogin);
-
-                resetLogin();
+            <script src="./Groupwork1.Js/Login.js">
             </script>
+
         </header>
     </div>
 </body>
