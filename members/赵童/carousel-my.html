@@ -180,8 +180,14 @@
     // $imgList.css('width',($imgLength+2)*$width);
     $imgList.css('left',-$width);
 
-    $btnPre.on('click',playPre);
-    $btnNext.on('click',playNext);
+    $btnPre.on('click',function(){
+        clearInterval(timer);
+        playPre();
+    });
+    $btnNext.on('click',function(){
+        clearInterval(timer);
+        playNext();
+    });
     $indicator.on('click','li',function(){
         jumpPage($(this).index()+1);
     })
@@ -208,6 +214,9 @@
         "http://imglf2.nosdn.127.net/img/SFQrTE81cjlQL2pBdWM3ejdqbGVwaGZVR2p0L1NIRmVxRmN4VjhRczUwajkzaHVqS1gzM3dBPT0.jpg?imageView&thumbnail=2000y850&type=jpg&quality=96&stripmeta=0&type=jpg","http://imglf1.nosdn.127.net/img/SFQrTE81cjlQL2pBdWM3ejdqbGVwaDNha0w0WmpGK0FqeGdvSXhtUWVVZmRaaktKeXk2eGZnPT0.jpg?imageView&thumbnail=2000y850&type=jpg&quality=96&stripmeta=0&type=jpg","http://imglf.nosdn.127.net/img/SFQrTE81cjlQL2pBdWM3ejdqbGVwb05OSHF2bDF4ZS8zK0VQa0RJdFVCZ25UT2FLa2dKUTN3PT0.jpg?imageView&thumbnail=2000y850&type=jpg&quality=96&stripmeta=0&type=jpg","http://imglf.nosdn.127.net/img/SFQrTE81cjlQL2pBdWM3ejdqbGVwdkFyKzRLUDdmRTZNMGxJeGxMWHV6Rk9YV21COGJIczJ3PT0.jpg?imageView&thumbnail=2000y850&type=jpg&quality=96&stripmeta=0&type=jpg","http://imglf1.nosdn.127.net/img/SFQrTE81cjlQL2pBdWM3ejdqbGVwclFNUWlzVGJVekpiMFBTODhTbW1jZUliM1FyUDhSVU93PT0.jpg?imageView&thumbnail=2000y850&type=jpg&quality=96&stripmeta=0&type=jpg"
     ];
 
+    var timer = setInterval(function(){
+        playNext();
+    },1500)
 
     function switchPage(num){
         // var index = num+1;
