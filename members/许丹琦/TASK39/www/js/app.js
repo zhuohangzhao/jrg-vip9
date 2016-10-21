@@ -6,8 +6,9 @@ requirejs.config({
 	}
 });
 
-requirejs(['jquery','app/carousel','app/Exposure','app/LoadMore'],
-	function($,carousel,Exposure,LoadMore){
+requirejs(['jquery','app/carousel','app/Exposure','app/LoadMore','app/GoTop'],
+	function($,carousel,Exposure,LoadMore,GoTop){
+		new GoTop($('.go-top'))
 		new carousel($('.carousel'));
 		new LoadMore($('.wrap'))
 		$('.about-description li').each(function(idx,node){

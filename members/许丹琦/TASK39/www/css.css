@@ -359,6 +359,17 @@ body {
 		right: 10px;
 	}
 
+	.go-top{
+	border:1px solid #ccc;
+	padding:10px;
+	background-color: #000;
+	color: #fff;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	display: none;
+}
+
 
 
 
