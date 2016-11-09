@@ -2,6 +2,8 @@
      function GoTop($ct){
         this.$ct = $ct;
         this.target = $('<div class="go-top">回到顶部</div>');
+        this.createNode();
+        this.bindEvent();
     }
     GoTop.prototype.createNode = function(){
         this.$ct.append(this.target);
@@ -16,9 +18,8 @@
         })
 
         this.target.on('click',function(){
-            $(window).scrollTop(0);
+           $('body').animate({scrollTop:0});
         });
     }
     var goTop = new GoTop($('body'));
-        goTop.createNode();
-        goTop.bindEvent();
+

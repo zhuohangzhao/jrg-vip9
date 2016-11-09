@@ -18,7 +18,12 @@
 		    $imgLi.find("img").css({ width: $imgWidth});
 			$imgCt.css({left:0-$imgWidth,width:imgRealLength}) // left 默认第一张图片，初始值为 -300
 
-
+			$('#header .pre').on('click',function(){
+				playPre();
+			})
+			$('#header .next').on('click',function(){
+				playNext();
+			})
 
 	 		$bullet.find('li').on('click',function(){	
 	 			var idx = $(this).index()	// 点击bullet时候，获取 下标
@@ -91,3 +96,24 @@
 	 		function stopAuto(){
 				clearInterval(clock);
 			}
+
+			$('#header .title-service').on('click',function(e){
+				$('body').animate({scrollTop:688});
+				e.preventDefault();	
+			});
+			$('#header .title-scenery').on('click',function(e){
+				$('body').animate({scrollTop:1350});
+				e.preventDefault();	
+			});
+			$('#header .title-travel').on('click',function(e){
+				$('body').animate({scrollTop:2477});
+				e.preventDefault();	
+			});
+			$('#header .title-team').on('click',function(e){
+				$('body').animate({scrollTop:4049});
+				e.preventDefault();	
+			});
+			$('#header .title-contact').on('click',function(e){
+				$('body').animate({scrollTop:5049});
+				e.preventDefault();	
+			});

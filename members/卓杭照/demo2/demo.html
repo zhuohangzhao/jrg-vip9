@@ -15,11 +15,11 @@
                 <h2>Wlecome</h2>
             </div>
     		<ul class="title-right">
-    			<li><a href="">Contact</a></li>
-    			<li><a href="">Team</a></li>
-    			<li><a href="">Travel</a></li>
-    			<li><a href="">Scenery</a></li>
-    			<li><a href="">Services</a></li>
+    			<li class="title-contact"><a href="">Contact</a></li>
+    			<li class="title-team"><a href="">Team</a></li>
+    			<li class="title-travel"><a href="">Travel</a></li>
+    			<li class="title-scenery"><a href="">Scenery</a></li>
+    			<li class="title-service" ><a href="">Services</a></li>
     		</ul>				
     	</div>
         <div class="carousel">
@@ -33,8 +33,8 @@
                     <div class="cover" data-bg-img="./img/bg3.jpg" alt=""></div>
                 </li>
             </ul>
-              <a href="#" class="pre"><</a>
-              <a href="#" class="next">></a>
+              <a href="#" class="carousel-btn pre"><</a>
+              <a href="#" class="carousel-btn next">></a>
             <ul class="bullet">
                 <li class="active"></li>
                 <li></li>
@@ -84,7 +84,7 @@
                 <ul class="scenery-list">
                     <li>
                         <a href="">
-                            <img src="img/p11.jpg" alt="">
+                            <img class="scenery-scale" src="img/p11.jpg" alt="">
                         </a>
                         <div class="cover">
                             <a href=""><i class="fa fa-plus"></i></a>
@@ -302,10 +302,12 @@
             </div>
             <div class="contact-form">
                 <form  name="form" action="task15-2" method="post">
-                    <input name="user" type="text" placeholder="YOU NAME*">
-                    <input name="email" type="text" placeholder="YOUR EMAIL*">
-                    <input name="phone"type="text" placeholder="YOUR PHONE*">
-                    <textarea name="messeage"  maxlength="100" placeholder="YOUR MESSAGE*" type="textarea" ></textarea>
+                <div class="contact-ziliao">
+                    姓名<input name="user" type="text" placeholder="You Name">
+                    邮箱<input name="email" type="text" placeholder="Your Email">
+                    手机<input name="phone"type="text" placeholder="Your Phone">
+                </div>
+                    <textarea name="messeage"  maxlength="100" placeholder="Your Message" type="textarea" ></textarea>
                     <input type="submit" value="提交">
                 </form>
             </div>
@@ -338,6 +340,6 @@
         </div>
     </div>
     <script src="./js/carousel.js"></script>
-    <script src="./js/gotop.js"></script> -->
+    <script src="./js/gotop.js"></script>
 </body>
 </html>

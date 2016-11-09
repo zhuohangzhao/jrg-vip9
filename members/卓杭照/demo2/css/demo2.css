@@ -17,6 +17,7 @@
 		display: block;
 		clear: both;
 	}
+    a{text-decoration: none;}
 	@font-face {
 	  font-family: 'iconfont';
 	  src: url('http://at.alicdn.com/t/font_1477147178_0686305.ttf') format('truetype');
@@ -114,6 +115,26 @@
 	#header .carousel .bullet .active{
 		background: #666;
 	}
+    #header .carousel-btn{
+        position: absolute;
+        padding: 20px 10px;
+        color: white;
+        background-color: #3f6f90;
+        opacity: 0.6;
+        z-index: 99;
+        top: 40%;
+        border-radius: 5px;
+    }
+    #header .next{
+        right: 2%;
+    }
+    #header .pre{
+        left: 2%;
+    }
+    
+    #header .carousel-btn:hover{
+        opacity: 0.8;
+    }
 /* sercices */
     #services{
         width: 1200px;
@@ -203,10 +224,11 @@
         left: 0;
         top: 0;
         opacity: 0.7;
+        cursor: pointer;
     }
     #scenery .scenery-list>li:hover{
-        transform: scale(1.01, 1.01);
-        transition: 0.5s all;
+        top: -3px;
+        transition: 1s all;
     }
     #scenery .cover .fa-plus{
         padding-top: 104px;
@@ -442,7 +464,11 @@
         border-radius: 5px;
         display: block;
         margin-bottom: 10px;
-        margin-left: 150px;
+
+    }
+    #contact .contact-ziliao{
+        margin-left: 100px;
+        color: white;
     }
     #contact input[name="messeage"]{
         position: absolute;
@@ -454,8 +480,8 @@
     }
     #contact textarea[name="messeage"]{
         position: absolute;
-        left: 54%;
-        top: 0;
+        left: 57%;
+        top: 52px;
         height: 150px;
         width: 400px;
         border-radius: 5px;
@@ -524,11 +550,11 @@
 .go-top{
 		font-size: 16px;
 		color: white;
-		border: 1px solid #43748b;
+		border: 1px solid #61c9bd;
 		width: 40px;
 		padding: 5px;
 		height: 40px;
-		background-color:  #43748b;
+		background-color:  #61c9bd;
 		border-radius: 4px;
 		text-align: center;
 		line-height: 1.2;
