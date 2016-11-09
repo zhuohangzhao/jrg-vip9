@@ -6,7 +6,7 @@ var $channel=$('.channel');
 var _this=this;
 var volume = 1.0;
 var draging = false;
-getChannel();
+
 
 
 // 播放/暂停控制
@@ -49,6 +49,7 @@ function getChannel(){
 		 	_this.appendChannel(response.channels);
 		 }
 	})
+	getmusic();
 }
 
 function appendChannel(data){
@@ -263,4 +264,4 @@ $('.m-lyric').on('click',function(){
 })
 
 
-$(document).ready(getmusic())
+$(document).ready(getChannel());
