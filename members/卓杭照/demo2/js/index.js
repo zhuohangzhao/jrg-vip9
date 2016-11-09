@@ -118,18 +118,17 @@
 				e.preventDefault();	
 			});
 
-	GoTop($('body'));
-    
-    function GoTop($ct){
+	new GoTop($('body'));
+     function GoTop($ct){
         this.$ct = $ct;
         this.target = $('<div class="go-top">回到顶部</div>');
         this.createNode();
         this.bindEvent();
     }
-    function createNode (){
+    GoTop.prototype.createNode = function(){
         this.$ct.append(this.target);
     }
-    function bindEvent (){
+    GoTop.prototype.bindEvent = function(){
         $(window).on('scroll',function(){
             if($(window).scrollTop()>100){
                 $('.go-top').css('display','block');
