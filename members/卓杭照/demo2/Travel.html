@@ -24,11 +24,23 @@
             <ul class="img-ct clearfix">
                 <li class="item">
                     <div class="cover" data-bg-img="./img/bg1.jpg"></div>
+                    <div class="item-welcome">
+                        <h2>欢迎来到布吉岛</h2>
+                        <a href="#">联系我们</a>
+                    </div>
                 </li>
                 <li class="item">
                     <div class="cover" data-bg-img="./img/bg2.jpg"></div>
+                    <div class="item-welcome">
+                        <h2>欢迎来到夏威夷</h2>
+                        <a href="#">联系我们</a>
+                    </div>
                 <li class="item">
                     <div class="cover" data-bg-img="./img/bg3.jpg" alt=""></div>
+                    <div class="item-welcome">
+                        <h2>欢迎来到普吉岛</h2>
+                        <a href="#">联系我们</a>
+                    </div>
                 </li>
             </ul>
               <a href="#" class="carousel-btn pre"><</a>
@@ -301,10 +313,19 @@
             <div class="contact-form">
                 <form  name="form" action="task15-2" method="post">
                 <div class="contact-ziliao">
-                    姓名<input name="user" type="text" placeholder="You Name">
-                    邮箱<input name="email" type="text" placeholder="Your Email">
-                    手机<input name="phone"type="text" placeholder="Your Phone">
+                    <div class="tip tip-user">用户名为3-10个字符</div>
+                    姓名<input class="user" name="user" type="text" placeholder="You Name">
+                    <span class="user-ok tip-ok">&#xe608;</span>
+
+                    <div class="tip tip-email">请输入email</div>
+                    邮箱<input class="email" name="email" type="text" placeholder="Your Email">
+                    <span class="email-ok tip-ok">&#xe608;</span>
+
+                    <div class="tip tip-phone">手机号码只能11位数字</div>
+                    手机<input class="phone" name="phone" type="text" placeholder="Your Phone">
+                    <span class="phone-ok tip-ok">&#xe608;</span>
                 </div>
+                    <div class="message">留言</div>
                     <textarea name="messeage"  maxlength="100" placeholder="Your Message" type="textarea" ></textarea>
                     <input type="submit" value="提交">
                 </form>

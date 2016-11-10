@@ -18,11 +18,15 @@
 		clear: both;
 	}
     a{text-decoration: none;}
-	@font-face {
-	  font-family: 'iconfont';
-	  src: url('http://at.alicdn.com/t/font_1477147178_0686305.ttf') format('truetype');
-	  
-	}
+    @font-face {
+      font-family: 'iconfont';
+      src: url('http://at.alicdn.com/t/font_1478767213_6715438.eot'); /* IE9*/
+      src: url('http://at.alicdn.com/t/font_1478767213_6715438.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('http://at.alicdn.com/t/font_1478767213_6715438.woff') format('woff'), /* chrome、firefox */
+      url('http://at.alicdn.com/t/font_1478767213_6715438.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url('http://at.alicdn.com/t/font_1478767213_6715438.svg#iconfont') format('svg'); /* iOS 4.1- */
+    }
+                    
                     
 /* header */
     #header{
@@ -36,6 +40,9 @@
             z-index: 1;
             background: #232227;
             opacity: 0.5;
+    }
+    #header .header-title:hover{
+        opacity: 0.8;
     }
     #header .title-left{
             float: left;
@@ -134,6 +141,25 @@
     
     #header .carousel-btn:hover{
         opacity: 0.8;
+    }
+    #header .item-welcome{
+        position: relative;
+        left: 43%;
+        top: 50%;
+        color: white;
+        width: 300px;
+        font-weight: normal;
+    }
+    #header .item-welcome a{
+        padding: 10px 20px;
+        background: #62cabb;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        position: relative;
+        left: 45px;
+        margin-top: 30px;
+        color: white;
+        display: inline-block;
     }
 /* sercices */
     #services{
@@ -436,7 +462,7 @@
     #contact{
         height: 100%;
         width: 100%;
-        background: url(http://www.winddesktop.com/Wallpaper/03327/Original/03327_033_2NkHMdRp.jpg) center center;
+        background: url(../img/bg5.jpg) center center;
         background-size: cover;
         display: table;
     }
@@ -464,11 +490,18 @@
         border-radius: 5px;
         display: block;
         margin-bottom: 10px;
+        border:1px solid transparent;
 
     }
     #contact .contact-ziliao{
         margin-left: 100px;
         color: white;
+    }
+    #contact .message{
+        position: absolute;
+        left: 57%;
+        top: 20px;
+        color: #ffffe7;
     }
     #contact input[name="messeage"]{
         position: absolute;
@@ -497,8 +530,23 @@
         color: white;
         font-size: 20px;
     }
-
-
+    #contact input[type="submit"]:hover{
+        opacity: 0.9;
+    }
+    #contact .tip{
+        font-size: 12px;
+        position: relative;
+        top: 23px;
+        left: 75px;
+        color: #b1a9b1;
+    }
+    #contact .tip-ok{
+        font-family: iconfont;
+        position: relative;
+        left: 38%;
+        top: -47px;
+        opacity: 0;
+    }
 /* footer */
     #footer .footer-layout{
         width: 1200px;
