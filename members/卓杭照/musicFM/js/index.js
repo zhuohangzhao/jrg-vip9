@@ -105,9 +105,10 @@ function getmusic(channel_id){
 	 		});
 	       play();//播放
 	       getlyric(sid,ssid);//获取歌词    
+	       setTimeout(setDuration,1000);
 		}
 	})
-	setTimeout(setDuration,1000);
+	
 };
 
 //获取歌词
