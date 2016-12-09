@@ -65,13 +65,16 @@ Send, {Right}
 else
 Send, ^{right}
 return
-;===========================;
-;CapsLock & a:: Send, ^{left}
-;CapsLock & d:: Send, ^{right}  
-CapsLock & e:: Send, ^{Enter}  
-CapsLock & s:: Send, ^l
-CapsLock & d:: Send, ^/
-
+;===============my customize============;
+CapsLock & a:: Send, ^{left}
+CapsLock & d:: Send, ^{right}  
+!e:: Send, ^{Enter}  
+!s:: Send, ^l
+!z:: Send, ^/
+!q:: Send, '
+!w:: Send, "
+!d:: Send, /
+!a:: Send, \
 ;;=============================Deletor==============================||
 CapsLock & ,:: Send, {Del}              ; , = Del char after
 CapsLock & .:: Send, ^{Del}             ; . = Del word after
