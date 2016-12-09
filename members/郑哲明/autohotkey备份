@@ -38,43 +38,43 @@ else
 Send, +{PgDn}
 return
 ;===========================;j = Left
-CapsLock & j::
-if getkeystate("alt") = 0
-Send, {Left}
-else
-Send, ^{left}
-return
+;CapsLock & a::
+;if getkeystate("alt") = 0
+;Send, {Left}
+;else
+;Send, ^{left}
+;return
 ;===========================;k = Down
-CapsLock & k::
-if getkeystate("alt") = 0
-Send, {Down}
-else
-Send, {PgDn}
-return
+;CapsLock & s::
+;if getkeystate("alt") = 0
+;Send, {Down}
+;else
+;Send, {PgDn}
+;return
 ;===========================;i = UP
-CapsLock & i::
-if getkeystate("alt") = 0
-Send, {Up}
-else
-Send, {PgUp}
-return
+;CapsLock & w::
+;if getkeystate("alt") = 0
+;Send, {Up}
+;else
+;Send, {PgUp}
+;return
 ;===========================;L = Right
-CapsLock & l::
-if getkeystate("alt") = 0
-Send, {Right}
-else
-Send, ^{right}
-return
+;CapsLock & d::
+;if getkeystate("alt") = 0
+;Send, {Right}
+;else
+;Send, ^{right}
+;return
 ;===============my customize============;
-CapsLock & a:: Send, ^{left}
-CapsLock & d:: Send, ^{right}  
-!e:: Send, ^{Enter}  
-!s:: Send, ^l
-!z:: Send, ^/
-!q:: Send, '
-!w:: Send, "
-!d:: Send, /
-!a:: Send, \
+!q:: Send, ^{left}
+!e:: Send, ^{right} 
+!w:: Send, {Up}
+!s:: Send, {Down}
+!a:: Send, {Left}
+!d:: Send, {Right}
+CapsLock & q:: Send, '
+CapsLock & e:: Send, "
+CapsLock & d:: Send, /
 ;;=============================Deletor==============================||
 CapsLock & ,:: Send, {Del}              ; , = Del char after
 CapsLock & .:: Send, ^{Del}             ; . = Del word after
@@ -112,8 +112,8 @@ CapsLock & v:: Send, ^v                 ; V = Paste
 ;CapsLock & y:: Send, ^y                	; Y = Redo
 ;;===========================Controller=============================||
 ;CapsLock & s:: Send, ^{Tab}             ; Switch Tag    S = {Ctr + Tab}
-CapsLock & w:: Send, ^w                 ; Close Tag     W = {Ctr + W}
-CapsLock & q:: Send, !{F4}              ; Close Window  Q = {Alt + F4}
+;CapsLock & w:: Send, ^w                 ; Close Tag     W = {Ctr + W}
+;CapsLock & q:: Send, !{F4}              ; Close Window  Q = {Alt + F4}
 CapsLock::Send, {ESC}                   ; Vimer's love	Capslock = {ESC}
 ;;=========================Application==============================||
 ;CapsLock & d:: Send, !d                 ; Dictionary 	D = {Alt + D}
