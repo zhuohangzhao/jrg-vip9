@@ -4,8 +4,6 @@
 
 
 
-$(function(){
-
     var $song;
     frame.onload = function(){
         $song = $('#frame').contents().find('#player');
@@ -243,5 +241,4 @@ $(function(){
         $('.volume-new').height(height-(mouseH-top));
         $song[0].volume = voice;
     });
-})
 
