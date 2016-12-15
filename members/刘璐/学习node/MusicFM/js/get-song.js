@@ -5,6 +5,11 @@
 
 
 $(function(){
+
+    var $song;
+    frame.onload = function(){
+        $song = $('#frame').contents().find('#player');
+    };
     //随机获取歌曲 === getSong() //添加歌曲信息//后获取歌词
     var sid;
     var channel;
@@ -72,10 +77,6 @@ $(function(){
     var duration;
     var overtime;
     var timeNow;
-    var $song;
-    frame.onload = function(){
-        $song = $('#frame').contents().find('#player');
-    };
     ///获取时间总长度
     function getDuration() {
         setTimeout(function () {
