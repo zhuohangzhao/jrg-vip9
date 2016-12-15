@@ -4,7 +4,7 @@
 
 
 
-
+$(function(){
     //随机获取歌曲 === getSong() //添加歌曲信息//后获取歌词
     var sid;
     var channel;
@@ -242,4 +242,5 @@
         $('.volume-new').height(height-(mouseH-top));
         $song[0].volume = voice;
     });
+})
 
