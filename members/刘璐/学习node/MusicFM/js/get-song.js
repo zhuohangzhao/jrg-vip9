@@ -31,7 +31,7 @@
             getWords();       //获取歌词
             getDuration();
             changeTime();
-            $song.volume =0.75;
+            $song[0].volume =0.75;
         }
     }
     //添加添加歌曲信息 ==== appendSong
