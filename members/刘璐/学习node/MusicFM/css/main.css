@@ -23,6 +23,8 @@ body,html,h2,p{
     border-radius: 5px;
     position:relative;
     margin-top: 25px;
+    display:none;
+    transition: all 1s;
 }
 #fliter-bg{
     position:absolute;
@@ -75,13 +77,16 @@ body,html,h2,p{
     font-weight: normal;
     padding:8px;
     font-size:14px;
-    color:#fff;
+    color:pink;
+}
+#music-fm .music-main .music-list h2.selected{
+    background:rgba(0,0,0,.7);
 }
 #music-fm .music-main .music-list h2:first-child{
    padding-top:16px;
 }
 #music-fm .music-main .music-list h2.active{
-    background:rgba(0,0,0,.7);
+    background:rgba(0,0,0,.4);
 }
 #music-fm .music-main .icon-yinle,.icon-tanhao,.music-name,.singer-name,.wrap{
     position:absolute;
@@ -92,10 +97,22 @@ body,html,h2,p{
     font-size:20px;
 }
 #music-fm .music-main .icon-tanhao{
-    margin:14px;
-    right:0;
-    font-size:25px;
+    margin: 14px;
+    right: 0;
+    font-size: 25px;
 }
+#music-fm .music-main .author{
+    top: 44px;
+    right: 2px;
+    font-size: 12px;
+    position:absolute;
+    color:#000000;
+    display:none;
+}
+#music-fm .music-main .music-author.hover .author{
+    display:block;
+}
+
 #music-fm .music-main .music-name{
     width:100%;
     font-size:24px;
@@ -117,6 +134,17 @@ body,html,h2,p{
     top:calc(20% + 90px);
     text-align: center;
 }
+
+@keyframes waiting{
+    0%{ transform: rotate(0deg)}
+    100%{ transform: rotate(720deg)}
+}
+#play{
+    -webkit-animation: 1s waiting infinite;
+    -o-animation: 1s waiting infinite;
+    animation: 1s waiting infinite;
+}
+
 #music-fm .music-main .wrap .iconfont{
     vertical-align: middle;
     font-size:36px;
