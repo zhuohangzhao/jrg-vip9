@@ -3,31 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Tie's FM</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_fcg8dl09an6rbe29.css">
     <script src="js/jquery-3.1.1.min.js"></script>
 <style>
-        @font-face {font-family: "iconfont";
-        src: url('font/iconfont.eot?t=1482561922670'); /* IE9*/
-        src: url('font/iconfont.eot?t=1482561922670#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('font/iconfont.woff?t=1482561922670') format('woff'), /* chrome, firefox */
-        url('font/iconfont.ttf?t=1482561922670') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-        url('font/iconfont.svg?t=1482561922670#iconfont') format('svg'); /* iOS 4.1- */
-        }
-        .iconfont{
-            font-family:"iconfont" !important;
-            font-size:16px;
-            font-style:normal;
-        }
-        .icon-ic_my_library_books_px:before { content: "\e9ef"; }
-        .icon-ic_play_arrow_px:before { content: "\e9f2"; }
-        .icon-ic_queue_music_px:before { content: "\e9f5"; }
-        .icon-ic_radio_px:before { content: "\e9f6"; }
-        .icon-ic_skip_next_px:before { content: "\e9fa"; }
-        .icon-ic_volume_off_px:before { content: "\e9fe"; }
-        .icon-ic_volume_up_px:before { content: "\e9ff"; }
-                                                            /*icon-font*/
     body{
         font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,PingFang SC,Source Han Sans CN,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
-        color: #4a4a4a;
+        /*background-color: #45a156;*/
     }
     h3{
         font-size: 20px;
@@ -46,12 +27,14 @@
         background-image: url("https://img3.doubanio.com/lpic/s3744584.jpg");
         margin-top: 20px;
         margin-left: 20px;
+        box-shadow: 0 0 20px black;
     }
     .information{
         float: right;
         margin-right: 20px;
         margin-top: 20px;
         text-align: right;
+        color: white;
     }
     .information>h3{
         margin: 0;
@@ -62,19 +45,13 @@
     .player{
         width: 400px;
         height: 200px;
-        background-color: #fafafa;
-        box-shadow: 1px 1px 1px silver;
-        border-radius: 2px 2px 2px 2px;
+        background-color: #4a4a4a;
+        box-shadow: 1px 1px 10px black;
+        border-radius: 5px 5px 2px 2px;
         position: relative;
+        overflow: hidden;
     }
-    .function{
-        border-radius: 2px 2px 2px 2px;
-        background: white;
-        width: 100%;
-        height:40px;
-        position: absolute;
-        bottom: 0;
-    }
+
     .lyric-ct{
         margin-top: 10px;
         width: 180px;
@@ -85,12 +62,12 @@
     }
     .lyric-ct>.border-top{
         width: 100%;
-        background-image: linear-gradient( to right, white 1%,#dadada,white 99%);
+        background-image: linear-gradient( to right, #4a4a4a 1%,white,#4a4a4a 99%);
         height: 1px;
     }
     .lyric-ct>.border-bottom{
         width: 100%;
-        background-image: linear-gradient( to right, white 1%,#dadada,white 99%);
+        background-image: linear-gradient( to right, #4a4a4a 1%,white,#4a4a4a 99%);
         height: 1px;
         position: absolute;
         bottom: 0;
@@ -99,27 +76,88 @@
         margin: 0 0;
     }
     .lyric-ct>.lyric>p{
-        color: #8f8e94;
+        color: silver;
         font-size: 10px;
         margin: 1px 0;
     }
     .lyric>.current{
         color: #45a156 !important;
     }
+    .function{
+        border-radius: 5px 5px 2px 2px;
+        background-image: linear-gradient( to bottom, white,#f7f7f7,#eeeeee);
+        width: 100%;
+        height:40px;
+        position: absolute;
+        bottom: 0;
+        box-shadow: 0px -1px 1px #4a4a4a;
+        color: #4a4a4a;
+    }
     .function>.channel{
+        position: relative;
+        width: 120px;
+        height: 40px;
+        display: inline-block;
+    }
+    .function>.current-channel>span{
+        font-weight: 300px !important;
+        color: #45a156;
+    }
+    .function>.current-channel{
         margin-left: 20px;
+        margin-top: -15px;
         float: left;
-        line-height: 40px;
+        line-height: 30px;
+        position: absolute;
+        top: 50%;
+        width: 120px;
+        text-align: center;
+        border-radius: 10px 10px 10px 10px;
+        
+    }
+    .function>.current-channel:hover{
+        background-image: linear-gradient( to top, white,#f7f7f7,#eeeeee);
+        border: 1px solid #eeeeee;
+        cursor: pointer;
+    }
+    .player>.channel-list{
+        position: absolute;
+        left: 20px;
+        bottom: -100px;
+        margin: 0;
+        padding: 0;
+        height: 140px;
+        background-color: #eeeeee;
+        overflow: auto;
+        border-radius: 5px 5px 0px 0px;
+        width: 120px;
+        color: #4a4a4a;
+    }
+    .player>.channel-list>ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 120px;
+    }
+    .player>.channel-list>ul>li{
+        width: 100%;
+        padding-left: 20px;
+        list-style: none;
+        font-size: 12px;
+        font-weight: 200;
+        line-height: 25px;
+    }
+    .player>.channel-list>ul>li:hover{
+        background-color: #4a4a4a;
+        cursor: pointer;
+        color: white;
     }
     .function>.button{
         float: right;
         margin-right: 20px;
         line-height: 40px;
     }
-    .function>.channel>span{
-        font-weight: 300px !important;
-        color: #45a156;
-    }
+
     .function>.button>.big-button{
         margin-top: 1px;
         float: right;
@@ -141,6 +179,40 @@
         color: #45a156;
         cursor: pointer;
     }
+    .player>.volume{
+        background-color: #eeeeee;
+        border-radius: 5px 5px 0px 0px;
+        width: 120px;
+        position: absolute;
+        bottom: 20px;
+        left: 210px;
+        height: 20px;
+    }
+    .player>.volume>.strip{
+        width: 100px;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+        background: #4a4a4a;
+        left: 50%;
+        margin-left: -50px;
+    }
+    .player>.volume>.strip>.knob{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #45a156;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -5px;
+        margin-left: -5px;
+        cursor: pointer;
+    }
+    ::-webkit-scrollbar{
+        display: none;
+    }
 </style>
 </head>
 <body>
@@ -159,9 +231,25 @@
                 <div class="border-bottom"></div>
             </div>
         </div>
+        <div class="channel-list">
+            <ul>
+                <li>华语MHz</li>
+                <li>欧美MHz</li>
+                <li>日韩MHz</li>
+                <li>轻音乐MHz</li>
+                <li>摇滚MHz</li>
+                <li>萨克斯MHz</li>
+                <li>电影原声MHz</li>
+            </ul>
+        </div>
+        <div class="volume">
+            <div class="strip">
+                <div class="knob"></div>
+            </div>
+        </div>
         <div class="function">
-            <div class="channel">
-                <span><i class="iconfont icon-ic_queue_music_px"></i></span>
+            <div class="current-channel">
+                <span><i class="iconfont icon-ic_radio_px"></i></span>
                 <span>轻音乐MHz</span>
             </div>
             <div class="button">
@@ -177,12 +265,69 @@
         </div>
         <div class="test"></div>
     </div>
-    <!--<i class="iconfont icon-ic_my_library_books_px"></i>
-    <i class="iconfont icon-ic_play_arrow_px"></i>
-    <i class="iconfont icon-ic_queue_music_px"></i>
-    <i class="iconfont icon-ic_radio_px"></i>
-    <i class="iconfont icon-ic_skip_next_px"></i>
+    <audio src="http://yinyueshiting.baidu.com/data2/music/42332611/731679228800128.mp3?xcode=a21ea630959f6d36f4316fffb8ff8771"></audio>
+<script>
+    bindMouseover($('.current-channel'),$('.channel-list'),'40px','-100px');
+    bindMouseover($('.icon-ic_volume_up_px'),$('.volume'),'40px','20px');
+
+    function bindMouseover($btn,$target,openPx,closePx){
+        var openStatus = false;
+        var mouseover = false;
+        $btn.on('mouseover',function(){
+            mouseover = true;
+            if(!openStatus){
+                openStatus = true;
+                $target.animate({'bottom':openPx},function(){
+                    openStatus = false;
+                });
+            }
+        })
+        $btn.on('mouseleave',function(){
+                mouseover = false;
+                setTimeout(function(){
+                    if(!mouseover){
+                        $target.animate({'bottom':closePx});
+                    }
+                },1000)
+        })
+        $target.on('mouseover',function(){
+            mouseover = true;
+            if(!openStatus){
+                $target.animate({'bottom':openPx},function(){
+                    openStatus = false;
+                });
+            }
+        })
+        $target.on('mouseleave',function(){
+                mouseover = false;
+                setTimeout(function(){
+                    if(!mouseover){
+                        $target.animate({'bottom':closePx});
+                    }
+                },1000)
+        })
+    }
+    var musicStatus = 'pause';
+    $('.icon-ic_play_arrow_px').on('click',function(){
+        $('audio')[0].play();
+        $(this).removeClass('icon-ic_play_arrow_px');
+        $(this).addClass('icon-ic_pause_px');
+    })
+
+
+
+
+
+
+
+
+</script>
     <i class="iconfont icon-ic_volume_off_px"></i>
-    <i class="iconfont icon-ic_volume_up_px"></i>-->
+    <i class="iconfont icon-ic_skip_next_px"></i>
+    <i class="iconfont icon-ic_radio_px"></i>
+    <i class="iconfont icon-ic_play_arrow_px"></i>
+    <i class="iconfont icon-ic_pause_px"></i>
+    <i class="iconfont icon-ic_my_library_books_px"></i>
+    <i class="iconfont icon-ic_volume_up_px"></i>
 </body>
 </html>
