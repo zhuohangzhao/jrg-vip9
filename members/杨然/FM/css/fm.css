@@ -21,7 +21,11 @@
 	border-radius: 10px;
 	height: 200px;
 	width: 100%;
-	background: url('http://musicdata.baidu.com/data2/pic/31061593/31061593.jpg@s_0,w_300') center center / cover no-repeat;
+	/*background: url('') center center / cover no-repeat;*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+
 }
 .model {
 	position: absolute;
@@ -29,7 +33,7 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.3);
 	border-radius: 10px;
 	overflow: hidden;
 }
@@ -60,7 +64,7 @@
 }
 .style-order {
 	position: absolute;
-    left: -260px;
+    left: -325px;
     background: rgba(150, 141, 141, .3);
     color: #dedede;
     height: 200px;
@@ -70,7 +74,13 @@
     font-size: 12px;
 }
 .style-order > li {
+	text-align: center;
 	padding: 2px 0;
+	cursor: pointer;
+}
+.style-order > li:hover {
+	color: #fff;
+	background-color: #888;
 }
 .fm-data {
 	padding: 10px 16px;
@@ -78,6 +88,13 @@
 .fm-info {
     float: left;
     /*text-align: center;*/
+}
+.fm-title {
+    width: 200px;
+    overflow: hidden;
+    height: 30px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .fm-shop {
 	float: right;
@@ -141,18 +158,21 @@
 .control-btn {
 	float: right;
 }
-
+.icon-zanting {
+	font-size: 40px !important;
+}
 .icon-kuaitui {
 	font-size: 30px !important;
 }
 .icon-bofang {
-	font-size: 30px !important;
+	font-size: 40px !important;
 }
 .icon-kuaijin {
-	font-size: 30px !important;
+	font-size: 24px !important;
+	vertical-align: super;
 }
 .control-btn {
-	padding-top: 10px;
+	padding-top: 16px;
 }
 .iconfont {
 	cursor: pointer;
