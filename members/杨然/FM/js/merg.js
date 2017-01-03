@@ -437,7 +437,7 @@
 				this.$progressBar = $progressBar = this.$ct.find('.fm-progress-bar'),
 				this.$progressVal = $progressVal = this.$ct.find('.fm-progress-value'),
 				this.$model = this.$ct.find('.model'),
-				this.$totalTime = this.$ct.find('.total-time'),
+				this.$totalTime = $totalTime =  this.$ct.find('.total-time'),
 				this.$playTime = $playTime = this.$ct.find('.cur-time'),
 	 			this.downUrl = '',
 				this.channelId =  '',
@@ -451,6 +451,7 @@
 				this.bind();
 				this.getChannels();
 				this.$volBg.hide();
+				
 				setInterval(this.playProgress, 500);
 
 			},
@@ -475,9 +476,7 @@
 				  		self.downUrl = res.song[0].url;
 				  		self.sid = res.song[0].sid;
 				  		self.getLyric();
-
 				 	 });
-				  
 			},
 			randomSong: function(){
 				this.channelId = 'public_aaa_bbb';
@@ -545,14 +544,18 @@
 					}
 				}
 			},
-			setProgress: function(e){
-				// this.$progressVal.css('width', (e.offsetX / this.$progressBar.outerWidth()) * 100 + '%');
-				this.$totalTime.html(parseInt(this.audio.duration / 60) + ':' + parseInt(this.audio.duration - (parseInt(this.audio.duration / 60) * 60)));
-				var curTime = this.audio.currentTime;
-				
-			},
+			// setProgres: function(e){
+			// 	// this.$progressVal.css('width', (e.offsetX / this.$progressBar.outerWidth()) * 100 + '%');
+			// 	$totalTime.html(parseInt(audio.duration / 60) + ':' + parseInt(audio.duration - (parseInt(audio.duration / 60) * 60)));
+			// },
 			playProgress: function(e){
 				$progressVal.css('width', (audio.currentTime / audio.duration) * 100 + '%');
+				if(parseInt(audio.duration - (parseInt(audio.duration / 60) * 60)) < 10) {
+					$totalTime.html(parseInt(audio.duration / 60) + ':' + '0' + parseInt(audio.duration - (parseInt(audio.duration / 60) * 60)));
+				} else {
+					$totalTime.html(parseInt(audio.duration / 60) + ':' + parseInt(audio.duration - (parseInt(audio.duration / 60) * 60)));
+				}
+				
 				if (e) {
 					$progressVal.css('width', (e.offsetX / $progressBar.outerWidth()) * 100 + '%');
 					console.log(parseInt($progressVal.css('width')) / parseInt($progressBar.css('width')) * 100 + '%');
