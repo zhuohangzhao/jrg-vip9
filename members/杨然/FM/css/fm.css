@@ -16,7 +16,6 @@
 }
 .fm-bg {
 	position: relative;
-	/*height: 128px;*/
 	border: 1px solid #ebebeb;
 	border-radius: 10px;
 	height: 200px;
@@ -25,7 +24,6 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
-
 }
 .model {
 	position: absolute;
@@ -37,10 +35,14 @@
 	border-radius: 10px;
 	overflow: hidden;
 }
+.bg-clear {
+	background-color: rgba(0, 0, 0, 0);
+}
 .list {
 	position: absolute;
-    right: 10px;
+    left: 10px;
     top: 10px;
+    z-index: 1;
 }
 .list i {
 	color: #fff;
@@ -49,14 +51,19 @@
 .lyric {
 	color: #ccc;
 	position: absolute;
-    top: 24px;
+    top: 80px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    width: 100%;
 }
 .lyric > li {
 	font-size: 12px;
 	padding: 1px 0;
+	transition: all 1s;
+	white-space:nowrap;
+	min-height: 16px;
+	height: 16px;
 }
 .lyric > li.active {
 	font-size: 14px;
@@ -64,14 +71,15 @@
 }
 .style-order {
 	position: absolute;
-    left: -325px;
-    background: rgba(150, 141, 141, .3);
-    color: #dedede;
+    left: -72px;
+   	background: rgba(255, 255, 255, 0.8);
+    color: black;
     height: 200px;
     top: -10px;
     overflow: auto;
     padding: 4px;
     font-size: 12px;
+    z-index: 1;
 }
 .style-order > li {
 	text-align: center;
@@ -86,8 +94,8 @@
 	padding: 10px 16px;
 }
 .fm-info {
+	cursor: default;
     float: left;
-    /*text-align: center;*/
 }
 .fm-title {
     width: 200px;
@@ -117,19 +125,19 @@
 .fm-info p {
 	font-size: 12px;
 }
-.fm-volume {
+.fm-progress {
     padding: 10px 16px;
     position: relative;
 }
-.fm-volume-full {
+.fm-progress-bar {
 	height: 4px;
     background: #fff;
     width: 190px;
     margin: 0 auto;
 	cursor: pointer;
 }
-.fm-volume-value {
-    width: 50%;
+.fm-progress-value {
+    width: 0%;
     background: black;
     height: 4px;
     cursor: pointer;
@@ -173,6 +181,7 @@
 }
 .control-btn {
 	padding-top: 16px;
+    position: relative;
 }
 .iconfont {
 	cursor: pointer;
@@ -180,19 +189,50 @@
 .iconfont:hover {
 	color: red;
 }
-
+.fm-volume {
+    display: inline-block;
+    width: 18px;
+}
+.fm-volume-bg {
+	box-sizing: border-box;
+    position: absolute;
+    width: 20px;
+    height: 120px;
+    background: #ccc;
+    top: -110px;
+    left: 41px;
+    padding: 8px 0;
+}
+.horn {
+	border: 10px solid #ccc;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+}
+.fm-volume-bar {
+    width: 4px;
+    height: 100px;
+    background: #aaa;
+    margin: 0 auto;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.fm-volume-value {
+    width: 4px;
+    /*height: 20%;*/
+    background: #fff;
+    border-radius: 4px;
+}
 ::-webkit-scrollbar
 {
   width: 4px;  /* for vertical scrollbars */
   height: 4px; /* for horizontal scrollbars */
 }
-
 ::-webkit-scrollbar-track
 {
   background: rgba(0, 0, 0, 0.1);
 
 }
-
 ::-webkit-scrollbar-thumb
 {
   background: rgba(0, 0, 0, 0.5);

@@ -5,68 +5,28 @@
 	<meta name="referrer" content="never">
 	<title>FM</title>
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/fm.css">
+	<!-- <link rel="stylesheet" href="css/fm.css"> -->
 	<link rel="stylesheet" href="icon/iconfont.css">
-	<script src="js/lib/jquery.min.js"></script>
-	<!-- <script src="./js/lib/music.js"></script> -->
+	<!-- <script src="js/lib/jquery.min.js"></script> -->
+	
 </head>
 <body>
 	<div class="fm-body">
-		
 		<audio id="audio" autoplay>
 			<source src="" type="audio/mpeg">
 			您的浏览器不支持 audio 元素。
 		</audio>
-
 		<div class="fm-bg">
 			<div class="model">
 				<div class="list">
 					<i class="iconfont icon-liebiao fm-menu"></i>
 					<ul class="style-order">
-						<!-- <li>漫步春天</li>
-						<li>秋日私语</li>
-						<li>温暖冬日</li>
-						<li>热歌</li>
-						<li>KTV金曲</li>
-						<li>Billboard</li>
-						<li>成名曲</li>
-						<li>网络歌曲</li>
-						<li>开车</li>
-						<li>影视</li>
-						<li>随便听听</li>
-						<li>经典老歌</li>
-						<li>70后</li>
-						<li>80后</li>
-						<li>90后</li>
-						<li>火爆新歌</li>
-						<li>儿歌</li>
-						<li>旅行</li>
-						<li>夜店</li>
-						<li>流行</li>
-						<li>摇滚</li>
-						<li>民谣</li>
-						<li>轻音乐</li>
-						<li>小清新</li>
-						<li>中国风</li>
-						<li>DJ舞曲</li>
-						<li>电影</li>
-						<li>轻松假日</li>
-						<li>欢快旋律</li>
-						<li>甜蜜感受</li>
-						<li>寂寞</li>
-						<li>单身情歌</li>
-						<li>舒缓节奏</li>
-						<li>慵懒午后</li>
-						<li>伤感</li>
-						<li>华语</li>
-						<li>欧美</li>
-						<li>日语</li>
-						<li>韩语</li>
-						<li>粤语</li> -->
+						<!-- <li>Channel_id</li> -->
 					</ul>
 				</div>
 				<ul class="lyric">
-					<li>111111111</li>
+					<li class="active">音乐来自百度FM, by 饥人谷</li>
+					<!-- <li>111111111</li>
 					<li>222222222</li>
 					<li>333333333</li>
 					<li class="active">444444444</li>
@@ -77,12 +37,10 @@
 					<li>111111111</li>
 					<li>222222222</li>
 					<li>333333333</li>
-					<li>444444444</li>
+					<li>444444444</li> -->
 				</ul>
 			</div>		
 		</div>
-
-
 		<div class="fm-data clearfix">
 			<div class="fm-info">
 				<h2 class="fm-title">-</h2>
@@ -94,19 +52,13 @@
 
 			</div>
 		</div>
-
-	
-
-		 <div class="fm-volume">
-		 	<div class="fm-volume-full">
-		 		<div class="fm-volume-value"></div>
+		 <div class="fm-progress">
+		 	<div class="fm-progress-bar">
+		 		<div class="fm-progress-value"></div>
 		 	</div>
 		 	<div class="cur-time">00:00</div>
 		 	<div class="total-time">05:00</div>
 		 </div>
-
-
-
 		<div class="control clearfix">
 			<div class="play-btn">
 				<!-- <i class="iconfont icon-kuaitui pre"></i> -->
@@ -116,10 +68,19 @@
 			<div class="control-btn">
 				<i class="iconfont icon-suiji loop"></i>
 				<i class="iconfont icon-changpian showLyric"></i>
-				<i class="iconfont icon-shengyin volume"></i>
+				<span class="fm-volume">
+					<div class="fm-volume-bg">
+							<div class="fm-volume-bar">
+								<div class="fm-volume-value"></div>
+							</div>
+							<div class="horn"></div>
+					</div>
+					<i class="iconfont icon-shengyin volume"></i>
+				</span>
+				
 			</div>
 		</div>
 	</div>
-	<script src="js/fm.js"></script>
+	<script src="js/merg.js"></script>
 </body>
 </html>

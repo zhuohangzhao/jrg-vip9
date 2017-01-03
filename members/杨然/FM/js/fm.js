@@ -1,30 +1,51 @@
+require("./lib/jquery.min.js");
 var Music = (function(){
 	var Fm = function(ct){
 		this.init(ct);
 	}
 	Fm.prototype = {
 		init: function(ct){
-			    this.$ct = ct,
-				this.$volume = this.$ct.find('.volume'),
-				this.$play = this.$ct.find('.play'),
-				this.audio = audio = document.getElementById('audio'),
-				this.$bgImg = this.$ct.find('.fm-bg'),
-				this.$title = this.$ct.find('.fm-title'),
-				this.$author = this.$ct.find('.fm-author'),
-				this.$next = this.$ct.find('.next'),
-				// this.pre = this.ct.find('.pre'),
-				this.$loop = this.$ct.find('.loop'),
-				this.$lyricBtn = this.$ct.find('.showLyric'),
-				this.$menuBtn = this.$ct.find('.fm-menu'),
-				this.$fmOrder = this.$ct.find('.style-order'),
-				this.$down = this.$ct.find('.down'),
-				this.$like = this.$ct.find('.xiai'),
-				this.downUrl = '',
-				this.channelId =  '',
-				this.timer;
+		    this.$ct = ct,
+			this.$volume = this.$ct.find('.volume'),
+			this.$volumeCt = this.$ct.find('.fm-volume'),
+			this.$volBg = $volBg = this.$ct.find('.fm-volume-bg'),
+			this.$play = this.$ct.find('.play'),
+			this.audio = audio = document.getElementById('audio'),
+			this.$volVal = $('.fm-volume-value'),
+			this.$volBar = $('.fm-volume-bar'),
+			this.$bgImg = this.$ct.find('.fm-bg'),
+			this.$title = this.$ct.find('.fm-title'),
+			this.$author = this.$ct.find('.fm-author'),
+			this.$next = this.$ct.find('.next'),
+			// this.pre = this.ct.find('.pre'),
+			this.$loop = this.$ct.find('.loop'),
+			this.$lyricBtn = this.$ct.find('.showLyric'),
+			this.$menuBtn = this.$ct.find('.fm-menu'),
+			this.$fmOrder = this.$ct.find('.style-order'),
+			this.$down = this.$ct.find('.down'),
+			this.$like = this.$ct.find('.xiai'),
+			this.$lyric = $lyric= this.$ct.find('.lyric'),
+			this.$lyricLi = $lyricLi = this.$lyric.find('.active'),
+			this.$lyricTop = $lyricTop = parseInt($lyric.css('top')),
+			this.$progressBar = $progressBar = this.$ct.find('.fm-progress-bar'),
+			this.$progressVal = $progressVal = this.$ct.find('.fm-progress-value'),
+			this.$model = this.$ct.find('.model'),
+			this.$totalTime = this.$ct.find('.total-time'),
+			this.$playTime = $playTime = this.$ct.find('.cur-time'),
+ 			this.downUrl = '',
+			this.channelId =  '',
+			this.timer,
+			this.curVol = 0.8 * 100,
+			this.audio.volume = 0.8,
+			this.sid = -1;
+
+			this.$volVal.height(100 - this.curVol + '%');
 			this.randomSong();
 			this.bind();
 			this.getChannels();
+			this.$volBg.hide();
+			setInterval(this.playProgress, 500);
+
 		},
 		getSong: function(){
 			var self = this;
@@ -37,17 +58,106 @@ var Music = (function(){
 			  	},
 			  	timeout: 2500,
 			  }).done(function(res){
+				  	if (!res.song[0].url && typeof(res.song[0].url)!="undefined" && res.song[0].url!=0){
+					    self.getSong();
+					}
 			  		self.$bgImg.css('background-image', 'url(' + res.song[0].picture + ')');
 			  		$(audio).attr('src', res.song[0].url);
 			  		self.$title.text(res.song[0].title).attr('title', res.song[0].title);
 			  		self.$author.text(res.song[0].artist);
 			  		self.downUrl = res.song[0].url;
-			  		console.log(res)
-			  });
+			  		self.sid = res.song[0].sid;
+			  		self.getLyric();
+
+			 	 });
+			  
 		},
 		randomSong: function(){
 			this.channelId = 'public_aaa_bbb';
 			this.getSong();
+		},
+		getLyric: function(){
+			var self = this;
+			$.ajax({
+				url: 'http://api.jirengu.com/fm/getLyric.php',
+				type: 'post',
+				dataType: 'json',
+				data: {
+					sid: this.sid
+				}
+			}).done(function(lyric){
+				var lyricArr = lyric.lyric.split('\n'),
+					lyricTime = [],
+					lyricText = [],
+					lyricInitArr = [],
+					numArr = [],
+					lyricTimeNum = 0,
+					timeReg = /\[\d{2}:\d{2}.\d{2}\]/g;
+				for (var i = 0; i < lyricArr.length; i++) {
+					lyricText.push(lyricArr[i].replace(timeReg, ''));
+					if (!(!lyricArr[i].match(timeReg) && typeof(lyricArr[i].match(timeReg))!="undefined" && lyricArr[i].match(timeReg)!=0)) {
+						lyricTime.push(lyricArr[i].match(timeReg));
+					} else {
+						lyricArr.splice(i, 1);
+						i--;
+					}
+					numArr.push(lyricTime[i][0].slice(1, -1).split(':'));
+					lyricTimeNum = parseInt(numArr[i][0] * 60) + parseFloat(numArr[i][1]);
+					if (lyricTimeNum === 0.01) {
+						continue;
+					}
+					var obj = { val: 0, text: ''};
+					obj.val = lyricTimeNum;
+					obj.text = lyricText[i];
+					lyricInitArr.push(obj);
+				}
+				self.renderLyric(lyricInitArr);
+			});
+		},
+		renderLyric: function(lyricArr){
+			this.$lyric.find('li').empty();
+			var html = '';
+			for (var i = 0; i < lyricArr.length; i++) {
+				html += '<li data-time="' + lyricArr[i].val + '">' + lyricArr[i].text + '</li>';
+			}
+			this.$lyric.append(html);
+			this.$lyricLis = $lyricLis = $('.lyric > li');
+			setInterval(this.showLyric, 100);
+		},
+		showLyric: function(){
+			var liH = $lyricLi.outerHeight();
+			var num = $lyricTop/liH
+			for (var i = 0; i < $lyricLis.length; i++) {
+				var curT = $lyricLis.eq(i).attr('data-time');
+				var nexT = $lyricLis.eq(i+1).attr('data-time');
+				var curTime = this.audio.currentTime;
+				if ((curTime >= curT) && (curT < nexT)) {
+					$lyricLis.removeClass('active');
+					$lyricLis.eq(i).addClass('active');
+					$lyric.css('top', -liH * (i-num) + 'px');
+				}
+			}
+		},
+		setProgress: function(e){
+			// this.$progressVal.css('width', (e.offsetX / this.$progressBar.outerWidth()) * 100 + '%');
+			this.$totalTime.html(parseInt(this.audio.duration / 60) + ':' + parseInt(this.audio.duration - (parseInt(this.audio.duration / 60) * 60)));
+			var curTime = this.audio.currentTime;
+			
+		},
+		playProgress: function(e){
+			$progressVal.css('width', (audio.currentTime / audio.duration) * 100 + '%');
+			if (e) {
+				$progressVal.css('width', (e.offsetX / $progressBar.outerWidth()) * 100 + '%');
+				console.log(parseInt($progressVal.css('width')) / parseInt($progressBar.css('width')) * 100 + '%');
+				audio.currentTime = audio.duration * (parseInt($progressVal.css('width')) / parseInt($progressBar.css('width')));
+				$playTime.html(parseInt(audio.currentTime / 60) + ':' + parseInt(audio.currentTime - (parseInt(audio.currentTime / 60) * 60)));
+				return
+			}
+			if(parseInt(audio.currentTime - (parseInt(audio.currentTime / 60) * 60)) < 10) {
+				$playTime.html(parseInt(audio.currentTime / 60) + ':' + '0' + parseInt(audio.currentTime - (parseInt(audio.currentTime / 60) * 60)));
+			} else {
+				$playTime.html(parseInt(audio.currentTime / 60) + ':' + parseInt(audio.currentTime - (parseInt(audio.currentTime / 60) * 60)));
+			}
 		},
 		getChannels: function(){
 			var self = this;
@@ -63,29 +173,63 @@ var Music = (function(){
 				self.$fmOrder.append(html);
 			});
 		},
+		setVolume: function(e){
+			this.audio.muted = false;
+			var curVol = this.curVol;
+			this.$volVal.height(100 - curVol + '%');
+			this.$volume.removeClass('icon-jingyin')
+					    .addClass('icon-shengyin');
+			if (($(e.target).hasClass('fm-volume-value') || $(e.target).hasClass('fm-volume-bar')) && e.offsetY >= 0 && e.offsetY <= 100) {
+					this.audio.volume = 1 - (e.offsetY / 100);
+					this.curVol = this.audio.volume * 100;
+					this.$volVal.height(100 - this.curVol + '%');
+				} 
+			return
+		},
+		mute: function(){
+			if (this.audio.muted != true) {
+				this.audio.muted = true;
+				this.$volVal.height('100%');
+				this.$volume.removeClass('icon-shengyin')
+						   .addClass('icon-jingyin');
+			} else {
+				this.audio.muted = false;
+				var curVol = this.curVol;
+				this.$volVal.height(100 - curVol + '%');
+				this.$volume.removeClass('icon-jingyin')
+						   .addClass('icon-shengyin');
+			}			
+		},
+		play: function(){
+			if (this.audio.paused != true) {
+				this.audio.pause();
+				this.$play.removeClass('icon-bofang')
+					 	 .addClass('icon-zanting');
+			} else {
+				this.audio.play();
+				this.$play.removeClass('icon-zanting')
+					 	 .addClass('icon-bofang');
+			}
+		},
+		loop: function(){
+			var $audio = $(this.audio);
+			if (this.$loop.hasClass('icon-suiji')) {
+				$audio.attr('loop', 'loop');
+				this.$loop.removeClass('icon-suiji')
+						   .addClass('icon-danquxunhuan');
+			} else {
+				$audio.removeAttr('loop');
+				this.$loop.removeClass('icon-danquxunhuan')
+						   .addClass('icon-suiji');
+			}
+		},
 		bind: function(){
 			var self = this;
 			this.$play.on('click', function(){
-				if (self.audio.paused != true) {
-					self.audio.pause();
-					$(this).removeClass('icon-bofang')
-						 	 .addClass('icon-zanting');
-				} else {
-					self.audio.play();
-					$(this).removeClass('icon-zanting')
-						 	 .addClass('icon-bofang');
-				}
+				self.play();
 			});
 			this.$volume.on('click', function(){
-				if (self.audio.muted != true) {
-					self.audio.muted = true;
-					$(this).removeClass('icon-shengyin')
-							   .addClass('icon-jingyin');
-				} else {
-					self.audio.muted = false;
-					$(this).removeClass('icon-jingyin')
-							   .addClass('icon-shengyin');
-				}
+				self.mute();
 			});
 			this.$down.on('click', function(){
 				window.location.href = self.downUrl;
@@ -94,7 +238,6 @@ var Music = (function(){
 				self.getSong();
 			});
 			$(this.audio).on('error', function(){
-				console.log('error');
 				self.getSong();
 			});
 			this.$fmOrder.on('click', function(e){
@@ -105,36 +248,53 @@ var Music = (function(){
 				clearInterval(self.timer);
 			});
 			this.$fmOrder.on('mouseleave', function(){
-				$(this).animate({ 'left': '-325px'});
+				var self = this;
+				setTimeout(function(){
+					$(self).animate({ 'left': '-72px'});
+				}, 500);
 			});
 			this.$menuBtn.on('click', function(){
-				self.$fmOrder.animate({ 'left': '-260px'});
-				self.timer = setInterval(function(){
-					self.$fmOrder.animate({ 'left': '-325px'});
-				}, 3000);
+				self.$fmOrder.animate({ 'left': '-10px'});
 			});
 			this.$next.on('click', function(){
 				self.getSong();
 			});
 			this.$loop.on('click', function(){
-				var $audio = $(self.audio);
-				if (self.$loop.hasClass('icon-suiji')) {
-					$audio.attr('loop', 'loop');
-					$(this).removeClass('icon-suiji')
-							   .addClass('icon-danquxunhuan');
-				} else {
-					$audio.removeAttr('loop');
-					$(this).removeClass('icon-danquxunhuan')
-							   .addClass('icon-suiji');
-				}
+				self.loop();
 			});
 			this.$like.on('click', function(){
 				$(this).css('color', 'red');
-				console.log($(this));
-			})
+			});
+			this.$volumeCt.hover(function(){
+				self.$volBg.fadeIn('fast');
+			}, function(){
+				setTimeout(function(){
+					self.$volBg.fadeOut('fast');
+				}, 500);
+			});
+			this.$volBg.on('click', function(e){
+				var event = e;
+				self.setVolume(event);
+			});
+			this.$progressBar.on('click', function(e){
+				var event = e;
+				self.playProgress(event);
+			});
+			this.$lyricBtn.on('click', function(){
+				self.$lyric.toggle();
+				self.$model.toggle('');
+			});
+		}
+	}	
+	return {
+		init: function($node){
+			$node.each(function(index, node){
+				new Fm($(node));
+			});
 		}
 	}
-	return new Fm($('.fm-body'));
-})()
+})();
+module.exports = Music;
+
 
 
