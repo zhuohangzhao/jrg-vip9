@@ -88,7 +88,7 @@
 
 
 	// module
-	exports.push([module.id, ".clearfix:after {\n\tcontent: '';\n\tdisplay: block;\n\tclear: both;\n}\n.fm-body {\n    font: 14px/1.2 \"Lantinghei SC\", \"Open Sans\", Arial, \"Hiragino Sans GB\", \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", \"WenQuanYi Micro Hei\", SimSun, sans-serif;\n    color: #52315b;\n\twidth: 292px;\n\theight: 358px;\n\tmargin: 50px auto;\n\tbox-sizing: border-box;\n\tborder: 1px solid #ebebeb;\n\tborder-radius: 10px;\n    background-color: #ebebeb;\n}\n.fm-bg {\n\tposition: relative;\n\tborder: 1px solid #ebebeb;\n\tborder-radius: 10px;\n\theight: 200px;\n\twidth: 100%;\n\t/*background: url('') center center / cover no-repeat;*/\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\tbackground-position: center center;\n}\n.model {\n\tposition: absolute;\n\ttop: 0;\n\tbottom: 0;\n\tleft: 0;\n\tright: 0;\n\tbackground-color: rgba(0, 0, 0, 0.3);\n\tborder-radius: 10px;\n\toverflow: hidden;\n}\n.bg-clear {\n\tbackground-color: rgba(0, 0, 0, 0);\n}\n.list {\n\tposition: absolute;\n    left: 10px;\n    top: 10px;\n    z-index: 1;\n}\n.list i {\n\tcolor: #fff;\n}\n\n.lyric {\n\tcolor: #ccc;\n\tposition: absolute;\n    top: 80px;\n    left: 50%;\n    transform: translateX(-50%);\n    text-align: center;\n    width: 100%;\n}\n.lyric > li {\n\tfont-size: 12px;\n\tpadding: 1px 0;\n\ttransition: all 1s;\n\twhite-space:nowrap;\n\tmin-height: 16px;\n\theight: 16px;\n}\n.lyric > li.active {\n\tfont-size: 14px;\n\tcolor: #fff;\n}\n.style-order {\n\tposition: absolute;\n    left: -72px;\n   \tbackground: rgba(255, 255, 255, 0.8);\n    color: black;\n    height: 200px;\n    top: -10px;\n    overflow: auto;\n    padding: 4px;\n    font-size: 12px;\n    z-index: 1;\n}\n.style-order > li {\n\ttext-align: center;\n\tpadding: 2px 0;\n\tcursor: pointer;\n}\n.style-order > li:hover {\n\tcolor: #fff;\n\tbackground-color: #888;\n}\n.fm-data {\n\tpadding: 10px 16px;\n}\n.fm-info {\n\tcursor: default;\n    float: left;\n}\n.fm-title {\n    width: 200px;\n    overflow: hidden;\n    height: 30px;\n    white-space: nowrap;\n    text-overflow: ellipsis;\n}\n.fm-shop {\n\tfloat: right;\n}\n.fm-shop i,\n.fm-shop span {\n\tcursor: pointer;\n}\n.fm-shop {\n    padding: 5px 0;\n}\n.fm-shop i:hover,\n.fm-shop span:hover {\n\tcolor: red;\n}\n.fm-info h2 {\n    font-size: 24px;\n    font-weight: 500;\n}\n.fm-info p {\n\tfont-size: 12px;\n}\n.fm-progress {\n    padding: 10px 16px;\n    position: relative;\n}\n.fm-progress-bar {\n\theight: 4px;\n    background: #fff;\n    width: 190px;\n    margin: 0 auto;\n\tcursor: pointer;\n}\n.fm-progress-value {\n    width: 0%;\n    background: black;\n    height: 4px;\n    cursor: pointer;\n}\n.cur-time,\n.total-time  {\n\tposition: absolute;\n\tfont-size: 12px;\n}\n\n.cur-time {\n\ttop: 5px;\n}\n.total-time {\n\ttop: 5px;\n    right: 15px;\n}\n\n.control {\n    padding: 10px 16px;\n}\n\n.play-btn {\n\tfloat: left;\n}\n.control-btn {\n\tfloat: right;\n}\n.icon-zanting {\n\tfont-size: 40px !important;\n}\n.icon-kuaitui {\n\tfont-size: 30px !important;\n}\n.icon-bofang {\n\tfont-size: 40px !important;\n}\n.icon-kuaijin {\n\tfont-size: 24px !important;\n\tvertical-align: super;\n}\n.control-btn {\n\tpadding-top: 16px;\n    position: relative;\n}\n.iconfont {\n\tcursor: pointer;\n}\n.iconfont:hover {\n\tcolor: red;\n}\n.fm-volume {\n    display: inline-block;\n    width: 18px;\n}\n.fm-volume-bg {\n\tbox-sizing: border-box;\n    position: absolute;\n    width: 20px;\n    height: 120px;\n    background: #ccc;\n    top: -110px;\n    left: 41px;\n    padding: 8px 0;\n}\n.horn {\n\tborder: 10px solid #ccc;\n    border-bottom-color: transparent;\n    border-right-color: transparent;\n    border-top-color: transparent;\n}\n.fm-volume-bar {\n    width: 4px;\n    height: 100px;\n    background: #aaa;\n    margin: 0 auto;\n    border-radius: 4px;\n    cursor: pointer;\n}\n.fm-volume-value {\n    width: 4px;\n    /*height: 20%;*/\n    background: #fff;\n    border-radius: 4px;\n}\n::-webkit-scrollbar\n{\n  width: 4px;  /* for vertical scrollbars */\n  height: 4px; /* for horizontal scrollbars */\n}\n::-webkit-scrollbar-track\n{\n  background: rgba(0, 0, 0, 0.1);\n\n}\n::-webkit-scrollbar-thumb\n{\n  background: rgba(0, 0, 0, 0.5);\n  border-radius: 4px;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+	exports.push([module.id, ".clearfix:after {\n\tcontent: '';\n\tdisplay: block;\n\tclear: both;\n}\n.fm-body {\n    font: 14px/1.2 \"Lantinghei SC\", \"Open Sans\", Arial, \"Hiragino Sans GB\", \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", \"WenQuanYi Micro Hei\", SimSun, sans-serif;\n    color: #52315b;\n\tbox-sizing: border-box;\n\tborder-radius: 10px;\n    position: fixed;\n    top: 18px;\n    left: 200px;\n    user-select: none;\n}\n.fm-bg {\n\tposition: relative;\n\tborder: 1px solid #ebebeb;\n\tborder-radius: 10px;\n\theight: 200px;\n\twidth: 100%;\n\t/*background: url('') center center / cover no-repeat;*/\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\tbackground-position: center center;\n}\n.model {\n\tposition: absolute;\n\ttop: 0;\n\tbottom: 0;\n\tleft: 0;\n\tright: 0;\n\tbackground-color: rgba(0, 0, 0, 0.3);\n\tborder-radius: 10px;\n\toverflow: hidden;\n}\n.bg-clear {\n\tbackground-color: rgba(0, 0, 0, 0);\n}\n.list {\n\tposition: absolute;\n    left: 10px;\n    top: 10px;\n    z-index: 1;\n}\n.list i {\n\tcolor: #fff;\n}\n\n.lyric {\n\tcolor: #ccc;\n\tposition: absolute;\n    top: 80px;\n    left: 50%;\n    transform: translateX(-50%);\n    text-align: center;\n    width: 100%;\n}\n.lyric > li {\n\tfont-size: 12px;\n\tpadding: 1px 0;\n\ttransition: all 1s;\n\twhite-space:nowrap;\n\tmin-height: 16px;\n\theight: 16px;\n}\n.lyric > li.active {\n\tfont-size: 14px;\n\tcolor: #fff;\n}\n.style-order {\n\tposition: absolute;\n    left: -72px;\n   \tbackground: rgba(255, 255, 255, 0.8);\n    color: black;\n    height: 200px;\n    top: -10px;\n    overflow: auto;\n    padding: 4px;\n    font-size: 12px;\n    z-index: 1;\n}\n.style-order > li {\n\ttext-align: center;\n\tpadding: 2px 0;\n\tcursor: pointer;\n}\n.style-order > li:hover {\n\tcolor: #fff;\n\tbackground-color: #888;\n}\n.fm-data {\n\tpadding: 10px 16px;\n}\n.fm-info {\n\tcursor: default;\n    float: left;\n}\n.fm-title {\n    width: 200px;\n    overflow: hidden;\n    height: 30px;\n    white-space: nowrap;\n    text-overflow: ellipsis;\n}\n.fm-shop {\n\tfloat: right;\n}\n.fm-shop i,\n.fm-shop span {\n\tcursor: pointer;\n}\n.fm-shop {\n    padding: 5px 0;\n}\n.fm-shop i:hover,\n.fm-shop span:hover {\n\tcolor: red;\n}\n.fm-info h2 {\n    font-size: 24px;\n    font-weight: 500;\n}\n.fm-info p {\n\tfont-size: 12px;\n}\n.fm-progress {\n    padding: 10px 16px;\n    position: relative;\n}\n.fm-progress-bar {\n\theight: 4px;\n    background: #fff;\n    width: 190px;\n    margin: 0 auto;\n\tcursor: pointer;\n}\n.fm-progress-value {\n    width: 0%;\n    background: black;\n    height: 4px;\n    cursor: pointer;\n}\n.cur-time,\n.total-time  {\n\tposition: absolute;\n\tfont-size: 12px;\n}\n\n.cur-time {\n\ttop: 5px;\n}\n.total-time {\n\ttop: 5px;\n    right: 15px;\n}\n\n.control {\n    padding: 10px 16px;\n}\n\n.play-btn {\n\tfloat: left;\n}\n.control-btn {\n\tfloat: right;\n}\n.icon-zanting {\n\tfont-size: 40px !important;\n}\n.icon-kuaitui {\n\tfont-size: 30px !important;\n}\n.icon-bofang {\n\tfont-size: 40px !important;\n}\n.icon-kuaijin {\n\tfont-size: 24px !important;\n\tvertical-align: super;\n}\n.control-btn {\n\tpadding-top: 16px;\n    position: relative;\n}\n.iconfont {\n\tcursor: pointer;\n}\n.iconfont:hover {\n\tcolor: red;\n}\n.fm-volume {\n    display: inline-block;\n    width: 18px;\n}\n.fm-volume-bg {\n\tbox-sizing: border-box;\n    position: absolute;\n    width: 20px;\n    height: 120px;\n    background: #ccc;\n    top: -110px;\n    left: 41px;\n    padding: 8px 0;\n}\n.horn {\n\tborder: 10px solid #ccc;\n    border-bottom-color: transparent;\n    border-right-color: transparent;\n    border-top-color: transparent;\n}\n.fm-volume-bar {\n    width: 4px;\n    height: 100px;\n    background: #aaa;\n    margin: 0 auto;\n    border-radius: 4px;\n    cursor: pointer;\n}\n.fm-volume-value {\n    width: 4px;\n    /*height: 20%;*/\n    background: #fff;\n    border-radius: 4px;\n}\n::-webkit-scrollbar\n{\n  width: 4px;  /* for vertical scrollbars */\n  height: 4px; /* for horizontal scrollbars */\n}\n::-webkit-scrollbar-track\n{\n  background: rgba(0, 0, 0, 0.1);\n\n}\n::-webkit-scrollbar-thumb\n{\n  background: rgba(0, 0, 0, 0.5);\n  border-radius: 4px;\n}\n.icon {\n    width: 16px;\n    height: 16px;\n    color: #101b79;\n}\n.fm-body {\n\n}\n.fm-warp {\n    border-radius: 10px;\n    border: 1px solid #ebebeb;\n    background-color: #ebebeb;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 	// exports
 
@@ -409,10 +409,76 @@
 	var Music = (function(){
 		var Fm = function(ct){
 			this.init(ct);
+			
+			
 		}
 		Fm.prototype = {
 			init: function(ct){
+				this.html = 
+		
+				'<audio id="audio" autoplay>\
+					<source src="" type="audio/mpeg">\
+					您的浏览器不支持 audio 元素。\
+				</audio>\
+				<div class="icon">\
+					<i class="iconfont icon-yinle"></i>\
+				</div>\
+				<div class="fm-warp">\
+					<div class="fm-bg">\
+					<div class="model">\
+						<div class="list">\
+							<i class="iconfont icon-liebiao fm-menu"></i>\
+							<ul class="style-order">\
+								<!-- <li>Channel_id</li> -->\
+							</ul>\
+						</div>\
+						<ul class="lyric">\
+							<li class="active">音乐来自百度FM, by 饥人谷</li>\
+						</ul>\
+					</div>		\
+				</div>\
+				<div class="fm-data clearfix">\
+					<div class="fm-info">\
+						<h2 class="fm-title">-</h2>\
+						<p class="fm-author">-</p>\
+					</div>\
+					<div class="fm-shop">\
+						<i class="iconfont icon-xiai xiai"></i>\
+						<span class="down">下载</span>\
+					</div>\
+				</div>\
+				 <div class="fm-progress">\
+				 	<div class="fm-progress-bar">\
+				 		<div class="fm-progress-value"></div>\
+				 	</div>\
+				 	<div class="cur-time">00:00</div>\
+				 	<div class="total-time">--:--</div>\
+				 </div>\
+				<div class="control clearfix">\
+					<div class="play-btn">\
+						<!-- <i class="iconfont icon-kuaitui pre"></i> -->\
+						<i class="iconfont icon-bofang play"></i>\
+						<i class="iconfont icon-kuaijin next"></i>\
+					</div>\
+					<div class="control-btn">\
+						<i class="iconfont icon-suiji loop"></i>\
+						<i class="iconfont icon-changpian showLyric"></i>\
+						<span class="fm-volume">\
+							<div class="fm-volume-bg">\
+									<div class="fm-volume-bar">\
+										<div class="fm-volume-value"></div>\
+									</div>\
+									<div class="horn"></div>\
+							</div>\
+							<i class="iconfont icon-shengyin volume"></i>\
+						</span>\
+					</div>\
+				</div>\
+				</div>'
+				,
+
 			    this.$ct = ct,
+			    this.create();
 				this.$volume = this.$ct.find('.volume'),
 				this.$volumeCt = this.$ct.find('.fm-volume'),
 				this.$volBg = $volBg = this.$ct.find('.fm-volume-bg'),
@@ -439,18 +505,26 @@
 				this.$model = this.$ct.find('.model'),
 				this.$totalTime = $totalTime =  this.$ct.find('.total-time'),
 				this.$playTime = $playTime = this.$ct.find('.cur-time'),
+				this.$icon = $icon = this.$ct.find('.icon'),
+				this.$warp = $warp = this.$ct.find('.fm-warp'),
 	 			this.downUrl = '',
 				this.channelId =  '',
 				this.timer,
+				
+
 				this.curVol = 0.8 * 100,
 				this.audio.volume = 0.8,
 				this.sid = -1;
 
+				
 				this.$volVal.height(100 - this.curVol + '%');
+
 				this.randomSong();
 				this.bind();
 				this.getChannels();
 				this.$volBg.hide();
+				this.drag();
+
 				
 				setInterval(this.playProgress, 500);
 
@@ -544,10 +618,6 @@
 					}
 				}
 			},
-			// setProgres: function(e){
-			// 	// this.$progressVal.css('width', (e.offsetX / this.$progressBar.outerWidth()) * 100 + '%');
-			// 	$totalTime.html(parseInt(audio.duration / 60) + ':' + parseInt(audio.duration - (parseInt(audio.duration / 60) * 60)));
-			// },
 			playProgress: function(e){
 				$progressVal.css('width', (audio.currentTime / audio.duration) * 100 + '%');
 				if(parseInt(audio.duration - (parseInt(audio.duration / 60) * 60)) < 10) {
@@ -558,7 +628,6 @@
 				
 				if (e) {
 					$progressVal.css('width', (e.offsetX / $progressBar.outerWidth()) * 100 + '%');
-					console.log(parseInt($progressVal.css('width')) / parseInt($progressBar.css('width')) * 100 + '%');
 					audio.currentTime = audio.duration * (parseInt($progressVal.css('width')) / parseInt($progressBar.css('width')));
 					$playTime.html(parseInt(audio.currentTime / 60) + ':' + parseInt(audio.currentTime - (parseInt(audio.currentTime / 60) * 60)));
 					return
@@ -633,6 +702,46 @@
 							   .addClass('icon-suiji');
 				}
 			},
+			drag: function(){
+				var top,
+					left,
+					setTop,
+					setLeft,
+					flag,
+					self = this;
+				this.$ct.on('mousedown', function(e){
+					$this = $(this);
+					flag = 1;
+					top = e.pageY - $this.offset().top;
+					left = e.pageX - $this.offset().left;
+			        maxX = $(window).width() - $this.outerWidth(),
+			        maxY = $(window).height() - $this.outerHeight();
+				});
+				$(document).on('mouseover', function(e){
+					if (flag) {
+						setTop = e.pageY - top;
+						setLeft = e.pageX - left;
+						if (setTop < 0) { setTop = 0 }
+						if (setLeft < 0) { setLeft = 0 }
+						if (setTop > maxY) { setTop = maxY }
+						if (setLeft > maxX) { setLeft = maxX }
+						self.$ct.css({
+							top: setTop,
+							left: setLeft
+						});
+					}
+				});
+				$(document).on('mouseup', function(e){
+					if (self.$warp.css('display') === 'none' && !$(e.target).hasClass('icon-yinle') && flag) {
+						self.$ct.css({
+							top: e.pageY,
+							left: e.pageX
+						});
+					}
+					$(this).off('mousemove')
+					flag = 0;
+				});
+			},
 			bind: function(){
 				var self = this;
 				this.$play.on('click', function(){
@@ -694,6 +803,16 @@
 					self.$lyric.toggle();
 					self.$model.toggle('');
 				});
+				this.$icon.on('click', function(){
+					self.$warp.slideToggle(500);
+				});
+			},
+			create: function(){
+				var html = this.html;
+				$('head').append('<link rel="stylesheet" href="css/fm.css">');
+				$('head').append('<link rel="stylesheet" href="icon/iconfont.css">');
+				this.$ct.append(html);
+				console.log(html)
 			}
 		}	
 		return {

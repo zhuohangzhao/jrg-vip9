@@ -1,4 +1,4 @@
-require("./lib/jquery.min.js");
+// require("./lib/jquery.min.js");
 var Music = (function(){
 	var Fm = function(ct){
 		this.init(ct);
@@ -397,6 +397,7 @@ var Music = (function(){
 				self.$model.toggle('');
 			});
 			this.$icon.on('click', function(){
+				console.log(self.$warp)
 				self.$warp.slideToggle(500);
 			});
 		},
@@ -416,7 +417,7 @@ var Music = (function(){
 		}
 	}
 })();
-module.exports = Music;
+// module.exports = Music;
 
 
 
