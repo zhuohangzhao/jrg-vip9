@@ -184,6 +184,7 @@ var Music = (function(){
 					obj.text = lyricText[i];
 					lyricInitArr.push(obj);
 				}
+				console.log(lyricInitArr)
 				self.renderLyric(lyricInitArr);
 			});
 		},
