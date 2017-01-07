@@ -54,6 +54,7 @@ li{
 /*header：导航栏*/
 /*header：首屏大图*/
 body,html,#header{
+	min-width: 1300px;
 	height: 100%;
 	width: 100%;
 }
