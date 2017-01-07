@@ -133,19 +133,25 @@ function getlyric(ssid,sid){
                     for(var i in line){			//遍历歌词数组
                         var lyricTime = line[i].match(timeReg);	//时间数组
                         var lyricText = line[i].replace(timeReg,"");// 纯歌词数组
+
                         for(j in lyricTime){			//遍历时间数组
                             var t = lyricTime[j].slice(1,9).split(':');//分析时间  时间的格式是[00:00.00] 分钟和毫秒是t[0],t[1]
                             //把结果做成数组 result[0]是当前时间，result[1]是纯歌词
+                            
+
                             var timeArr = parseInt(t[0])*60 + parseFloat(t[1]); 
+
                             //计算出一个curTime s为单位
                             result.push([timeArr, lyricText]);
                         };
                     };
+                    console.log(result)
                     result.sort(function(a,b){
                     	return a[0]-b[0];
                     })
                 };
 	            lyricArr = result;//存到lyricArr里面
+	            
 	            renderLyric(lyricArr);//渲染歌词
 
         }).fail(function(){
@@ -188,7 +194,7 @@ setInterval(setTime,500)	//每0.5秒计算进度条长度
 function setTime(){
 	var time = myAudio.currentTime/myAudio.duration;
 	var timeNumber = this.dealTime(myAudio.currentTime);
-	$('.time-outline .cur-time').text(timeNumber);
+	$('.time-outline <div class="cur-time"></div>').text(timeNumber);
 	if(time>=1){
 		$('.time-outline .time').css('width','0');
 		getmusic();

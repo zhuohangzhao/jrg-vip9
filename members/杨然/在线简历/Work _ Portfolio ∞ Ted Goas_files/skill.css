@@ -1,0 +1,37 @@
+.sk-page {
+	padding-left: 250px;
+}
+.sk-page-head {
+	display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #222;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: .05em;
+    background-color: #ccc;
+}
+.echart-wrapper {
+	height: 400px;
+	/*background-color: red;*/
+}
+.sk-page-content {
+    font-size: 14px;
+    text-align: left;
+    background: #ccc;
+    color: black;
+    padding: 25px;
+}
+.sk-page-content:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+.sk-page-content > ul {
+	width: 50%;
+	float: left;
+}
+ul, li {
+	list-style: none;
+}
