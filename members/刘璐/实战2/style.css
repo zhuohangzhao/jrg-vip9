@@ -19,9 +19,9 @@ body,html{
 }
 body{
     font-family: "宋体", Arial, Helvetica, sans-serif;
-    color:#f5f5f5;
+    color:#333;
     line-height:1.5;
-    background:#181818;
+    background:#fff;
 }
 /****************font-face字体声明****************/
 @font-face {font-family: "iconfont";
@@ -42,7 +42,7 @@ body{
 }
 .icon-hua:before { content: "\e601"; }
 .icon-hua{
-    color:orange;
+    color:#333;
     font-size:16px;
 }
 /******************通用样式组件******************/
@@ -56,9 +56,9 @@ body{
     padding:8px;
     margin:5px auto;
     font-size:12px;
-    color:#fff;
+    color:#eee;
     border:1px solid;
-    background:#000;
+    background:#333;
     border-radius:6px;
 }
 .clearfix{zoom:1;}
@@ -77,15 +77,15 @@ body{
     padding:15px 0 20px 15px;
 }
 #header a{
-    color:#fff;
+    color:#333;
 }
 .nav .child {
     position:absolute;
     top:100%;
     left:180px;
     display:none;
-    background:#181818;
-    border:1px solid #f5f5f5;
+    background:#333;
+    border:1px solid #eee;
     border-top:none;
 }
 .nav li:hover .child{
@@ -94,7 +94,7 @@ body{
 .child li{
     font-size:12px;
     padding:5px;
-    border-bottom:1px dotted #f5f5f5;
+    border-bottom:1px dotted #eee;
 }
 .child li:nth-child(3){
     border:none;
