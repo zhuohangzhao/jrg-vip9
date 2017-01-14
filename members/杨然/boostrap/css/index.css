@@ -1,0 +1,387 @@
+
+ * 公共样式
+ */
+body {
+  font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+ul, li {
+	list-style: none;
+}
+@font-face {
+	font-family: "weijinsuo";
+	src: url("../fonts/MiFie-Web-Font.eot") format("embedded-opentype"), 
+	url("../fonts/MiFie-Web-Font.svg") format("svg"), 
+	url("../fonts/MiFie-Web-Font.ttf") format("truetype"), 
+	url("../fonts/MiFie-Web-Font.woff") format("woff");
+}
+
+[class^="icon-"], 
+[class*=" icon-"] {
+	font-family: "weijinsuo";
+	font-style: normal;
+}
+
+.icon-mobilephone::before {
+  content: "\e908";
+  font-size: 13px;
+}
+
+.icon-telephone::before {
+  content: "\e909";
+  font-size: 15px;
+}
+
+.icon-logo::before {
+  content: "\e93e";
+}
+
+.icon-icon::before {
+  content: "\e920";
+}
+/*
+ * bootstrap 扩展
+ */
+.btn-register { 
+  color: #ffffff; 
+  background-color: #BD1B1B; 
+  border-color: #BD1B1B; 
+} 
+ 
+.btn-register:hover, 
+.btn-register:focus, 
+.btn-register:active, 
+.btn-register.active, 
+.open .dropdown-toggle.btn-register { 
+  color: #ffffff; 
+  background-color: #AB0924; 
+  border-color: #BD1B1B; 
+} 
+ 
+.btn-register:active, 
+.btn-register.active, 
+.open .dropdown-toggle.btn-register { 
+  background-image: none; 
+} 
+ 
+.btn-register.disabled, 
+.btn-register[disabled], 
+fieldset[disabled] .btn-register, 
+.btn-register.disabled:hover, 
+.btn-register[disabled]:hover, 
+fieldset[disabled] .btn-register:hover, 
+.btn-register.disabled:focus, 
+.btn-register[disabled]:focus, 
+fieldset[disabled] .btn-register:focus, 
+.btn-register.disabled:active, 
+.btn-register[disabled]:active, 
+fieldset[disabled] .btn-register:active, 
+.btn-register.disabled.active, 
+.btn-register[disabled].active, 
+fieldset[disabled] .btn-register.active { 
+  background-color: #BD1B1B; 
+  border-color: #BD1B1B; 
+} 
+ 
+.btn-register .badge { 
+  color: #BD1B1B; 
+  background-color: #ffffff; 
+}
+
+.navbar-itcast {
+	background-color: #fff;
+	border-color: #f5f5f5;
+}
+.navbar-itcast .navbar-brand {
+  color: #777;
+}
+.navbar-itcast .navbar-brand:hover,
+.navbar-itcast .navbar-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+.navbar-itcast .navbar-text {
+  color: #777;
+}
+.navbar-itcast .navbar-nav > li > a {
+  color: #777;
+}
+.navbar-itcast .navbar-nav > li > a:hover,
+.navbar-itcast .navbar-nav > li > a:focus {
+  color: #333;
+  background-color: transparent;
+}
+.navbar-itcast .navbar-nav > .active > a,
+.navbar-itcast .navbar-nav > .active > a:hover,
+.navbar-itcast .navbar-nav > .active > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+.navbar-itcast .navbar-nav > .disabled > a,
+.navbar-itcast .navbar-nav > .disabled > a:hover,
+.navbar-itcast .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+.navbar-itcast .navbar-toggle {
+  border-color: #ddd;
+}
+.navbar-itcast .navbar-toggle:hover,
+.navbar-itcast .navbar-toggle:focus {
+  background-color: #ddd;
+}
+.navbar-itcast .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+.navbar-itcast .navbar-collapse,
+.navbar-itcast .navbar-form {
+  border-color: #e7e7e7;
+}
+.navbar-itcast .navbar-nav > .open > a,
+.navbar-itcast .navbar-nav > .open > a:hover,
+.navbar-itcast .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+  .navbar-itcast .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+  .navbar-itcast .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-itcast .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+    background-color: transparent;
+  }
+  .navbar-itcast .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-itcast .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-itcast .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  .navbar-itcast .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-itcast .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-itcast .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+}
+.navbar-itcast .navbar-link {
+  color: #777;
+}
+.navbar-itcast .navbar-link:hover {
+  color: #333;
+}
+.navbar-itcast .btn-link {
+  color: #777;
+}
+.navbar-itcast .btn-link:hover,
+.navbar-itcast .btn-link:focus {
+  color: #333;
+}
+.navbar-itcast .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-itcast .btn-link:hover,
+.navbar-itcast .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-itcast .btn-link:focus {
+  color: #ccc;
+}
+/*
+ * 头部区域
+ */
+#header  {
+
+}
+#header > .topbar {
+	height: 40px;
+	border-bottom: 1px solid rgb(192, 192, 192);
+	line-height: 40px;
+}
+#header > .topbar > .container > .row > div {
+	height: 40px;
+	font-size: 12px;
+	color: #888;
+}
+#header > .topbar > .container > .row > div.first ~ div {
+	border-left: 1px solid #c0c0c0;
+}
+#header .mobile-link {
+	font-size: 12px;
+	color: #888;
+}
+#header .mobile-link:hover {
+	text-decoration: none;
+} 
+#header .row > div:nth-of-type(3) a {
+	font-size: 12px;
+	color: #888;
+}
+#header .mobile-link > img {
+	display: none;
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    top: 28px;
+    z-index: 1001;
+}
+#header .mobile-link:hover > img {
+	display: block;
+}
+#header .icon-icon {
+	font-size: 50px;
+	color: #e93222;
+	line-height: 50px;
+	vertical-align: middle;
+}
+#header .icon-logo {
+	font-size: 32px;
+	color: #333;
+	line-height: 50px;
+	vertical-align: middle;
+}
+#header .navbar-brand {
+	height: 80px;
+}
+#header .navbar-nav > li > a {
+	line-height: 50px;
+	font-size: 14px;
+}
+#header .navbar-itcast .navbar-nav > .active > a, .navbar-itcast .navbar-nav > .active > a:hover, .navbar-itcast .navbar-nav > .active > a:focus {
+	background-color: transparent;
+	border-bottom: 2px solid #e92322;
+}
+#header .nav > li > a:hover, .nav > li > a:focus {
+    border-bottom: 2px solid #e92322;
+}
+#header .navbar-toggle {
+	margin-bottom: 23px;
+	margin-top: 23px;
+}
+#header .navbar {
+	margin-bottom: 0;
+}
+ /*
+ * 轮播图 main-ad
+ */
+#main-ad {
+
+}
+#main-ad > .carousel-inner > .item {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+@media (min-width: 768px) {
+	/* 屏幕宽度大于768时item有高度410px 使用大图片 */
+	#main-ad > .carousel-inner > .item {
+		height: 410px;
+	}
+}
+#main-ad > .carousel-inner > .item > img {
+	width: 100%;
+}
+/*
+ * 特色介绍
+ */
+#feature {
+	padding: 50px 0;
+	border-bottom: 1px solid #c0c0c0;
+}
+.icon-uniE907:before {
+	content: "\e907";
+}
+#feature .row > li {
+	cursor: pointer;
+	color: #333;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+#feature .row > li a {
+	text-decoration: none;
+}
+#feature .row > li:hover,
+#feature .row > li:hover a {
+	color: #e93222;
+}
+
+#feature i {
+	font-size: 34px;
+}
+
+/*
+ * 立即预约
+ */
+.icon-uniE906:before {
+	content: "\e906";
+}
+.icon-uniE905:before {
+	content: "\e905";
+}
+#order {
+	border-bottom: 1px solid #c0c0c0;
+	padding: 20px 0;
+}
+#order p {
+	/*line-height: 60px;*/
+	font-size: 14px;
+	margin-bottom: 0;
+}
+#order p span {
+	color: #e92322;
+}
+#order p:nth-child(1) a {
+	border-bottom: 2px dashed #e92322;
+	text-decoration: none;
+	color: #e92322;
+}
+#order p:nth-child(2) a {
+	color: #333;
+	font-style: 14px;
+}
+
+/*
+ * 产品推荐
+ */
+#products {
+	background-color: #f1f1f1;
+	padding: 40px 0;
+}
+#products ul.nav > li a {
+	color: #333;
+}
+#products ul.nav > li.active {
+	border-bottom: 2px solid #e92322;
+}
+#products .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	background-color: transparent;
+	border: none;
+}
+#products .nav-tabs > li > a {
+	border: none;
+}
+.panel-item {
+  border-color: #ddd;
+}
+.panel-item > .panel-heading {
+  color: #333;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+}
+.panel-item > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #ddd;
+}
+.panel-item > .panel-heading .badge {
+  color: #f5f5f5;
+  background-color: #333;
+}
+.panel-item > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #ddd;
+}
+/*
+ * 公共样式
+ */
+
+/*
+ * 公共样式
+ */
+
+/*
+ * 页脚区域
+ 
