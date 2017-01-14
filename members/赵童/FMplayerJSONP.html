@@ -62,7 +62,7 @@
             var _this = this;
             setInterval(function(){
                 if(_this.$audio[0].ended){
-                    _this.switchSong();
+                    _this.$nextBtn.click();
                 }
             },1000)
         },
