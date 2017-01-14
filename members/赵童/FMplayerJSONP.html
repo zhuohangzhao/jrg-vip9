@@ -46,11 +46,16 @@
             this.isClickMute = true;
             this.volumeMemory = 0;
             this.isLyricDisplay = true;
+            this.oldSid = 0;
 
 
-            this.getChannel();
-            this.getSong(this.$currentChannelSpan.data('id'));
-            this.getLyric(this.$audio.data('sid'));
+            // this.getChannel();
+
+            this.send('http://api.jirengu.com/fm/getChannels.php','fm.getChannel');
+            // this.send('http://api.jirengu.com/fm/getSong.php','fm.getSong');
+            // this.send('http://api.jirengu.com/fm/getLyric.php','fm.getLyric');
+            // this.getSong(this.$currentChannelSpan.data('id'));
+            // this.getLyric(this.$audio.data('sid'));
             this.adjustVolume(80);
             this.$lyricBtn.css('color','#45a156');
             this.beatPause();
@@ -78,80 +83,80 @@
             
             this.$playerCt = $(htmlStr);
         },
-        getChannel: function(){
-            var _this = this;
-            $.ajax({
-                async: false,
-                url: 'http://api.jirengu.com/fm/getChannels.php',
-                method: 'GET',
-            }).done(function(channelInfo){
-                var channelInfoArr = JSON.parse(channelInfo).channels;
-                $(channelInfoArr).each(function(){
-                    if(/xinqing/.test(this.channel_id)){
-                        _this.channelArr.push(this);
-                    }
-                });
-                $(_this.channelArr).each(function(){
-                    var $li = $('<li data-id="'+ this.channel_id + '">' + this.name + 'MHz' + '</li>');
-                    _this.$channelListUl.append($li);
-                });
-                _this.switchChannel(_this.channelArr[0].channel_id);
-            });
+        send: function(url,callback,data){
+            var $script = $('<script>');
+            var str = url+'?';
+            if(data){
+                str += data + '&';
+            }
+            str += 'callback='+callback;
+            $script.attr('src',str);
+            $('head').append($script);
+            // $script.remove();
         },
-        getSong: function(channelId){
+        getChannel: function(channelInfo){
             var _this = this;
-            $.ajax({
-                async: false,
-                url: 'http://api.jirengu.com/fm/getSong.php',
-                method: 'GET',
-                data: {channel: channelId}
-            }).done(function(song){
-                var songInfo = JSON.parse(song).song[0];
-                _this.$audio.data('sid',songInfo.sid);
-                _this.$audio.attr('src',songInfo.url);
-                _this.$albumArt.css('background-image','url('+songInfo.picture+')');
-                _this.$artist.text(songInfo.artist);
-                _this.$title.text(songInfo.title);
+            var channelInfoArr = channelInfo.channels;
+            // var channelInfoArr = JSON.parse(channelInfo).channels;
+            $(channelInfoArr).each(function(){
+                if(/xinqing/.test(this.channel_id)){
+                    _this.channelArr.push(this);
+                }
             });
+            $(this.channelArr).each(function(){
+                var $li = $('<li data-id="'+ this.channel_id + '">' + this.name + 'MHz' + '</li>');
+                _this.$channelListUl.append($li);
+            });
+            this.switchChannel(_this.channelArr[0].channel_id);
+
         },
-        getLyric: function(sid){
-            var _this = this;
-            $.ajax({
-                async: false,
-                url: 'http://api.jirengu.com/fm/getLyric.php',
-                method: 'POST',
-                data: {sid: sid}
-            }).done(function(lyric){
-                var str = JSON.parse(lyric).lyric;
-                var lyricMatch = str.match(/\[\d\d\:\d\d\.\d\d\].+\n/g);
-                var lyricArr = [];
-                for(var i = 0;i < lyricMatch.length;i++){
-                    lyricMatch[i] = lyricMatch[i].replace('\n','')
-                    var time = lyricMatch[i].match(/\[\d\d\:\d\d\.\d\d\]/);
-                    time = time[0].match(/\d\d\:\d\d/)[0];
-                    var min = parseInt(time.match(/\d\d/)[0]);
-                    var sec = parseInt(time.replace(/\d\d\:/,''));
-                    var newTime = min*60+sec;
-                    var value = lyricMatch[i].replace(/\[\d\d\:\d\d\.\d\d\]/,'');
-                    lyricArr.push({time:newTime,value:value});
-                };
-                var lyricStr = '';
-                for(var i = 0;i < lyricArr.length;i++){
-                    lyricStr += '<li data-time="' + lyricArr[i].time + '">' + lyricArr[i].value + '</li>';
-                };
-                _this.$lyricUl.empty();
-                _this.$lyricUl.append($(lyricStr));
-            });
+        getSong: function(song){
+            var songInfo = song.song[0];
+            this.$audio.data('sid',songInfo.sid);
+            this.$audio.attr('src',songInfo.url);
+            this.$albumArt.css('background-image','url('+songInfo.picture+')');
+            this.$artist.text(songInfo.artist);
+            this.$title.text(songInfo.title);
+        },
+        getLyric: function(lyric){
+            // var _this = this;
+            console.log(2);
+            var str = lyric.lyric;
+            var lyricMatch = str.match(/\[\d\d\:\d\d\.\d\d\].+\n/g);
+            var lyricArr = [];
+            for(var i = 0;i < lyricMatch.length;i++){
+                lyricMatch[i] = lyricMatch[i].replace('\n','')
+                var time = lyricMatch[i].match(/\[\d\d\:\d\d\.\d\d\]/);
+                time = time[0].match(/\d\d\:\d\d/)[0];
+                var min = parseInt(time.match(/\d\d/)[0]);
+                var sec = parseInt(time.replace(/\d\d\:/,''));
+                var newTime = min*60+sec;
+                var value = lyricMatch[i].replace(/\[\d\d\:\d\d\.\d\d\]/,'');
+                lyricArr.push({time:newTime,value:value});
+            };
+            var lyricStr = '';
+            for(var i = 0;i < lyricArr.length;i++){
+                lyricStr += '<li data-time="' + lyricArr[i].time + '">' + lyricArr[i].value + '</li>';
+            };
+            this.$lyricUl.empty();
+            this.$lyricUl.append($(lyricStr));
         },
         bind: function(){
+            var _this = this;
             this.bindIcon();
             this.bindList();
             this.bindPlay();
             this.bindVolume();
-            this.bindChannel();
             this.bindNext();
             this.bindLyric();
             this.bindLyricBtn();
+            this.bindChannelTimer = setInterval(function(){
+                if(_this.$channelListUl.find('li').length>0){
+                    _this.bindChannel();
+                    clearInterval(_this.bindChannelTimer);
+                }
+            },100);
+            
         },
         bindIcon: function(){
             var _this = this;
@@ -347,8 +352,14 @@
             var _this = this;
             this.$channelListUl.find('li').each(function(){
                 $(this).on('click',function(){
+                    _this.oldSid = _this.$audio.data('sid');
                     _this.switchChannel($(this).data('id'));
-                    _this.playMusic();
+                    _this.nextTimer = setInterval(function(){
+                        if(_this.$audio.data('sid') !== _this.oldSid){
+                            _this.playMusic();
+                            clearInterval(_this.nextTimer);
+                        }
+                    },100)
                 })
             })
             this.$channelListUl.on('mouseover',function(){
@@ -360,27 +371,49 @@
         },
         switchChannel: function(channelId){
             var _this =this;
-            this.pauseMusic();
+            // this.pauseMusic();
             this.$channelListUl.find('li').each(function(){
                 if(channelId === $(this).data('id')){
                     _this.$currentChannelSpan.text($(this).text());
                     _this.$currentChannelSpan.data('id',$(this).data('id'));
-                    _this.getSong($(this).data('id'));
-                    _this.getLyric(_this.$audio.data('sid'));
+                    // _this.send('http://api.jirengu.com/fm/getSong.php','fm.getSong','channel='+channelId);
+                    // // _this.getSong($(this).data('id'));
+                    // // _this.getLyric(_this.$audio.data('sid'));
+                    // _this.lyricTimer = setInterval(function(){
+                    //     if(fm.$audio.data('sid')){
+                    //         fm.send('http://jirenguapi.applinzi.com/fm/getLyric.php','fm.getLyric','sid='+fm.$audio.data('sid'));
+                    //         clearInterval(fm.lyricTimer);
+                    //     }
+                    // },100);
+                    _this.switchSong();
                 }
             })
         },
         bindNext: function(){
             var _this = this;
             this.$nextBtn.on('click',function(){
+                _this.oldSid = _this.$audio.data('sid');
                 _this.switchSong();
+                _this.nextTimer = setInterval(function(){
+                    if(_this.$audio.data('sid') !== _this.oldSid){
+                        _this.playMusic();
+                        clearInterval(_this.nextTimer);
+                    }
+                },100)
             })
         },
         switchSong: function(){
             this.pauseMusic();
-            this.getSong(this.$currentChannelSpan.data('id'));
-            this.getLyric(this.$audio.data('sid'));
-            this.playMusic();
+            this.send('http://api.jirengu.com/fm/getSong.php','fm.getSong','channel='+this.$currentChannelSpan.data('id'));
+            // this.getSong(this.$currentChannelSpan.data('id'));
+            // this.getLyric(this.$audio.data('sid'));
+            this.lyricTimer = setInterval(function(){
+                if(fm.$audio.data('sid')){
+                    fm.send('http://jirenguapi.applinzi.com/fm/getLyric.php','fm.getLyric','sid='+fm.$audio.data('sid'));
+                    clearInterval(fm.lyricTimer);
+                }
+            },100);
+            
         },
         bindLyric: function(){
             var _this = this;
@@ -439,7 +472,8 @@
     }
 
 
-    new FmPlayer();
+    var fm = new FmPlayer();
+    fm.$lyricBtn.click();
 </script>
 </body>
 </html>
