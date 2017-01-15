@@ -438,8 +438,13 @@
         }
     }
 
-
     new FmPlayer();
+    var playTimer = setInterval(function(){
+        if(fm.$audio.attr('src')){
+            fm.playMusic();
+            clearInterval(playTimer);
+        }
+    },500)
 </script>
 </body>
 </html>
