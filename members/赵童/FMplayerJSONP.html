@@ -119,29 +119,58 @@
             this.$artist.text(songInfo.artist);
             this.$title.text(songInfo.title);
         },
-        getLyric: function(lyric){
-            // var _this = this;
-            console.log(2);
-            var str = lyric.lyric;
-            var lyricMatch = str.match(/\[\d\d\:\d\d\.\d\d\].+\n/g);
-            var lyricArr = [];
-            for(var i = 0;i < lyricMatch.length;i++){
-                lyricMatch[i] = lyricMatch[i].replace('\n','')
-                var time = lyricMatch[i].match(/\[\d\d\:\d\d\.\d\d\]/);
-                time = time[0].match(/\d\d\:\d\d/)[0];
-                var min = parseInt(time.match(/\d\d/)[0]);
-                var sec = parseInt(time.replace(/\d\d\:/,''));
-                var newTime = min*60+sec;
-                var value = lyricMatch[i].replace(/\[\d\d\:\d\d\.\d\d\]/,'');
-                lyricArr.push({time:newTime,value:value});
-            };
-            var lyricStr = '';
-            for(var i = 0;i < lyricArr.length;i++){
-                lyricStr += '<li data-time="' + lyricArr[i].time + '">' + lyricArr[i].value + '</li>';
-            };
-            this.$lyricUl.empty();
-            this.$lyricUl.append($(lyricStr));
+        getLyric: function(sid){
+            var _this = this;
+            $.ajax({
+                // async: false,
+                url: 'http://api.jirengu.com/fm/getLyric.php',
+                method: 'POST',
+                data: {sid: sid}
+            }).done(function(lyric){
+                var str = JSON.parse(lyric).lyric;
+                var lyricMatch = str.match(/\[\d\d\:\d\d\.\d\d\].+\n/g);
+                var lyricArr = [];
+                for(var i = 0;i < lyricMatch.length;i++){
+                    lyricMatch[i] = lyricMatch[i].replace('\n','')
+                    var time = lyricMatch[i].match(/\[\d\d\:\d\d\.\d\d\]/);
+                    time = time[0].match(/\d\d\:\d\d/)[0];
+                    var min = parseInt(time.match(/\d\d/)[0]);
+                    var sec = parseInt(time.replace(/\d\d\:/,''));
+                    var newTime = min*60+sec;
+                    var value = lyricMatch[i].replace(/\[\d\d\:\d\d\.\d\d\]/,'');
+                    lyricArr.push({time:newTime,value:value});
+                };
+                var lyricStr = '';
+                for(var i = 0;i < lyricArr.length;i++){
+                    lyricStr += '<li data-time="' + lyricArr[i].time + '">' + lyricArr[i].value + '</li>';
+                };
+                _this.$lyricUl.empty();
+                _this.$lyricUl.append($(lyricStr));
+            });
         },
+        // getLyric: function(lyric){
+        //     // var _this = this;
+        //     console.log(2);
+        //     var str = lyric.lyric;
+        //     var lyricMatch = str.match(/\[\d\d\:\d\d\.\d\d\].+\n/g);
+        //     var lyricArr = [];
+        //     for(var i = 0;i < lyricMatch.length;i++){
+        //         lyricMatch[i] = lyricMatch[i].replace('\n','')
+        //         var time = lyricMatch[i].match(/\[\d\d\:\d\d\.\d\d\]/);
+        //         time = time[0].match(/\d\d\:\d\d/)[0];
+        //         var min = parseInt(time.match(/\d\d/)[0]);
+        //         var sec = parseInt(time.replace(/\d\d\:/,''));
+        //         var newTime = min*60+sec;
+        //         var value = lyricMatch[i].replace(/\[\d\d\:\d\d\.\d\d\]/,'');
+        //         lyricArr.push({time:newTime,value:value});
+        //     };
+        //     var lyricStr = '';
+        //     for(var i = 0;i < lyricArr.length;i++){
+        //         lyricStr += '<li data-time="' + lyricArr[i].time + '">' + lyricArr[i].value + '</li>';
+        //     };
+        //     this.$lyricUl.empty();
+        //     this.$lyricUl.append($(lyricStr));
+        // },
         bind: function(){
             var _this = this;
             this.bindIcon();
@@ -404,14 +433,17 @@
             })
         },
         switchSong: function(){
+            var _this = this;
             this.pauseMusic();
+            this.oldSid = this.$audio.data('sid');
             this.send('http://api.jirengu.com/fm/getSong.php','fm.getSong','channel='+this.$currentChannelSpan.data('id'));
             // this.getSong(this.$currentChannelSpan.data('id'));
-            // this.getLyric(this.$audio.data('sid'));
+
             this.lyricTimer = setInterval(function(){
-                if(fm.$audio.data('sid')){
-                    fm.send('http://jirenguapi.applinzi.com/fm/getLyric.php','fm.getLyric','sid='+fm.$audio.data('sid'));
-                    clearInterval(fm.lyricTimer);
+                if(_this.$audio.data('sid') !== _this.oldSid){
+                    _this.getLyric(_this.$audio.data('sid'));
+                    // fm.send('http://jirenguapi.applinzi.com/fm/getLyric.php','fm.getLyric','sid='+fm.$audio.data('sid'));
+                    clearInterval(_this.lyricTimer);
                 }
             },100);
             
@@ -474,7 +506,7 @@
 
 
     var fm = new FmPlayer();
-    fm.$lyricBtn.click();
+    // fm.$lyricBtn.click();
     var playTimer = setInterval(function(){
         if(fm.$audio.attr('src')){
             fm.playMusic();

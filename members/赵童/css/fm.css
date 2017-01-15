@@ -13,7 +13,7 @@ p,span{
 .player-ct{
     position: fixed;
     right: 50px;
-    top: 20px;
+    top: 10px;
     z-index: 999;
 }
 .player-icon{
@@ -100,6 +100,7 @@ p,span{
 }
 .lyric-ct .lyric-ul{
     /*display: none;*/
+    width: 100%;
     list-style: none;
     position: absolute;
     top: 0px;
