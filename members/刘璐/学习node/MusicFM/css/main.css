@@ -135,16 +135,6 @@ body,html,h2,p{
     text-align: center;
 }
 
-@keyframes waiting{
-    0%{ transform: rotate(0deg)}
-    100%{ transform: rotate(720deg)}
-}
-#play{
-    -webkit-animation: 1s waiting infinite;
-    -o-animation: 1s waiting infinite;
-    animation: 1s waiting infinite;
-}
-
 #music-fm .music-main .wrap .iconfont{
     vertical-align: middle;
     font-size:36px;
