@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+	<title>Music FM</title>
+	<link rel="stylesheet" href="css/iconfont.css">
+	<!--<link rel="stylesheet" href="merge/index.min.css">-->
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+	<div id="fm">
+		<!--channel-->
+		<div class="side">
+			<ul class="channel">
+				<p>分类导航</p>
+            	<li class="m-icon m-channel">随机歌曲</li>
+         	</ul> 
+		</div>
+		<!-- 背景图片 -->
+		<div class="music-background">
+			<!--歌词-->
+			<div class="music-lyric">
+				<div class="lyric-view">
+					<ul class="lyric"></ul>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<audio src="" autoplay></audio>
+			<div class="music-message">
+				<p class="music-name"></p>
+				<p class="music-author"></p>
+				<p class="record" title="" data-id=""></p>
+			</div>
+		</div>
+		<!-- 进度条 -->
+		<div class="time-outline"> 
+            <div class="time"></div> 
+            <span class="cur-time">00:00</span> 
+            <span class="total-time">04:00</span> 
+        </div>
+		<!--按钮，icon  -->
+		<div class="controls">
+			<div class="play-control">
+				<span class="m-icon m-pre btn-pre" title="换曲"></span>
+				<span class="m-icon m-play btn-play" title="播放/暂停"></span>
+				<span class="m-icon m-next btn-next" title="换曲"></span>
+
+			</div>
+			<!-- 循环播放，歌词显示 -->
+			<div class="music-control">		
+				<span class="m-icon m-volume colored"></span>
+				<div class="volume-line">
+                    <div class="triangle"></div>
+                    <div class="volume-light"></div>
+                    <div class="volume-outline"></div>
+                </div>
+				<span class="m-icon m-xunhuan colored"></span>
+				<span class="m-icon m-lyric lyric-btn colored lyriced"></span>
+				<span class="m-icon m-xiangmu channel-btn"></span>
+
+				<span class="m-icon m-heart colored"></span>
+				<div class="my-like">
+					<div class="like-list-head">
+					<img src="img/delete.png" title="清空收藏列表">
+					<p>收藏列表</p>
+					</div>
+					<ul class="like-list"></ul>
+				</div>
+			</div>
+			<span class="m-icon m-xiangmu like-list-btn"></span>
+
+		</div>
+	</div>
+	
+	<script src="js/jquery.min.js"></script>
+	<!--<script src="merge/index.min.js"></script>-->
+	<!--<script src="./js/index.js"></script>-->
+	<script src="./js/indexfm.js" type="text/javascript"></script>
+	<script src="js/drag.js" type="text/javascript"></script>
+
+</body>
+</html>
